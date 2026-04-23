@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>temporallogic.org</title>
+<meta name="description" content="Research, courses, software, and resources from the Laboratory for Temporal Logic at Iowa State University.">
+<link rel="shortcut icon" href="favicon.ico">
+<style>
+  :root {
+    --purple:        #5b3a8a;
+    --purple-deep:   #3d2466;
+    --purple-soft:   #efeaf6;
+    --ink:           #1f1b2e;
+    --ink-soft:      #4a4458;
+    --line:          #e4dff0;
+    --bg:            #fbfaff;
+    --card:          #ffffff;
+    --accent:        #c8102e; /* ISU red, used sparingly */
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--purple); text-decoration: none; }
+  a:hover { color: var(--purple-deep); text-decoration: underline; }
+
+  header.hero {
+    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple) 100%);
+    color: #fff;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 4px solid var(--purple-deep);
+  }
+  header.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  header.hero h1 .dot {
+    color: var(--purple-soft);
+    font-weight: 300;
+    margin: 0 0.15em;
+  }
+  header.hero p.tag {
+    margin: 0.25rem auto 0;
+    max-width: 42rem;
+    font-size: 1.05rem;
+    color: #e8e0f5;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  section.section { margin-bottom: 2.5rem; }
+  section.section h2 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--purple-deep);
+    margin: 0 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--line);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--purple);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(91, 58, 138, 0.10);
+    border-left-color: var(--purple-deep);
+  }
+  .card a.title {
+    display: block;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+  .card a.title:hover { color: var(--purple-deep); text-decoration: none; }
+  .card .desc {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  ul.linklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.35rem 1.25rem;
+  }
+  ul.linklist li {
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted var(--line);
+    font-size: 0.92rem;
+  }
+  ul.linklist li a {
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-weight: 500;
+  }
+  ul.linklist li .meta {
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--purple); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>temporal logic<span class="dot">·</span>org</h1>
+  <p class="tag">Research, courses, software, and resources from the
+    Laboratory for Temporal Logic at Iowa State University.</p>
+</header>
+
+<main>
+
+  <section class="section">
+    <h2>Main Sections</h2>
+    <div class="grid">
+      <!-- TEMPORARILY HIDDEN: re-enable as content is published incrementally.
+      <div class="card">
+        <a class="title" href="home/">Home / About</a>
+        <p class="desc">Overview of the lab, research themes, and people.</p>
+      </div>
+      <div class="card">
+        <a class="title" href="research/">Research Projects</a>
+        <p class="desc">Companion pages for published papers, datasets, and tools.</p>
+      </div>
+      -->
+      <div class="card">
+        <a class="title" href="courses/">Courses</a>
+        <p class="desc">Course materials, lectures, and lab videos.</p>
+      </div>
+      <!-- TEMPORARILY HIDDEN: re-enable as content is published incrementally.
+      <div class="card">
+        <a class="title" href="software/">Software</a>
+        <p class="desc">Released tools and downloads.</p>
+      </div>
+      <div class="card">
+        <a class="title" href="kyr/">Kristin Yvonne Rozier</a>
+        <p class="desc">PI homepage.</p>
+      </div>
+      -->
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; Laboratory for Temporal Logic ·
+    <a href="home/contact.html">Contact</a> ·
+    Source on <a href="#">GitHub</a></p>
+</footer>
+
+</body>
+</html>

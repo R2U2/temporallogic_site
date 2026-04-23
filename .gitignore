@@ -1,0 +1,195 @@
+# =============================================================================
+# ALLOW-LIST .gitignore  (deny-everything-then-allow)
+# =============================================================================
+#
+# CURRENT POLICY: Only the AERE 361 / AERE 3610 course is published.
+# Everything else in the repo is intentionally hidden from git so it cannot
+# be accidentally pushed to GitHub Pages.
+#
+# HOW TO ROLL OUT MORE CONTENT INCREMENTALLY:
+#   1. Find the section below labeled "==== STAGE 2: ... ====" (etc.)
+#   2. Uncomment the `!` lines in that stage to un-ignore that content.
+#   3. Also un-comment the matching card in /index.html or /courses/index.html
+#      (look for "TEMPORARILY HIDDEN" comments).
+#   4. Run `git status` to confirm only the expected files are now tracked.
+#
+# HOW THIS FILE WORKS:
+#   - `/*`  ignores everything at the repo root by default.
+#   - `!foo` un-ignores `foo`.
+#   - For directories, you must un-ignore the directory AND re-ignore its
+#     contents AND then un-ignore the specific children you want.
+#
+# =============================================================================
+
+
+# ---------------------------------------------------------------------------
+# Step 1: Block EVERYTHING at the repo root.
+# ---------------------------------------------------------------------------
+/*
+
+
+# ---------------------------------------------------------------------------
+# Step 2: Always-allowed top-level files (repo plumbing)
+# ---------------------------------------------------------------------------
+!/.gitignore
+!/.gitattributes
+!/.nojekyll
+!/README.md
+!/VIDEOS_TO_UPLOAD.md
+!/LICENSE
+!/CNAME
+!/favicon.ico
+!/robots.txt
+
+# GitHub Actions workflows for Pages deploy
+!/.github/
+!/.github/workflows/
+!/.github/workflows/*.yml
+!/.github/workflows/*.yaml
+
+
+# ---------------------------------------------------------------------------
+# Step 3: STAGE 1 — AERE 361 / AERE 3610 course (CURRENTLY ENABLED)
+# ---------------------------------------------------------------------------
+# Allow the trimmed-down landing pages and the course tree.
+!/index.html
+!/courses/
+
+# Inside /courses/, block everything by default, then un-ignore only what
+# the AERE3610 page needs in order to render.
+courses/*
+!courses/index.html
+!courses/homestyle.css
+!courses/banner.html
+!courses/footer.html
+!courses/navigation.html
+!courses/fm-logo.png
+!courses/ltl-swoosh-white.png
+!courses/LaTeXsymbolsguide.pdf
+!courses/AERE3610/
+
+# Inside /courses/AERE3610/, allow the whole subtree EXCEPT the usual junk
+# (videos go to YouTube; backups, archives, and dupes stay local).
+courses/AERE3610/AERE361/
+courses/AERE3610/saved_links
+courses/AERE3610/Rozier.c
+courses/AERE3610/backup.*
+courses/AERE3610/*~
+courses/AERE3610/*.bak
+courses/AERE3610/*.old
+courses/AERE3610/*.corrupt
+courses/AERE3610/*.html_F[0-9]*
+courses/AERE3610/*.html_S[0-9]*
+courses/AERE3610/*.html.[0-9]*
+courses/AERE3610/*.html.old
+courses/AERE3610/*.mp4
+courses/AERE3610/*.mov
+courses/AERE3610/*.mkv
+courses/AERE3610/*.webm
+courses/AERE3610/*.avi
+courses/AERE3610/*.m4v
+courses/AERE3610/*.wmv
+courses/AERE3610/*.flv
+courses/AERE3610/*.ogv
+courses/AERE3610/*.mp3
+# Note: data.tar.gz / data.zip ARE allowed — the lab page links to them.
+
+
+# ---------------------------------------------------------------------------
+# Step 4: STAGE 2 — Home / About pages   (DISABLED)
+# ---------------------------------------------------------------------------
+# To enable: uncomment the lines below AND uncomment the Home/About card
+# in /index.html.
+#
+# !/home/
+# home/*
+# !home/index.html
+# !home/about.html
+# !home/contact.html
+# !home/footer.html
+# !home/headerwrap.html
+# !home/navbar.html
+# !home/portfolio.html
+# !home/single-post.html
+# !home/single-project.html
+# !home/assets/
+# # (you may also want: !home/blog.html  — currently deleted)
+
+
+# ---------------------------------------------------------------------------
+# Step 5: STAGE 3 — Research projects   (DISABLED)
+# ---------------------------------------------------------------------------
+# To enable: uncomment the lines below AND uncomment the Research card
+# in /index.html. Big binary artifacts (.ova, .tar.gz, .zip, videos) stay
+# blocked unless individually un-ignored.
+#
+# !/research/
+# research/*
+# !research/index.html
+# !research/img/
+# # Then add specific project subfolders you want to publish, e.g.:
+# # !research/R2U2/
+# # !research/CAV18/
+# # ...etc., each followed by a re-block of binary blobs inside it.
+
+
+# ---------------------------------------------------------------------------
+# Step 6: STAGE 4 — AppliedFormalMethods course   (DISABLED)
+# ---------------------------------------------------------------------------
+# To enable: uncomment below AND uncomment the AppliedFormalMethods card
+# in /courses/index.html.
+#
+# !courses/AppliedFormalMethods/
+# courses/AppliedFormalMethods/*~
+# courses/AppliedFormalMethods/*.bak
+# courses/AppliedFormalMethods/*.old
+# courses/AppliedFormalMethods/*.corrupt
+# courses/AppliedFormalMethods/index.html.[0-9]*
+# courses/AppliedFormalMethods/index.html.bak
+# courses/AppliedFormalMethods/index.html.corrupt
+# courses/AppliedFormalMethods/index.html_F[0-9]*
+# courses/AppliedFormalMethods/index.html_S[0-9]*
+# courses/AppliedFormalMethods/FM_AERO_panel.html_F[0-9]*
+# courses/AppliedFormalMethods/FM_AERO_panel.html_S[0-9]*
+
+
+# ---------------------------------------------------------------------------
+# Step 7: STAGE 5 — Course Resources, FM_S2015, ML_F2015   (DISABLED)
+# ---------------------------------------------------------------------------
+# !courses/resources/
+# !courses/FM_S2015/
+# !courses/ML_F2015/
+
+
+# ---------------------------------------------------------------------------
+# Step 8: STAGE 6 — Software, KYR, Photos, Blog   (DISABLED)
+# ---------------------------------------------------------------------------
+# !/software/
+# !/kyr/
+# kyr/*
+# !kyr/index.html
+# !kyr/CV/
+# !/Photos/
+# !/Blog/
+
+
+# ---------------------------------------------------------------------------
+# Globally never-allowed (server cruft, secrets, OS junk)
+# ---------------------------------------------------------------------------
+# These are belt-and-suspenders — the deny-all above already blocks them at
+# root, but listing them ensures they stay blocked even after future
+# `!` un-ignores.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+.htaccess
+_*.htaccess
+.dh-diag
+BohanLiVideo.jsp
+wp-content/
+.well-known/
+old.index.html
+google*.html
+*_250708055729*
