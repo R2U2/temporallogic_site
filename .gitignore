@@ -165,7 +165,8 @@ courses/AERE3610/*.mp3
 # Step 8: STAGE 6 — Software, KYR, Photos, Blog   (DISABLED)
 # ---------------------------------------------------------------------------
 # !/software/
-# !/kyr/
+!kyr/index.html
+!kyr/KYRozierCV.pdf
 # kyr/*
 # !kyr/index.html
 # !kyr/CV/
