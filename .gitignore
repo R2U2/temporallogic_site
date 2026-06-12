@@ -134,23 +134,20 @@ courses/AERE3610/*.mp3
 
 
 # ---------------------------------------------------------------------------
-# Step 6: STAGE 4 — AppliedFormalMethods course   (DISABLED)
+# Step 6: STAGE 4 — AppliedFormalMethods course   (ENABLED)
 # ---------------------------------------------------------------------------
-# To enable: uncomment below AND uncomment the AppliedFormalMethods card
-# in /courses/index.html.
-#
-# !courses/AppliedFormalMethods/
-# courses/AppliedFormalMethods/*~
-# courses/AppliedFormalMethods/*.bak
-# courses/AppliedFormalMethods/*.old
-# courses/AppliedFormalMethods/*.corrupt
-# courses/AppliedFormalMethods/index.html.[0-9]*
-# courses/AppliedFormalMethods/index.html.bak
-# courses/AppliedFormalMethods/index.html.corrupt
-# courses/AppliedFormalMethods/index.html_F[0-9]*
-# courses/AppliedFormalMethods/index.html_S[0-9]*
-# courses/AppliedFormalMethods/FM_AERO_panel.html_F[0-9]*
-# courses/AppliedFormalMethods/FM_AERO_panel.html_S[0-9]*
+!courses/AppliedFormalMethods/
+courses/AppliedFormalMethods/*~
+courses/AppliedFormalMethods/*.bak
+courses/AppliedFormalMethods/*.old
+courses/AppliedFormalMethods/*.corrupt
+courses/AppliedFormalMethods/index.html.[0-9]*
+courses/AppliedFormalMethods/index.html.bak
+courses/AppliedFormalMethods/index.html.corrupt
+courses/AppliedFormalMethods/index.html_F[0-9]*
+courses/AppliedFormalMethods/index.html_S[0-9]*
+courses/AppliedFormalMethods/FM_AERO_panel.html_F[0-9]*
+courses/AppliedFormalMethods/FM_AERO_panel.html_S[0-9]*
 
 
 # ---------------------------------------------------------------------------

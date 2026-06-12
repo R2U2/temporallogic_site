@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<!-- 1.  SITE TITLE -->
+<title>Applied Formal Methods</title>
+
+<!-- 2.  METADATA-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../homestyle.css">
+
+</head>
+
+
+<body>
+<!-- begin banner -->
+<!--#include virtual="../banner.html" -->
+<!-- end banner -->
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+<tbody><tr>
+
+<!-- begin left navigation -->
+<!--#include virtual="FM_AERO_panel.html" -->
+<!-- begin content area -->
+<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<!-- 5. PAGE TITLE -->
+<tr><td colspan="3" id="content"><h2><font color="#000000">
+AERE/COMS 407/507</font><br>
+Applied Formal Methods
+
+</td></tr>
+<tr><td class="content-sub"><p>
+
+
+<!-- Actual Content -->
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Course Summary</span></h3></div>
+
+<p>
+  In this course you will be introduced to best practices for the application of formal methods, a set of mathematically rigourous techniques for the formal specification, validation, and verification of safety- and security-critical cyberphysical systems, of which aircraft and spacecraft are the prime example. We will explore the tools, techniques, and applications of formal methods, focusing on the aerospace domain.
+
+  We will examine the latest research to gain an understanding of the current state of the art, including the capabilities and limitations of applying formal methods for systems analysis. Students will leave with a better understanding of real-world system specification, design, and verification, including why the <A HREF="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management/ss_handbook/media/app_d_1200.pdf"> FAA specifically calls out formal methods</A> in certification requirements such as DO-178B, DO-178C, and DO-254, and why modern security teams from <A HREF="https://www.darpa.mil/program/high-assurance-cyber-military-systems">DARPA</A> to <A HREF="https://aws.amazon.com/security/provable-security/">AWS</A> require formal methods for <b><font color="purple"><span title="Both security *of* the cloud and *in* the cloud (e.g., airplanes)!">cloud security</span></font></b>. 
+
+<p>This course is intended to be a fun, interactive introduction to applying
+formal analysis in the context of real-world systems.  Hands-on learning, through the use of software tools
+in homeworks and projects, will be emphasized. <b>We will learn the real tools used at NASA, Boeing, Collins Aerospace, Honeywell, Airbus, Amazon, and others.</b>  Students from all
+areas of aerospace engineering, electrical and computer engineering, computer science,
+cybersecurity, mathematics, and other engineering disciplines, are
+encouraged to enroll. It is registered in the international <A HREF="https://fme-teaching.github.io/courses/">FME Education Course Database</A>.
+</p>
+
+
+    <p><A href="FM2025-syllabus.pdf">Course Syllabus</A></p>
+
+    <!--2020
+    <p><A href="https://docs.google.com/spreadsheets/d/10QegoOU8Iy24VlwcBkQKFgFbrwWLwIUC83jGIbUuirg/edit?usp=sharing">2020 Face-to-face attendance schedule</A></p>
+
+    <p><A href="https://docs.google.com/spreadsheets/d/1BV2CLpSUEFvr-jgzId3NcmyhnxREsRRiu9AJhcCD858/edit?usp=sharing">2020 Paper Presentation Links</A></p>
+
+    <p><A href="https://drive.google.com/drive/folders/1XeNg5IONDGrwfjVI-gC7kNMIouE4SToO?usp=sharing">2020 Paper Presentation Folder</A></p>
+-->
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Prerequisites</span></h3></div>
+
+<p>
+The prerequisite is mathematical maturity: Calculus II plus familiarity with discrete mathematics (or ability to learn them quickly from review material made available in the course). This prerequisite take the form of a disjunction; one of the following is required: AERE 361, COMS 311, or permission of the instructor (e.g., for students in other departments). Registering for 407 <I>always</I> requires instructor permission. 
+</p>
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Tools</span></h3></div>
+
+<p>
+<table>
+<tr>
+<td>
+<A HREF="http://spinroot.com/">
+<img src="./spinlogo2.gif" style="max-height:100px"></A>
+</td>
+<td>
+<b>Spin Model Checker</b> <br>  <BR>
+<A HREF="http://spinroot.com/">http://spinroot.com/</A><BR>
+Books: <A HREF="http://spinroot.com/spin/books.html">http://spinroot.com/spin/books.html</A>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="https://spot.lrde.epita.fr/">
+<!--<img src="https://spot.lrde.epita.fr/spot2-2018081121.svg" -->
+<!--<img src="https://spot.lrde.epita.fr/spot2-2020031312.svg" -->
+<!--<img src="https://spot.lrde.epita.fr/spot2-2020072109.svg" -->
+<img src ="./spot2-2026042522.svg" 
+style="max-height:100px"></A>
+</td>
+<td>
+<b>SPOT Produces Our Traces</b> <br> <BR>
+<A HREF="https://spot.lrde.epita.fr/">https://spot.lrde.epita.fr/</A><BR>
+More generally, <A HREF="https://www.jflap.org/">JFLAP</A>  <A HREF="https://automatonsimulator.com/#%7B%22type%22%3A%22PDA%22%2C%22pda%22%3A%7B%22transitions%22%3A%7B%22start%22%3A%7B%22%22%3A%7B%22%22%3A%5B%7B%22state%22%3A%22s0%22%2C%22stackPushChars%22%3A%22aaa%24%22%7D%5D%7D%7D%2C%22s0%22%3A%7B%22a%22%3A%7B%22a%22%3A%5B%7B%22state%22%3A%22s0%22%2C%22stackPushChars%22%3A%22%22%7D%5D%7D%2C%22%22%3A%7B%22a%22%3A%5B%7B%22state%22%3A%22s1%22%2C%22stackPushChars%22%3A%22%22%7D%5D%2C%22%24%22%3A%5B%7B%22state%22%3A%22s1%22%2C%22stackPushChars%22%3A%22%24%22%7D%5D%7D%7D%2C%22s1%22%3A%7B%22%22%3A%7B%22a%22%3A%5B%7B%22state%22%3A%22s1%22%2C%22stackPushChars%22%3A%22%22%7D%5D%7D%2C%22b%22%3A%7B%22%24%22%3A%5B%7B%22state%22%3A%22s2%22%2C%22stackPushChars%22%3A%22%22%7D%5D%7D%7D%2C%22s2%22%3A%7B%22a%22%3A%7B%22%22%3A%5B%7B%22state%22%3A%22s2%22%2C%22stackPushChars%22%3A%22%22%7D%5D%7D%2C%22b%22%3A%7B%22%22%3A%5B%7B%22state%22%3A%22s2%22%2C%22stackPushChars%22%3A%22%22%7D%5D%7D%7D%7D%2C%22startState%22%3A%22start%22%2C%22acceptStates%22%3A%5B%22s2%22%5D%7D%2C%22states%22%3A%7B%22start%22%3A%7B%7D%2C%22s0%22%3A%7B%22top%22%3A233%2C%22left%22%3A212%2C%22displayId%22%3A%22s0%22%7D%2C%22s1%22%3A%7B%22top%22%3A391%2C%22left%22%3A263%2C%22displayId%22%3A%22s1%22%7D%2C%22s2%22%3A%7B%22isAccept%22%3Atrue%2C%22top%22%3A372%2C%22left%22%3A521%2C%22displayId%22%3A%22s2%22%7D%7D%2C%22transitions%22%3A%5B%7B%22stateA%22%3A%22start%22%2C%22label%22%3A%22%CF%B5%2C%CF%B5%2Caaa%24%22%2C%22stateB%22%3A%22s0%22%7D%2C%7B%22stateA%22%3A%22s0%22%2C%22label%22%3A%22a%2Ca%2C%CF%B5%22%2C%22stateB%22%3A%22s0%22%7D%2C%7B%22stateA%22%3A%22s0%22%2C%22label%22%3A%22%CF%B5%2Ca%2C%CF%B5%22%2C%22stateB%22%3A%22s1%22%7D%2C%7B%22stateA%22%3A%22s0%22%2C%22label%22%3A%22%CF%B5%2C%24%2C%24%22%2C%22stateB%22%3A%22s1%22%7D%2C%7B%22stateA%22%3A%22s1%22%2C%22label%22%3A%22%CF%B5%2Ca%2C%CF%B5%22%2C%22stateB%22%3A%22s1%22%7D%2C%7B%22stateA%22%3A%22s1%22%2C%22label%22%3A%22b%2C%24%2C%CF%B5%22%2C%22stateB%22%3A%22s2%22%7D%2C%7B%22stateA%22%3A%22s2%22%2C%22label%22%3A%22a%2C%CF%B5%2C%CF%B5%22%2C%22stateB%22%3A%22s2%22%7D%2C%7B%22stateA%22%3A%22s2%22%2C%22label%22%3A%22b%2C%CF%B5%2C%CF%B5%22%2C%22stateB%22%3A%22s2%22%7D%5D%2C%22bulkTests%22%3A%7B%22accept%22%3A%22b%5Cnab%5Cnaab%5Cnaaab%5Cnabb%5Cnba%5Cnbb%5Cnbaab%22%2C%22reject%22%3A%22%5Cna%5Cnaa%5Cnaaaab%5Cnaaaaaaa%5Cnaaaabbbb%5Cnaaaabaaab%22%7D%7D">simulates automata</A>
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+<A HREF="https://es-static.fbk.eu/tools/nuxmv/">
+<img src="./NuXMV.png" style="max-height:100px"></A>
+</td>
+<td>
+<b>nuXmv Model Checker</b>  <BR>
+<A HREF="https://es-static.fbk.eu/tools/nuxmv/">https://es-static.fbk.eu/tools/nuxmv/</A>
+<BR> In addition to the manuals, see the <A HREF="http://temporallogic.org/courses/AppliedFormalMethods/nuXmvIntroSlides.pdf">Introduction Slides</A>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="https://isabelle.in.tum.de/">
+<img src="./isabelle_logo.gif" style="max-height:100px"></A>
+</td>
+<td>
+<b>Isabelle Theorem Prover</b> <BR>
+<A HREF="https://isabelle.in.tum.de/">https://isabelle.in.tum.de/</A> <BR>
+Also: <A HREF="http://talisker.inf.kcl.ac.uk/cgi-bin/repos.cgi/isabelle-cookbook/raw-file/tip/progtutorial.pdf">The Isabelle Cookbook</A> <!-- Also:   https://nms.kcl.ac.uk/christian.urban/Cookbook/ -->
+and <A HREF="https://nms.kcl.ac.uk/christian.urban/Cookbook/">Guide for Beginners</A>; See also <A HREF="https://www.isa-afp.org/entries/LTL.html">Linear Temporal Logic</A>, 
+  and <A HREF="./DefiningAndUsingDeductiveSystemsWithIsabelle.pdf">Propositional and Modal Logic in Isabelle</A> (also <A HREF="https://www.isa-afp.org/entries/Modal_Logics_for_NTS.html">Modal Logics for Nominal Transition Systems</A>), 
+and <A HREF="https://plato.stanford.edu/entries/logic-hybrid/">Hybrid Logics</A> like <A HREF="https://www.isa-afp.org/entries/Epistemic_Logic.html">Epistemic Logic</A>, <A HREF="https://www.isa-afp.org/entries/Adaptive_State_Counting.html">State Counting/Reduction</A> <BR>
+Functional Programming is helpful for understanding Isabelle; some reviews are <A HREF="./AnIntroductionToFunctionalProgramming.pdf">here</A> and <A HREF="./ABeginnerFriendlyIntroToFunctionalProgramming.pdf">here</A>
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+<A HREF="http://pvs.csl.sri.com/">
+<img src="./pvslogo-icon.gif" style="max-height:100px"></A>
+</td>
+<td>
+<b>PVS Theorem Prover</b> <BR>
+<A HREF="http://pvs.csl.sri.com/">http://pvs.csl.sri.com/</A> <BR>
+NASA PVS Library (NASALib) v7.1 (<A HREF="https://github.com/nasa/pvslib">https://github.com/nasa/pvslib)</A><BR>
+NASA PVS VSCode GUI (<A HREF="https://github.com/nasa/vscode-pvs">https://github.com/nasa/vscode-pvs</A>)<BR>
+30+ years of theorem proving at NASA: <A HREF="https://shemesh.larc.nasa.gov/fm/pvs/">https://shemesh.larc.nasa.gov/fm/pvs/</A>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="http://www.prismmodelchecker.org/">
+<img src="./p_blue.png" style="max-height:100px"></A>
+</td>
+<td>
+<b>PRISM Model Checker</b> <BR>
+<A HREF="http://www.prismmodelchecker.org/">http://www.prismmodelchecker.org/</A>
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="https://r2u2.temporallogic.org/">
+<img src="./R2U2-logo.png" style="max-height:100px"></A>
+</td>
+<td>
+<b>Responsive Realizable Unobtrusive Unit (R2U2)</b> <BR>
+<A HREF="https://r2u2.temporallogic.org/">https://r2u2.temporallogic.org/</A>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<A HREF="https://www.microsoft.com/en-us/research/project/dafny-a-language-and-program-verifier-for-functional-correctness/">
+<img src="dafny-logo_sm-300x249.jpg" style="max-height:100px"></A>
+</td>
+<td>
+<b>Dafny Language and Program Verifier</b> <BR>
+<A HREF="http://rise4fun.com/dafny/">http://rise4fun.com/dafny/</A><BR>
+<A HREF="https://github.com/dafny-lang/dafny">https://github.com/dafny-lang/dafny</A><BR>
+Note that Dafny has many popular video tutorials!
+</td>
+</tr>
+
+
+<tr>
+<td>
+<A HREF="http://research.microsoft.com/en-us/um/redmond/projects/z3/">
+<img src="z3.png" style="max-height:100px"></A>
+</td>
+<td>
+<b>Z3 SMT Solver</b> <BR>
+<A HREF="https://github.com/Z3Prover/z3">https://github.com/Z3Prover/z3<BR>
+See also: <A HREF="https://research.temporallogic.org/papers/SMT-SomethingYouMustTry.pdf">SMT: Something You Must Try</A></A>
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="http://www.cprover.org/cbmc/">
+<img src="cbmc-about-cbmc.png" style="max-height:100px"></A>
+</td>
+<td>
+<b>CBMC (Bounded Model Checker for C programs)</b> <BR>
+<A HREF="http://www.cprover.org/cbmc/">http://www.cprover.org/cbmc/</A><BR>
+Tip: CBMC has little support for C++; use for C only. Use CBMC for "unit proof" starting from the leaves of the call tree and working toward the root call; see Amazon's strategy here: <A HREF="https://nchong.github.io/papers/icse-seip20.pdf">https://nchong.github.io/papers/icse-seip20.pdf</A>
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="https://coq.inria.fr/">
+<img src="coq_logo.svg" style="max-height:100px"></A>
+</td>
+<td>
+<b> Coq Proof Assistant</b><BR>
+<A HREF="https://coq.inria.fr/">https://coq.inria.fr/</A><BR>
+<A HREF="http://adam.chlipala.net/frap/">Book: Formal Reasoning About Programs</A>
+</td>
+</tr>
+
+<tr>
+<td colspan="2"><hr/></td>
+</tr>
+
+
+
+<tr>
+<td>
+<!--<A HREF="https://sv-comp.sosy-lab.org/2022/">
+<!--<img src="coq_logo.png" style="max-height:100px"></A>-->
+</td>
+<td>
+<b> Software Model Checking</b><BR>
+<A HREF="https://sv-comp.sosy-lab.org/2022/">Competition on Software Verification (SV-COMP)</A><BR>
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="http://fmv.jku.at/hwmcc20/">                                                                             
+<img src="http://fmv.jku.at/hwmcc20/hwmcc.png" style="max-height:100px"></A>
+</td>
+<td>
+<b> Hardware Model Checking</b><BR>
+<A HREF="http://fmv.jku.at/hwmcc20/">HardWare Model Checking Competition (HWMCC)</A><BR>
+</td>
+</tr>
+
+
+<!--
+<tr>
+<td colspan="2"><hr/></td>
+</tr>
+-->
+
+<tr>
+<td>
+<!--<A HREF="https://coq.inria.fr/">
+<img src="coq_logo.svg" style="max-height:100px"></A> -->
+</td>
+<td>
+<b> Static Analysis</b><BR>
+<A HREF="https://orange.hosting.lsoft.com/trk/click?ref=znwrbbrs9_6-2d0e7x32e44cx032703&">Static Analysis: An Introduction</A><BR>
+</td>
+</tr>
+
+<HR>
+
+
+<tr>
+<td>
+<A HREF="https://tptp.org/CASC/">
+<!--<img src="https://tptp.org/CASC/CASC.png" style="max-height:100px"></A> -->
+<img src="CASC.png" style="max-height:100px"></A>
+</td>
+<td>
+<b> ATP (Automated Theorem Proving)</b><BR>
+<A HREF="https://tptp.org/CASC/">The CADE ATP System Competition: The World Championship for Automated Theorem Proving</A><BR>
+</td>
+</tr>
+
+
+
+</table>
+</p>
+
+<BR>
+
+<HR>
+<!--
+<B> You may either install these tools on your local machine or run them on ISU's remote linux servers.</B> If you do not have access contact solution@iastate.edu, your local IT specialist (e.g., Jim Wellman), or the professor. 
+<UL>
+  <li> There are <A HREF="https://it.engineering.iastate.edu/linux-remote-servers/">COE servers</A> and <A HREF="https://it.engineering.iastate.edu/remote-aere-linux-servers/">AERE servers</A>. The tools can be run via a remote desktop connection (e.g., ssh -Y -X) to linuxremote1.engineering.iastate.edu thru linuxremote5.engineering.iastate.edu.  There are also two aerospace linux servers that tend to have more free cycles: linuxremote-1.aere.iastate.edu and linuxremote-2.aere.iastate.edu. </li>
+  <li> You must be on-campus or connected to the VPN from off-campus to reach these systems.
+  <li> Formal methods tools, plus git and LaTeX, should be already installed/easy to install on the linux remote servers. For example, 'spin' and 'ispin' run from the command line. These applications are installed in /opt/Spin.  All of the examples, documentation, etc. can be found there. PVS and nuXmv are also available on the linux remote servers.</li>
+</UL>
+-->
+<b>Do not struggle with tool installation on your own machine!</b> If you are running linux, these tools should all install easily, but if not, use the provided virtal machines. There is no credit for time spent trying to install a tool. To access tools like spin, you will need to vpn in from off campus and then ssh -X username@aere407.ece.iastate.edu.  This works from a command line (e.g., in linux), or from mobaXterm in windows. All software (e.g., Isabelle and nuXmv) is installed in /usr/local/packagename, except for spin and ispin, which are in /usr/local/bin. The GUI ispin is invoked by running "ispin.tcl" from the command line. Elizabeth Sloan wrote excellent advice for <A HREF="./InstallingSpin2024-09-09.html">installing spin</A>. Nathan Vaughn also wrote a blog post about <a href="https://blog.nathanv.me/posts/spin-windows/">how to get ispin working with windows</A>. Zili Wang wrote	excellent advice for <A	HREF="./InstallingIsabelle.html">installing Isabelle</A>. If you insist on running a formal methods tool in an operating system that is not linux, you can try using <A HREF="
+https://gitlab.com/sosy-lab/software/fm-weck">this fm-weck formal methods tool container</A>; do this at your own risk!
+
+</p>
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Exam Dates (estimated)</span></h3></div>
+
+<p>
+<B>Midterm</B>: 10/28 <BR> <!--10/18; 10/29/2019; 10/20/2020; 10/26/2021; 10/19/2023; 10/23/2024
+-- Review for midterm on 10/16; send any questions for review to the professor by 10/15 at the latest <BR> -->
+<BR>
+<B>Final Project</B>: (in lieu of final exam)
+<table>
+ <tr>
+    <td>
+      Project Requirements: 
+    </td>
+    <td>
+     <A HREF="FM_Project_Deliverables.pdf">HERE</A>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Final Project GitHub classroom link:
+    </td>
+    <td>
+      <!-- github broke this link? <A HREF="https://classroom.github.com/g/4dsKkzj3">HERE</A> -->
+      <A HREF="https://classroom.github.com/a/a4JZMixY">HERE</A>
+     </td>
+  </tr>
+  <tr>
+    <td>
+      Project Proposal:
+    </td>
+    <td>
+      10/24
+      <!-- 10/31/2019; 10/22/2020; 10/28/2021; 10/26/2023; 10/25/2024 -->
+    </td>
+  </TR>
+  <tr>
+    <td>
+      Project Midterm Report:
+    </td>
+    <td>
+      11/11 or 11/13 <font color="#FF0000"><b>Give short mid-term presentations on this day!</b></font>
+      <!-- 2019: 11/19 (or 11/14) <font color="#FF0000"><b>Give short mid-term presentations on this day!</b></font> -->
+      <!-- 2021: 11/5 or 11/10; 2024: 11/12 or 11/19 -->
+    </td>
+  </TR>
+  <TR>
+    <td>
+      Project Presentations:
+    </td>
+    <td>
+      12/9:
+      <!-- 2019: 12/10: 12/7/2021 -->
+      <BR>
+<!--    </td>
+    <td>
+--> 
+     12/11:
+      <!-- 2019: 12/12: 12/9/2021-->
+<BR>
+<!--    </td>
+    <td>
+--> 
+     12/17: 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Friday Progress Reports Due: 
+    </td>
+    <td>
+      10/31, 11/7, 11/14, 11/21, 11/28 (optional), 12/5, 12/12
+      <!-- 2021:       11/12, 11/19, 11/26 (optional), 12/3, 12/10 -->
+      <!-- 2020: 10/30, 11/6, 11/13, 11/20 -->
+      <!-- 2019: 11/8, 11/15, 11/22, 11/29 (optional), 12/6 -->
+      <!-- 2024:       11/1, 11/8, 11/15, 11/22, 11/29 (optional), 12/6, 12/13 -->
+    </td>
+  </tr>
+  <TR>
+    <td>
+      Final Report:
+    </td>
+    <td>
+      <!-- 2023: --> During exam period (9:45am-11:45am on Wednesday, 12/17)
+      <!-- 2021: During exam period (9:45am-11:45am on Monday, 12/13); same in 2023 -->
+      <!-- 2019: During exam period (9:45am-11:45am on Thursday, 12/19) -->
+    </td>
+</TR>
+</table>
+</p>
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Assignment Deadlines</span></h3></div>
+
+<p> 
+  Homework 0 due 8/28
+  <!-- 8/29/2019; 8/20/2020; 8/26/2021, 8/24/2023; 8/29/2024 -->
+</p>
+
+<p>
+  Homework 1 due 9/4
+  <!-- 9/5/2019; 8/27/2020; 9/2/2021, 8/31/2023 -->
+</p>
+
+<p>
+  Homework 2 due 9/16
+  <!-- 9/17/2019; 9/8/2020; 9/14/2021, 9/12/2023 -->
+</p>
+
+<p>
+  Homework 3 due 10/2
+  <!-- 10/3/2019 <!-- extended from 9/25; everything extended after this!
+9/24/2020; 9/30/2021, 9/28/2023-->
+</p>
+
+<p>
+  Homework 4 due 10/14
+  <!-- 10/10/2019; 10/1/2020; 10/7/2021, 10/5 but moved to 10/10/2023 -->
+</p>
+
+<p>
+  Homework 5 due 10/23 <!-- 10/12 -->
+  <!-- 10/17/2019; 10/8/2020; 10/14/2021, 10/17/2023; -->
+</p>
+
+    <p>
+<!--      Update: There will be a total of 5 homeworks. There is no Homework 6. -->
+<!--  Homework 6 due 10/23 -->
+  <!-- 10/24/2019; 10/15/2020; 10/21/2021; orig 10/19/2023 but canceled -->
+</p>
+
+<p>
+  Choice of research paper for in-class presentation due 10/21
+  <!-- 10/22/2019; 10/13/2020; 10/19/2021; 10/17/2023; 10/22/2024 -->
+</p>
+
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Reading/Homeworks</span></h3></div>
+
+<p> 
+  Homework 0 (Review of Version Control and LaTeX primer): distributed 8/26 from
+  <!-- 8/26/2019; 8/18/2020; 8/24/2021, 8/22/2023 8/26/2024-->
+<!--LATEST: <a href="https://classroom.github.com/a/trEQ_5-s"> -->
+<!--<a href="https://classroom.github.com/a/fb7cM3fJ"> -->
+<!--<a href="https://classroom.github.com/assignment-invitations/e6055aa750a6a5ef9c76def2fb8905c8"> -->
+CANVAS</A>
+<!--<ul>
+<li> Re-grades for Homework 0 due on 8/24 via the same link. 
+</ul>
+</p>-->
+
+<p> Note: if you want a deeper understanding of git, there are many <A HREF="https://www.coursera.org/learn/version-control-with-git">online courses</A>.</p>
+
+<p>
+  Homework 1 (Propositional Logic Review): distributed 8/28 from
+  <!-- 8/29/2019; 8/20/2020; 8/26/2021; 8/24/2023 -->
+  <!--<A HREF="https://classroom.github.com/a/l5U0be5G">HERE</a>-->
+<!--<A HREF="https://classroom.github.com/a/P2ud1W-z">HERE</A>--> CANVAS
+  <ul>
+<li> Here is a handy condensed list of definitions <a href="./PropositionalLogic_Appendix.pdf">here</a>.
+</ul>
+</p>
+
+<p>
+  Homework 2 (Temporal Logic): distributed 8/30 from
+  <!-- 9/5/2019; 8/27/2020; 9/2/2021; 8/31/2023 -->
+<!--<A HREF="https://classroom.github.com/a/5ogtYvs_">HERE</A>-->
+<!--<A HREF="https://classroom.github.com/a/mBu0PLc2">HERE</A>--> CANVAS
+</p>
+
+
+<p>
+  Homework 3: distributed 9/11 from
+<!--<A HREF="https://classroom.github.com/a/5J73j7MW">HERE</A>-->
+  <!-- 9/17/2019; 9/8/020; 9/14/2021; 9/12/2023 -->
+<!--<A HREF="https://classroom.github.com/a/5J73j7MW">HERE</A>-->
+<!--<A HREF="https://classroom.github.com/a/3oWkXHnf">HERE</A>-->CANVAS
+</p>
+
+<p>
+  Homework 4: distributed 10/2. Submit
+  <!-- 10/3/2019; 9/24/2020; 9/30/2021; 9/28/2023 -->
+<!--<A HREF="https://classroom.github.com/a/Mzy22ncZ">HERE</A> -->
+  <!--<A HREF="https://classroom.github.com/a/wCSz1KUd">-->
+<!--    <A HREF="https://classroom.github.com/a/DaHGL80x">HERE</A> <!--</A>--> CANVAS
+<ul>
+<li> <A HREF="./ProvingTheoremsWithComputers.pdf">Proving Theorems With Computers</a>
+</ul>
+
+</p>
+
+<p>
+  Homework 5: distributed 10/14 <!--10/5. Submit -->
+  <!-- 10/10/2019; 10/1/2020; 10/7/2021; 10/10/2023 -->
+  <!--<A HREF="https://classroom.github.com/a/cFr1l2nh">HERE</A>-->
+<!--  <A HREF="https://classroom.github.com/a/hAGlUPGb">HERE</A> -->
+<!--<A HREF="https://classroom.github.com/a/qZFKhgjR">HERE</A>-->
+<!--<A HREF="https://classroom.github.com/a/XFg63s_q">HERE</A>-->CANVAS
+  <!--
+<ul>
+<li> <A HREF="./ProvingTheoremsWithComputers.pdf">Proving Theorems With Computers</a>
+</ul> -->
+</p>
+
+<!--
+<p>
+  Homework 6: distributed 10/12. Submit
+  <!-- 10/17/2019; 10/8/2020; 10/14/2021; 10/12/2023 but moved -->
+  <!--  <A HREF="https://classroom.github.com/a/XsuFwsT4">HERE</A>  -->
+<!--  HERE
+<!--  <A HREF="https://classroom.github.com/a/87guVR6R">HERE</A> -->
+<!--</p>
+-->
+
+<HR>
+
+<p>
+  Choice of research paper for presention due via email: <b>10/21</b> <BR>
+  <b>You may not choose a paper authored by the professor.</B>
+  <!-- 10/22/2019; 10/13/2020; 10/19/2021; 10/17/2023 -->
+</p>
+
+<p>
+Professor evaluation form for in-class presentations is available <A HREF="ProfessorPresentationEvaluationForm.pdf">HERE</A><BR>
+
+Student evaluation form for in-class presentations is available <A HREF="StudentPresentationEvaluationForm.pdf">HERE</A><BR>
+</p>
+
+
+    <p>
+      Here is some great advice on <a HREF="https://freuder.wordpress.com/presentation-advice/"><I>How to Give a Good Research Presentation</I></A>.<BR>
+      Remember to specifically address <A HREF="http://research.kristinrozier.com/papers/RozierRozierEthics2014.pdf">Reproducibility, Correctness, and Buildability</A>. Here is some inspiration on past <A HREF="http://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html">reproducibility challenges</A>.
+</p>
+
+
+<p>
+Here is some great advice on <a HREF="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf"><I>How to Read a Paper</I></a> (there is also advice on <a HREF="https://edgeforscholars.org/one-minute-writing-roundup/">how to write papers</A> and <a HREF="https://www.springernature.com/gp/authors/campaigns/how-to-peer-review">how to peer review papers</A>)</a>.
+
+<p>
+<B>Paper Presentation Schedule:</B><BR>
+Each presentation should be approximately 30 minutes, including time for questions.<BR>
+<table>
+<tr><td>10/28</td><td> Midterm Examination</td></tr>
+<tr><td>10/30</td><td> Henry & Guest </td></tr>
+<tr><td>11/ 4</td><td> Shim & Omar </td></tr>
+<tr><td>11/ 6</td><td> Special Feature: "Human Considerations in Applied Formal Methods" </td></tr>
+<tr><td>11/11</td><td> Midterm project report presentations</td></tr>
+<tr><td>11/13</td><td> Midterm project report presentations</td></tr>
+<!--<tr><td>11/16</td><td>Midterm project report presentations</td></tr> -->
+<tr><td>11/18</td><td> Yufei & Roy  </td></tr>
+<tr><td>11/20</td><td> Walker  & Chris  </td></tr>
+<tr><td>12/ 2</td><td> Tushar  &  Ridma </td></tr>
+<tr><td>12/ 4</td><td> Katherine  & Tagba  </td></tr>
+<tr><td>12/ 9</td><td> Final project report presentations </td></tr>
+<tr><td>12/11</td><td> Final project report presentations</td></tr>
+<!--<tr><td>12/9</td><td>Final project report presentations</td></tr> -->
+<tr><td>12/17</td><td>(during final exam period) Final project report presentations</td></tr>
+</table>
+<!--
+OLD:
+<table>
+<tr><td>10/24</td><td> Midterm Examination</td></tr>
+<tr><td>10/29</td><td>  Declan & Jae  </td></tr>
+<tr><td>10/31</td><td>  Aiden & Atie  </td></tr>
+<tr><td>11/ 5</td><td>  John & Mike  </td></tr>
+<tr><td>11/ 7</td><td>  Christopher & Jared  </td></tr>
+<tr><td>11/12</td><td>Midterm project report presentations</td></tr>
+<tr><td>11/14</td><td>Special Guest Lecture by <A HREF="https://users.cs.utah.edu/~blg/">Prof. Ben Greenman</A>! </td></tr>
+<!--<tr><td>11/16</td><td>Midterm project report presentations</td></tr> -->
+<!--
+<tr><td>11/19</td><td>  Midterm project report presentations</td></tr>
+<tr><td>11/21</td><td>  Erik & Dara  </td></tr>
+<tr><td>12/ 3</td><td>  James & Ethan  </td></tr>
+<tr><td>12/ 5</td><td>  Chandeepa & Omar & Lillian </td></tr>
+<tr><td>12/10</td><td> Final project report presentations </td></tr>
+<tr><td>12/12</td><td>Final project report presentations</td></tr>
+<!--<tr><td>12/9</td><td>Final project report presentations</td></tr> -->
+<!--
+<tr><td>12/18</td><td>(during final exam period) Final project report presentations</td></tr>
+</table>
+<!-- 2019
+  <tr><td>10/29</td><td> Midterm Examination</td></tr>
+<tr><td>10/31</td><td> Guest Lecture: Dr. Yogananda Jeppu, Honeywell, India </td></tr>
+<tr><td>11/5</td><td> Evan & Zachary </td></tr>
+<tr><td>11/7</td><td> Spencer & Yen-Chen </td></tr>
+<tr><td>11/12</td><td> Kate & Esther </td></tr>
+<tr><td>11/14</td><td>Midterm project report presentations</td></tr>
+<tr><td>11/19</td><td>Midterm project report presentations</td></tr>
+<!--<tr><td>11/13</td><td>? </td></tr>
+    <tr><td>11/15</td><td>? </td></tr> -->
+<!--
+<tr><td>11/21</td><td> Guest Lecture: Dr. Borzoo Bonakdarpour, ISU </td></tr>
+<tr><td>12/3</td><td> Ben </td></tr>
+<tr><td>12/5</td><td> Matt & Megan </td></tr>
+<tr><td>12/10</td><td>Final project report presentations</td></tr>
+<tr><td>12/12</td><td>Final project report presentations</td></tr>
+-->
+<!--</table> -->
+</p>
+
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Optional Textbooks</span></h3></div>
+
+
+<p>
+<table>
+<tr>
+<td>
+<A HREF="https://www.amazon.com/Introduction-Practical-Formal-Methods-Temporal-ebook/dp/B005E8AID2/ref=sr_1_1?ie=UTF8&qid=1483648485&sr=8-1&keywords=practical+formal+methods+using+temporal+logic]">
+<img src="./PracticalFormalMethods.jpg" style="max-height:240px">
+</A>
+
+</td>
+<td>
+
+<b>Use this for:</b>
+<UL>
+<li> good background on LTL: well-formed formulas, semantics, encoding English sentences, expressivity, normal forms, relationship to automata
+<li> reactive system properties: safety, liveness, fairness
+<li> specification and modeling of real systems
+<li> deciding the truth of a temporal formula; related proof techniques including explicit model checking
+<li> thorough chapter on Spin, including how to run it from the command line and a good Promela tutorial
+<li> review of classical and propositional logic
+<li> extensions including synthesizing software from specifications
+</UL>
+
+<b>Be cautious that:</b>
+<UL>
+<li> LTL is instead called PTL in this book; that is non-standard
+<li> LTL2BA is not the best tool; SPOT is far superior now: <a href="https://spot.lrde.epita.fr/">https://spot.lrde.epita.fr/</A>
+<li> URLs provided are outdated (no longer active or superseded by the state of the art)
+<li> Spin chapter refers to outdated xspin (though only briefly)
+</UL>
+
+</td>
+</tr>
+</td>
+</table>
+
+<hr>
+
+<table>
+<tr>
+<td>
+<A HREF="https://www.amazon.com/Systems-Software-Verification-Model-Checking-Techniques/dp/3642074782/ref=sr_1_2?ie=UTF8&qid=1476916752&sr=8-2&keywords=system+and+software+verification">
+<img src="./SystemsAndSoftwareVerification.jpg" style="max-height:240px">
+</A>
+</td>
+
+<td>
+<b>Use this for:</b>
+<UL>
+<li> supplemental material on temporal logics (LTL, CTL, CTL*)
+<li> background on automata as system models
+<li> review of explicit and symbolic model checking
+<li> reachability, safety, liveness, deadlock-freeness, fairness
+<li> overview of modeling abstraction methods
+<li> out-of-date chapters on SPIN and SMV still have useful reviews of basic tool usage
+<li> ideas for related formal methods, including timed automata models, additional tools
+</UL>
+
+<b>Be cautious that:</b>
+<UL>
+<li> <i>This book is extremely out of date!</i>
+<li> LTL is the proper name for Linear Temporal Logic (book calls it PLTL)
+<li> comparisons of LTL vs CTL/CTL* have been changed/been disproved
+<li> SMV version described is no longer available; current tool is nuXmv
+<li> Spin version described has been updated (xspin vs ispin)
+</UL>
+</td>
+</tr>
+</table>
+</p>
+
+<hr>
+
+<table>
+<tr>
+<td>
+<A HREF="https://link.springer.com/book/10.1007/978-3-031-30167-4">
+<img src="./ConciseGuideToSoftwareVerification.jpg" style="max-height:240px">
+</A>
+</td>
+
+<td>
+<b>Use this for:</b>
+<UL>
+<li> supplemental material on software verification
+<li> guide to how to choose an appropriate varification technique
+<li> review of LTL and CTL model checking <i>of software</i> using SPIN and NuSMV
+<li> background on annotation checking
+</UL>
+
+<b>Be cautious that:</b>
+<UL>
+<li> <i>Formal methods for the analysis of hardware are not in the scope of this book!</i>
+</UL>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">LaTeX Resources</span></h3></div>
+
+<p>
+<UL>
+<li> <A HREF="../LaTeXsymbolsguide.pdf">LaTeX Symbols Guide</A>: The ultimate symbol list! And the <a href="http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf">2021 Edition</A>
+<li> <A HREF="https://en.wikibooks.org/wiki/LaTeX">LaTeX Wikibook</A>: Good general purpose reference manual
+<li> <A HREF="http://www.logicmatters.net/latex-for-logicians/">LaTeX for Logicians</A>: Symbols of logic and proofs!
+<li> <A HREF="http://detexify.kirelabs.org/classify.html">Detexify</A>: Draw your symbol!
+   <li> <A HREF="https://www.tablesgenerator.com/">LaTeX Table Generator</A>: Automatically generate LaTeX tables!
+<li> <A HREF="http://mirror.utexas.edu/ctan/info/latexcheat/latexcheat/latexsheet.pdf">LaTeX Cheat Sheet</A>: All the basics on one (two-sided) page!
+</UL>
+</p>
+
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Awesome Applications</span></h3></div>
+<p>
+  <UL>
+    <!--    <li> <A HREF=""> </A> </li> -->
+    <li> <A HREF="https://shemesh.larc.nasa.gov/fm/DO-333-case-studies.html">Beginner's guide and DO-333 Case Studies from NASA Langley!</A> </li>
+    <li> <A HREF="https://www.darpa.mil/program/high-assurance-cyber-military-systems">High-Assurance Cyber Military Systems (HACMS)</A> </li>
+    <li> <A HREF="https://aws.amazon.com/security/provable-security/">Provable Security</A> (and a <A HREF="https://aws.amazon.com/blogs/security/tag/automated-reasoning/">blog</A> too!)</li>
+    <li> <A HREF="http://verifiablerobotics.com/">Verifiable Robotics</A> </li>
+    <li> <A HREF="https://www.prismmodelchecker.org/casestudies/">PRISM Case Studies</A> </li>
+    <li> <A HREF="http://loonwerks.com/">Collins Aerospace Trusted Systems</A> </li>
+    <li> <A HREF="https://galois.com/research-development/software-correctness/">Software Correctness</A> </li>
+<li> <A HREF="pseuCo.com">pseuCo.com</A>: an entirely-online Java-to-Labeled Transition System generator!
+<li> <A HREF="https://qracorp.com/formal-methods-engineering-embedded-systems/">Engineering Embedded Systems</A> </li>
+<li> <A HREF="https://m-cacm.acm.org/magazines/2018/10/231372-formally-verified-software-in-the-real-world/fulltext?mobile=true">Formally Verified Software in the Real World (and on-board Boeing's Unmanned Little Bird)</A> </li>
+<li> <A HREF="https://pdfs.semanticscholar.org/1379/5208a53cf54f2384775111ad1231aff4a5fd.pdf">Trusted Autonomy in Air Force Flight Critical Systems</A> </li>
+<li> <A HREF="https://www.isa-afp.org/entries/IMO2019.html">International Mathematical Olympiad 2019</A> </li>
+<li> <A HREF="http://www.tptp.org">TPTP  (Thousands  of Problems  for Theorem  Provers)</A></li>
+<li> <A HREF="http://logipedia.inria.fr/about/about.php">Library of Proofs</A>!</li>
+    <li> Oh yeah? Well <A HREF="https://www.pm.inf.ethz.ch/research/verifythis.html">Verify This!</A> (There's also a <A HREF="http://verifythis.github.io/">VerifyThis Long-Term Challenge</A> with a <A HREF="https://vimeo.com/357544904">video</A>.)</li>
+    <li> There are a large collection of <a href="https://alastairreid.github.io/verification-competitions/">Verification Competitions</a> for different types of formal methods tools!
+<li> <A HREF="https://competition.isabelle.systems/competitions/contest/11/">Proving for Fun</A> (Isabelle instructional videos are <A HREF="https://www.youtube.com/watch?v=7w4KC6i9Yac">HERE</A> and <A HREF="https://www.youtube.com/watch?v=Uav5jWHNghY">HERE</A>.)</li>
+<li><A HREF="https://arxiv.org/abs/2003.06458">QED at Large: A Survey of Engineering of Formally Verified Software</A></li>
+<li><A HREF="https://mathoverflow.net/questions/291158/proofs-shown-to-be-wrong-after-formalization-with-proof-assistant">Are there examples of originally widely accepted proofs that were later discovered to be wrong by attempting to formalize them using a proof assistant?</A></li>
+<li><A HREF="https://www.quantamagazine.org/how-close-are-computers-to-automating-mathematical-reasoning-20200827/">How Close Are Computers to Automating Mathematical Reasoning?</A></li>
+<li><A HREF="https://m-fleury.github.io/isasat/isasat.html">ISASAT</A>: a SAT solver with provable full functional correctness verified, down to LLVM intermediate code, using <A HREF="https://www21.in.tum.de/~lammich/isabelle_llvm/">Isabelle/LLVM</A></li>
+  <li><A HREF="https://www.openaccessgovernment.org/interactive-proof-assistants/85137/">Computer science, software and mathematics: Interactive proof assistants</A></li>
+<li><A HREF="http://www.envisage-project.eu/proving-android-java-and-python-sorting-algorithm-is-broken-and-how-to-fix-it/"> Proving that Android's, Java's and Python's sorting algorithm is broken (and showing how to fix it)</A> using Key</li>
+<li> <A HREF="https://proofgeneral.github.io/">Proof General</A> provides a generic Emacs mode for Proof Assistants: Coq, PhoX, EasyCrypt, Qrhl-tool</li>
+    <li><A HREF = "https://leanprover-community.github.io/">Lean Together</A>: a practical theorem prover with a great math library and community! </li>
+    <li>A great survey paper on <A HREF="https://temporallogic.org/courses/AppliedFormalMethods/ExtractModelRefine-ImprovedModellingOfProgramVerificationToolsThroughDataEnrichment.pdf">modelling and program verification tools</A></li>
+    <li>An interactive <A HREF="https://quickstrom.github.io/ltl-visualizer/">Linear Temporal Logic Visualizer</A></li>
+</p>
+</UL>
+
+<div style="border-top:solid \#C8102E 0pt;border-left:none;border-botom:none;border-right:none;padding:0.0pt 1in 0.0pt 0.0in;background:#C8102E"><h3><span style="color:white">Videos</span></h3></div>
+<p>
+  <UL>
+<!--    <li> <A HREF=""> </A> </li> -->
+<li> <a href="https://www.youtube.com/watch?v=wOQuW6QFdos"><i> From Aristotle to the iPhone </i> </a>
+</li>
+<li> <a href="https://logicday.vcla.at/vienna-logic-day-lecture/#LogicDay"><i>Knowledge Processing, Logic, and the Future of AI</i></a>
+</li>
+<li> <A HREF="http://video.lfcps.org">Video Lectures</A> on advanced cyber-physical system verification by Prof. Andre Platzer</li>
+<li> <A HREF="https://www.youtube.com/watch?v=5vL6aCvgQXU&t=1881s">The Pragmatic Engineer YouTube</A> on
+  why Amazon S3 relies on formal methods</li>
+  </A></li>
+  </UL>
+</p>
+
+
+
+
+<p></p>
+<!-- Footer Stuff -->
+</td>
+
+<!-- Right column: Place your logo, images, contacts and related links here --><!--your logo or images should be no wider than 160 pixels-->
+<!-- "<td class="right_border">" is essential, DO NOT REMOVE -->
+<!--#include virtual="../navigation.html" -->
+<!--end Right column-->
+
+<!-- begin footer -->
+<!--#include virtual="../footer.html" -->
+<!-- end footer -->	  
+
