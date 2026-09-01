@@ -63,9 +63,9 @@ courses/*
 !courses/banner.html
 !courses/footer.html
 !courses/navigation.html
-!courses/fm-logo.png
-!courses/ltl-swoosh-white.png
-!courses/LaTeXsymbolsguide.pdf
+courses/fm-logo.png
+courses/ltl-swoosh-white.png
+courses/LaTeXsymbolsguide.pdf
 !courses/AERE3610/
 
 # Inside /courses/AERE3610/, allow the whole subtree EXCEPT the usual junk
@@ -163,7 +163,7 @@ courses/AppliedFormalMethods/FM_AERO_panel.html_S[0-9]*
 # ---------------------------------------------------------------------------
 # !/software/
 !kyr/index.html
-!kyr/KYRozierCV.pdf
+kyr/KYRozierCV.pdf
 # kyr/*
 # !kyr/index.html
 # !kyr/CV/
