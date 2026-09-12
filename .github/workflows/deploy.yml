@@ -25,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Verify benchmark download
+        run: python3 -m zipfile -t research/FPROGG/Benchmark_Library.zip
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
