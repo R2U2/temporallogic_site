@@ -172,7 +172,6 @@ kyr/KYRozierCV.pdf
 # kyr/*
 # !kyr/index.html
 # !kyr/CV/
-# !/Photos/
 # !/Blog/
 
 
@@ -200,3 +199,7 @@ google*.html
 # Publish the complete PANDA distribution.
 !/PANDAv1-final/
 !/PANDAv1-final/**
+
+# Publish the complete photo collection.
+!/Photos/
+!/Photos/**
