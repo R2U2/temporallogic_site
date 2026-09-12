@@ -1,0 +1,33 @@
+In order to use this you'd do the following:
+
+Create a new list class:
+        KList myList;
+
+When you want to add a variable do the following:
+        KItem search;
+        search.setName("variableName");
+        int found = myList.query(search);
+
+Found will be 0 if the item isn't in the list, 1 otherwise.  To actually
+get the item from the list (once you know it was there, a special error
+item is returned if it doesn't exist, so query first) do this:
+        KItem item = myList.find(search);
+
+The instance "item" will now have a copy of the item from the list.  To
+add an item to the list:
+        KItem newItem;
+        newItem.setName("variableName");
+        myList.addItem(newItem);
+
+To remove an item from the list:
+        KItem search;
+        search.setName("variableName");
+        if (myList.query(search))
+                myList.removeItem(search);
+
+The list identifies items as being the same based on their name.
+Currently the item has another field "string info" which can be used if
+you like.  If you want to add additional fields to the KItem class, do so
+as normal but make sure they get copyed over by the constructors, etc, as
+this is critical to the list functioning, it makes heavy use of copy
+constructors and the like.

@@ -165,6 +165,8 @@ courses/AppliedFormalMethods/FM_AERO_panel.html_S[0-9]*
 # Step 8: STAGE 6 — Software, KYR, Photos, Blog   (DISABLED)
 # ---------------------------------------------------------------------------
 # !/software/
+!/kyr/
+kyr/*
 !kyr/index.html
 kyr/KYRozierCV.pdf
 # kyr/*
@@ -194,3 +196,7 @@ wp-content/
 old.index.html
 google*.html
 *_250708055729*
+
+# Publish the complete PANDA distribution.
+!/PANDAv1-final/
+!/PANDAv1-final/**

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://temporallogic.org/?sitemapindex.xml
+Sitemap: https://temporallogic.org/?sitemap281.xml
+Sitemap: https://temporallogic.org/?sitemap78.xml
+Sitemap: https://temporallogic.org/?sitemap405.xml
+Sitemap: https://temporallogic.org/?sitemap939.xml
+Sitemap: https://temporallogic.org/?sitemap917.xml
+Sitemap: https://temporallogic.org/search.php?sitemap912.xml
