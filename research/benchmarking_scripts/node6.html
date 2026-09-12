@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+
+
+<title>Pattern Formulas</title>
+<meta name="description" content="Pattern Formulas">
+<meta name="keywords" content="benchmarking_scripts">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta name="Generator" content="LaTeX2HTML v2002-2-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="node6_files/benchmarking_scripts.css">
+
+<link rel="previous" href="node5.html">
+<link rel="up" href="node3.html">
+<link rel="next" href="node7.html">
+</head><body>
+<!--Navigation Panel-->
+<a name="tex2html91" href="node7.html">
+<a name="tex2html89" href="node3.html">
+<a name="tex2html85" href="node5.html">
+<br>
+<b> Next:</b> <a name="tex2html92" href="node7.html">Bibliography</a>
+<b> Up:</b> <a name="tex2html90" href="node3.html">Input Formulas</a>
+<b> Previous:</b> <a name="tex2html86" href="node5.html">Counter Formulas</a>
+<br>
+<br>
+<!--End of Navigation Panel-->
+
+<h2><a name="SECTION00033000000000000000">
+Pattern Formulas</a>
+</h2>
+
+<p>
+These scripts generate formulas from the eight classes of scalable formulas defined by [<a href="node7.html#GH06">3</a>] to evaluate the performance of model checking algorithms on temporally-complex formulas. 
+
+</p><p>
+
+</p><p>
+<br>
+Run them like this:
+<br><tt>formula.pl [-v] n</tt>
+<br>
+where <img src="node6_files/img3.png" alt="$n$" width="12" align="middle" border="0" height="31"> is the number of variables (ie the size) of the formula you desire. The flag -v is for ``verbose.''
+
+</p><p>
+
+</p><div align="center">
+<!-- MATH
+ \begin{displaymath}
+E(n) = \bigwedge_{i=1}^{n} \Diamond p_i
+\end{displaymath}
+ -->
+
+<img src="node6_files/img34.png" alt="\begin{displaymath}E(n) = \bigwedge_{i=1}^{n} \Diamond p_i \end{displaymath}" width="93" border="0" height="52">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+U(n) = (\ldots (p_1 \ \mathcal{U} \ p_2) \ \mathcal{U} \ \ldots) \ \mathcal{U} \ p_n
+\end{displaymath}
+ -->
+
+<img src="node6_files/img35.png" alt="\begin{displaymath}U(n) = (\ldots (p_1  \mathcal{U}  p_2)  \mathcal{U}  \ldots)  \mathcal{U}  p_n \end{displaymath}" width="226" border="0" height="28">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+R(n) = \bigwedge_{i=1}^{n} (\Box \Diamond p_i \vee \Diamond \Box p_{i+1})
+\end{displaymath}
+ -->
+
+<img src="node6_files/img36.png" alt="\begin{displaymath}R(n) = \bigwedge_{i=1}^{n} (\Box \Diamond p_i \vee \Diamond \Box p_{i+1}) \end{displaymath}" width="182" border="0" height="52">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+U_2(n) = p_1 \ \mathcal{U} \ (p_2 \ \mathcal{U} \ (\ldots p_{n-1} \ \mathcal{U} \ p_n) \ldots )
+\end{displaymath}
+ -->
+
+<img src="node6_files/img37.png" alt="\begin{displaymath}U_2(n) = p_1  \mathcal{U}  (p_2  \mathcal{U}  (\ldots p_{n-1}  \mathcal{U}  p_n) \ldots ) \end{displaymath}" width="261" border="0" height="28">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+C_1(n) = \bigvee_{i=1}^{n} \Box \Diamond p_i
+\end{displaymath}
+ -->
+
+<img src="node6_files/img38.png" alt="\begin{displaymath}C_1(n) = \bigvee_{i=1}^{n} \Box \Diamond p_i \end{displaymath}" width="111" border="0" height="52">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+C_2(n) = \bigwedge_{i=1}^{n} \Box \Diamond p_i
+\end{displaymath}
+ -->
+
+<img src="node6_files/img39.png" alt="\begin{displaymath}C_2(n) = \bigwedge_{i=1}^{n} \Box \Diamond p_i \end{displaymath}" width="111" border="0" height="52">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+Q(n) = \bigwedge (\Diamond p_i \vee \Box p_{i+1})
+\end{displaymath}
+ -->
+
+<img src="node6_files/img40.png" alt="\begin{displaymath}Q(n) = \bigwedge (\Diamond p_i \vee \Box p_{i+1}) \end{displaymath}" width="157" border="0" height="31">
+</div>
+<br clear="all">
+
+
+<div align="center">
+<!-- MATH
+ \begin{displaymath}
+S(n) = \bigwedge_{i=1}^{n} \Box p_i
+\end{displaymath}
+ -->
+
+<img src="node6_files/img41.png" alt="\begin{displaymath}S(n) = \bigwedge_{i=1}^{n} \Box p_i \end{displaymath}" width="93" border="0" height="52">
+</div>
+<br clear="all">
+
+
+<p>
+
+</p><ol>
+<li><a name="tex2html13" href="Eformula.pl.zip">Eformula.pl</a>
+</li>
+<li><a name="tex2html14" href="Uformula.pl.zip">Uformula.pl</a>
+</li>
+<li><a name="tex2html15" href="Rformula.pl.zip">Rformula.pl</a>
+</li>
+<li><a name="tex2html16" href="U2formula.pl.zip">U2formula.pl</a>
+</li>
+<li><a name="tex2html17" href="C1formula.pl.zip">C1formula.pl</a>
+</li>
+<li><a name="tex2html18" href="C2formula.pl.zip">C2formula.pl</a>
+</li>
+<li><a name="tex2html19" href="Qformula.pl.zip">Qformula.pl</a>
+</li>
+<li><a name="tex2html20" href="Sformula.pl.zip">Sformula.pl</a>
+</li>
+</ol>
+
+<p>
+
+<br></p><hr>
+<address>
+Kristin Yvonne Rozier
+2007-05-10
+</address>
+</body></html>

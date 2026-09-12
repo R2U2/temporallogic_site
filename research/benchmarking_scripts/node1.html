@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+        original version by:  Nikos Drakos, CBLU, University of Leeds
+        * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+        * with significant contributions from:
+        Jens Lippmann, Marek Rouchal, Martin Wilck and others --><title>Explicit Tool Models</title>
+        <meta name="description" content="Explicit Tool Models">
+        <meta name="keywords" content="benchmarking_scripts">
+        <meta name="resource-type" content="document">
+        <meta name="distribution" content="global">
+        <meta name="Generator" content="LaTeX2HTML v2002-2-1">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <link rel="STYLESHEET" href="node1_files/benchmarking_scripts.css">
+        <link rel="next" href="node2.html">
+        <link rel="previous" href="benchmarking_scripts.html">
+        <link rel="up" href="benchmarking_scripts.html">
+        <link rel="next" href="node2.html">
+    </head>
+    <body>
+        <!--Navigation Panel--><a name="tex2html40" href="node2.html"><a name="tex2html38" href="benchmarking_scripts.html"><a name="tex2html32" href="benchmarking_scripts.html">
+        <br>
+        <b> Next:</b>
+        <a name="tex2html41" href="node2.html">Symbolic Tool Models</a>
+        <b> Up:</b>
+        <a name="tex2html39" href="benchmarking_scripts.html">Model Checking Benchmarking Scripts</a>
+        <b> Previous:</b>
+        <a name="tex2html33" href="benchmarking_scripts.html">Model Checking Benchmarking Scripts</a>
+        <br>
+        <br>
+        <!--End of Navigation Panel--><h1><a name="SECTION00010000000000000000"> Explicit Tool Models</a></h1>
+        To benchmark LTL formula translations, we use for the SPIN model a <i>universal</i>
+        Promela program, enumerating all possible traces over <img src="node1_files/img1.png" alt="$Prop$" width="37" align="middle" border="0" height="31">. For example, when <!-- MATH
+        $Prop = \{a, b\}$
+        --><img src="node1_files/img2.png" alt="$Prop = \{a, b\}$" width="95" align="middle" border="0" height="32">, (and therefore the number <img src="node1_files/img3.png" alt="$n$" width="12" align="middle" border="0" height="31">of variables is 2), the Promela model is:
+        <p>
+        </p>
+        <pre>/*File: 2vars.pml*/
+
+bool A,B;
+
+/* define an active procedure to generate values for A and B */
+
+active proctype generateValues()
+{ do
+   :: atomic{ A = 0; B = 0; }
+   :: atomic{ A = 0; B = 1; }
+   :: atomic{ A = 1; B = 0; }
+   :: atomic{ A = 1; B = 1; }
+  od }
+</pre>
+        <p>
+            We use the 
+            <tt>
+                atomic{}
+            </tt>
+            construct to ensure that the Boolean
+            variables change value in one unbreakable step. Note that the size of
+            this model is exponential in the number of atomic propositions.
+        </p>
+        <p>
+            The variables in <img src="node1_files/img1.png" alt="$Prop$" width="37" align="middle" border="0" height="31">are defined in the accompanying file 
+            <tt>
+                2vars.define
+            </tt>, which is prepended to the never-claim we are testing.
+        </p>
+        <p>
+            These two files are generated automatically for any given value of <img src="node1_files/img3.png" alt="$n$" width="12" align="middle" border="0" height="31">by any one of the following scripts. (Just for simplicity, there are 3 versions of the same script here.):
+        </p>
+        <p>
+        </p>
+        <p>
+            <br>
+            <table cellpadding="3">
+                <tbody>
+                    <tr>
+                        <td colspan="1" align="center">
+                            Script Name
+                        </td>
+                        <td colspan="1" align="center">
+                            Variable Set
+                        </td>
+                        <td colspan="1" align="center">
+                            Recommended Input Formulas
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <a name="tex2html3" href="generateValues.pl.zip">generateValues.pl</a>
+                        </td>
+                        <td align="left">
+                            Prop = a, b, c, ..., aa, bb, cc, ...
+                        </td>
+                        <td align="left">
+                            Use with random and counter formulas.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <a name="tex2html4" href="generatePvalues.pl.zip">generatePvalues.pl</a>
+                        </td>
+                        <td align="left">
+                            Prop = p1, p2, p3, ...
+                        </td>
+                        <td align="left">
+                            Use with pattern formulas.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <a name="tex2html5" href="generateAlphaPvalues.pl.zip">generateAlphaPvalues.pl</a>
+                        </td>
+                        <td align="left">
+                            Prop = po, pt, ph, ...
+                        </td>
+                        <td align="left">
+                            Use with pattern formulas, for tools
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            which don't allow numbers in variable names
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+        </p>
+        <p>
+            <br>
+            Usage: 
+            <tt>
+                generateValues.pl number_of_variables
+            </tt>
+        </p>
+        <p>
+        </p>
+        <p>
+            <br>
+            Here is an example of how to use these scripts to run SPIN on a generated Promela never-claim with a universal model:
+        </p>
+        <p>
+        </p>
+        <div align="left">
+            <tt>
+                #Preceed the formula with a 'next time' operator to skip 
+                <br>
+                # &nbsp;SPIN's nondeterministic assignment upon declaration
+                <br>
+                $LTL_to_automata_tool_binary ``(X($input_formula))" &gt;&amp; $temp #generate the automaton
+                <br>
+                generateValues.pl $n
+                <br>
+                cp -f $nvars.define pan.ltl
+                <br>
+                cat $temp � pan.ltl
+                <br>
+                rm -f $temp
+                <br>
+                cp -f $nvars.pml pan_in
+                <br>
+                spin -a -X -N pan.ltl pan_in
+                <br>
+                gcc -w -o pan -D_POSIX_SOURCE -DMEMLIM=128 -DXUSAFE -DNOFAIR &nbsp;pan.c
+                <br>
+                ./pan -v -X -m10000 -w19 &nbsp;-a -c1
+                <br>
+            </tt>
+        </div>
+        <p>
+        </p>
+        <hr><!--Navigation Panel--><a name="tex2html40" href="node2.html"><a name="tex2html38" href="benchmarking_scripts.html"><a name="tex2html32" href="benchmarking_scripts.html">
+                    <br>
+                    <b> Next:</b><a name="tex2html41" href="node2.html">Symbolic Tool Models</a><b> Up:</b><a name="tex2html39" href="benchmarking_scripts.html">Model Checking Benchmarking Scripts</a><b> Previous:</b><a name="tex2html33" href="benchmarking_scripts.html">Model Checking Benchmarking Scripts</a><!--End of Navigation Panel-->
+                    <address>
+                        Kristin Yvonne Rozier
+                        2007-05-10
+                    </address>
+                    </body>
+                </html>

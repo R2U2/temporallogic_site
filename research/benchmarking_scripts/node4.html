@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+
+
+<title>Random Formulas</title>
+<meta name="description" content="Random Formulas">
+<meta name="keywords" content="benchmarking_scripts">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta name="Generator" content="LaTeX2HTML v2002-2-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="node4_files/benchmarking_scripts.css">
+
+<link rel="next" href="node5.html">
+<link rel="previous" href="node3.html">
+<link rel="up" href="node3.html">
+<link rel="next" href="node5.html">
+</head><body>
+<!--Navigation Panel-->
+<a name="tex2html73" href="node5.html">
+<a name="tex2html71" href="node3.html">
+<a name="tex2html65" href="node3.html">
+<br>
+<b> Next:</b> <a name="tex2html74" href="node5.html">Counter Formulas</a>
+<b> Up:</b> <a name="tex2html72" href="node3.html">Input Formulas</a>
+<b> Previous:</b> <a name="tex2html66" href="node3.html">Input Formulas</a>
+<br>
+<br>
+<!--End of Navigation Panel-->
+
+<h2><a name="SECTION00031000000000000000">
+Random Formulas</a>
+</h2>
+
+<p>
+In order to cover as much of the problem space as possible, I wrote a
+script to generate sets of 500 randomly-generated formulas varying the
+formula length and number of variables as in [<a href="node7.html#DGV99">1</a>]. It randomly generates sets of 500 formulas varying the number of variables, <img src="node4_files/img8.png" alt="$N$" width="16" align="middle" border="0" height="31">, from 1 to 5, and the length of the formula, <img src="node4_files/img9.png" alt="$L$" width="13" align="bottom" border="0" height="17">, from 5 up to 200. It sets the probability of choosing a temporal operator <img src="node4_files/img10.png" alt="$P = 0.5$" width="54" align="middle" border="0" height="30">
+to create formulas with both a nontrivial temporal structure and a
+nontrivial Boolean structure. For temporal tests, formulas are also
+generated with<!-- MATH
+ $P = \frac{1}{3}$
+ -->
+ <img src="node4_files/img11.png" alt="$P = \frac{1}{3}$" width="43" align="middle" border="0" height="38">, <img src="node4_files/img12.png" alt="$P = 0.7$" width="54" align="middle" border="0" height="31">, and <img src="node4_files/img13.png" alt="$P = 0.95$" width="62" align="middle" border="0" height="30">. Other choices are decided uniformly. When generating a set of length <img src="node4_files/img9.png" alt="$L$" width="13" align="bottom" border="0" height="17">, every formula created is exactly of length <img src="node4_files/img9.png" alt="$L$" width="13" align="bottom" border="0" height="17"> and not <i>up to</i> <img src="node4_files/img9.png" alt="$L$" width="13" align="bottom" border="0" height="17">, however, these randomly-generated formulas are frequently reducible.
+
+</p><p>
+
+</p><p>
+<br>
+Here is the script used to generate random formulas in the style of [<a href="node7.html#DGV99">1</a>]:
+
+</p><div align="left">
+<tt>
+ <a name="tex2html6" href="generateFormulas.pl.zip">generateFormulas.pl</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With no arguments: generate a wide range of formula files
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With 3 arguments: generate files for specified L, N, P (order matters)
+<br></tt>
+</div>
+
+<p>
+
+</p><p>
+<br>
+In our paper, [<a href="node7.html#RV07">4</a>], all of the random formulas we used were generated prior to testing, so each tool was run on the <i>same</i> formulas. If you wish to re-create our tests exactly, the set of formulas generated for our experiments are here:
+
+</p><p>
+
+</p><p>
+<br>
+
+<a name="tex2html7" href="formulas.html"><tt>formulas/</tt></a>
+<br><a name="tex2html8" href="formulas.zip">formulas.zip</a>
+</p><p>
+</p><hr>
+<!--Navigation Panel-->
+<a name="tex2html73" href="node5.html">
+<a name="tex2html71" href="node3.html">
+<a name="tex2html65" href="node3.html">
+<br>
+<b> Next:</b> <a name="tex2html74" href="node5.html">Counter Formulas</a>
+<b> Up:</b> <a name="tex2html72" href="node3.html">Input Formulas</a>
+<b> Previous:</b> <a name="tex2html66" href="node3.html">Input Formulas</a>
+<!--End of Navigation Panel-->
+<address>
+Kristin Yvonne Rozier
+2007-05-10
+</address>
+</body></html>

@@ -1,0 +1,290 @@
+\documentclass{article}
+%\usepackage{times}
+%\usepackage{mathtime} 
+\usepackage{pslatex} %regular times font/smaller courier font
+\usepackage{amssymb}
+\usepackage{alltt}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{html}
+
+%\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}{Corollary}
+\newtheorem{lem}{Lemma}
+\newtheorem{defin}{Definition}
+%Use like this: \begin{lem}\label{...}  .... \end{lem}
+
+\renewcommand{\labelitemi}{ } %to make itemize have bullets instead of confusing -'s
+\pagestyle{plain} %just for editing purposes
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\always}{\Box}
+\newcommand{\eventually}{\Diamond}
+\newcommand{\calL}{{\cal L}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure Magic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{subfigure}
+\renewcommand{\topfraction}{.95} %figures can take up at most 95% of the page before being alone
+\renewcommand{\bottomfraction}{.99} %figures can take up at most 99% of the page before being alone
+\renewcommand{\textfraction}{.1} %at most this this % of page will be text before making figure-only page
+\addtolength{\textfloatsep}{-5mm}
+\addtolength{\floatsep}{-5mm}
+\addtolength{\intextsep}{-5mm}
+\addtolength{\abovecaptionskip}{-5mm}
+\addtolength{\belowcaptionskip}{-3mm}
+
+\title{Model Checking Benchmarking Scripts}
+\author{Kristin Y. Rozier}
+\date{2007}
+
+\begin{document}
+
+\maketitle
+
+These pages contain further details of the experiments described in \htmladdnormallink{``LTL Satisfiability Checking''}{http://shemesh.larc.nasa.gov/people/kyr/publications.html} by K.Y.Rozier and M.Y.Vardi.
+
+All of the software available for download on this page was written by Kristin Yvonne Rozier. It is released under a \htmladdnormallink{NASA Software Agreement}{http://shemesh.larc.nasa.gov/people/kyr/software_agreement.txt}. Please feel free to email me concerning clarifications, bugs, or other corrections.
+
+\section{Explicit Tool Models}
+To benchmark LTL formula translations, we use for the SPIN model a \emph{universal} Promela program, enumerating all possible traces over $Prop$. For example, when $Prop = \{a, b\}$, (and therefore the number $n$ of variables is 2), the Promela model is:
+
+\begin{verbatim}
+/*File: 2vars.pml*/
+
+bool A,B;
+
+/* define an active procedure to generate values for A and B */
+
+active proctype generateValues()
+{ do
+   :: atomic{ A = 0; B = 0; }
+   :: atomic{ A = 0; B = 1; }
+   :: atomic{ A = 1; B = 0; }
+   :: atomic{ A = 1; B = 1; }
+  od }
+\end{verbatim}
+
+We use the \texttt{atomic\{\}} construct to ensure that the Boolean variables change value in one unbreakable step. Note that the size of this model is exponential in the number of atomic propositions.
+
+The variables in $Prop$ are defined in the accompanying file \texttt{2vars.define}, which is prepended to the never-claim we are testing.
+
+These two files are generated automatically for any given value of $n$ by any one of the following scripts. (Just for simplicity, there are 3 versions of the same script here.):
+
+\medskip\noindent
+\begin{tabular}{lll}
+\multicolumn{1}{c}{Script Name} & \multicolumn{1}{c}{Variable Set} & \multicolumn{1}{c}{Recommended Input Formulas} \\
+\htmladdnormallink{generateValues.pl}{generateValues.pl.zip} & Prop = {a, b, c, \ldots, aa, bb, cc, \ldots} & Use with random and counter formulas. \\
+\htmladdnormallink{generatePvalues.pl}{generatePvalues.pl.zip} & Prop = {p1, p2, p3, \ldots} & Use with pattern formulas. \\
+\htmladdnormallink{generateAlphaPvalues.pl}{generateAlphaPvalues.pl.zip} & Prop = {po, pt, ph, \ldots} & Use with pattern formulas, for tools \\
+ & & which don't allow numbers in variable names \\
+\end{tabular}
+
+\medskip \noindent
+Usage: \texttt{generateValues.pl number\_of\_variables}
+
+\medskip \noindent
+Here is an example of how to use these scripts to run SPIN on a generated Promela never-claim with a universal model:
+
+\begin{alltt}
+#Preceed the formula with a 'next time' operator to skip 
+#  SPIN's nondeterministic assignment upon declaration
+$LTL_to_automata_tool_binary ``(X($input_formula))" >& $temp #generate the automaton
+generateValues.pl $n
+cp -f ${n}vars.define pan.ltl
+cat $temp >> pan.ltl
+rm -f $temp
+cp -f ${n}vars.pml pan_in
+spin -a -X -N pan.ltl pan_in
+gcc -w -o pan -D_POSIX_SOURCE -DMEMLIM=128 -DXUSAFE -DNOFAIR  pan.c
+./pan -v -X -m10000 -w19  -a -c1
+\end{alltt}
+
+
+\section{Symbolic Tool Models}
+
+We can also benchmark LTL formula modeling with CadenceSMV and NuSMV. To check whether a LTL formula $\phi$ is satisfiable, we model check $\neg\phi$ against a universal SMV model. For example, if $\phi = (X (a))$, we provide the following input to NuSMV:
+\small
+\begin{verbatim}
+MODULE main
+  VAR
+    a : boolean;
+    b : boolean;
+    c : boolean;
+  LTLSPEC !(X(a=1 ))
+  FAIRNESS
+    1
+\end{verbatim}
+\normalsize
+(The ``FAIRNESS'' line varies with versions of NuSMV. The CadenceSMV model is very similar.) SMV negates the specification, $\neg \phi$, symbolically compiles $\phi$ into $A_{\phi}$, and conjoins $A_{\phi}$ with the universal model. If the automaton is not empty, then SMV finds a fair path, which satisfies the formula $\phi$. In this way, SMV acts as both a symbolic compiler and a search engine.
+
+\section{Input Formulas}
+In \cite{RV07}, we benchmarked the tools against three types of scalable formulas: random formulas, counter formulas, and pattern formulas. Scalability played an important role in our experiment, since the goal was to challenge the tools with large formulas and state spaces.
+
+\subsection{Random Formulas}
+
+In order to cover as much of the problem space as possible, I wrote a script to generate sets of 500 randomly-generated formulas varying the formula length and number of variables as in \cite{DGV99}. It randomly generates sets of 500 formulas varying the number of variables, $N$, from 1 to 5, and the length of the formula, $L$, from 5 up to 200. It sets the probability of choosing a temporal operator $P = 0.5$ to create formulas with both a nontrivial temporal structure and a nontrivial Boolean structure. For temporal tests, formulas are also generated with $P = \frac{1}{3}$, $P = 0.7$, and $P = 0.95$. Other choices are decided uniformly. When generating a set of length $L$, every formula created is exactly of length $L$ and not \emph{up to} $L$, however, these randomly-generated formulas are frequently reducible.
+
+\medskip \noindent
+Here is the script used to generate random formulas in the style of \cite{DGV99}:
+\begin{alltt}
+\htmladdnormallink{generateFormulas.pl}{generateFormulas.pl.zip}
+        With no arguments: generate a wide range of formula files
+        With 3 arguments: generate files for specified L, N, P (order matters)
+\end{alltt}
+
+\medskip \noindent
+In our paper, \cite{RV07}, all of the random formulas we used were generated prior to testing, so each tool was run on the \emph{same} formulas. If you wish to re-create our tests exactly, the set of formulas generated for our experiments are here:
+
+\medskip \noindent
+\htmladdnormallink{\texttt{formulas/}}{formulas/}\\
+\htmladdnormallink{formulas.zip}{formulas.zip}
+
+
+\subsection{Counter Formulas}
+
+Pre-translation rewriting is highly effective for random formulas, but ineffective for structured formulas \cite{EH00,SB00}. To measure performance on scalable, non-random formulas we tested the tools on formulas that describe $n$-bit binary counters with increasing values of $n$. These formulas are irreducible by pre-translation rewriting, uniquely satisfiable, and represent a predictably-sized state space. Correctness is easily determined by checking for precisely the unique counterexample for each counter formula. We tested four constructions of binary counter formulas, varying two factors: number of variables and nesting of $\mathcal{X}$'s.
+
+We can represent a binary counter using two variables: a counter variable and a marker variable to designate the beginning of each new counter value. Alternatively, we can use 3 variables, adding a variable to encode carry bits, which eliminates the need for $\mathcal{U}$-connectives in the formula. We can nest $\mathcal{X}$'s to provide more succinct formulas or express the formulas using a conjunction of unnested $\mathcal{X}$-sub-formulas.
+
+Let $b$ be an atomic proposition. Then a computation $\pi$ over $b$ is a word in $(2^{\{0,1\}})^\omega$. By dividing $\pi$ into blocks of length $n$, we can view $\pi$ as a sequence of $n$-bit values, denoting the sequence of values assumed by an $n$-bit counter starting at $0$, and incrementing successively by $1$. To simplify the formulas, we represent each block $b_0,b_1,\ldots,b_{n-1}$ as having the most significant bit on the right and the least significant bit on the left. For example, for $n=2$ the $b$ blocks cycle through the values $00$, $10$, $01$, and $11$. For technical convenience, we use an atomic proposition $m$ to mark the blocks. That is, we intend $m$ to hold at point $i$ precisely when $i=0 \bmod n$.
+
+For $\pi$ to represent an $n$-bit counter, the following properties need to hold:
+
+\begin{alltt}
+1) The marker consists of a repeated pattern of a 1 followed by n-1 0's.
+2) The first n bits are 0's.
+3) If the least significant bit is 0, then it is 1 n steps later 
+   and the other bits do not change.
+4) All of the bits before and including the first 0 in an n-bit block flip
+   their values in the next block; the other bits do not change.
+\end{alltt} 
+
+For $n=4$, these properties are captured by the conjunction of the following formulas:
+
+\begin{alltt}
+1. (m) && ( [](m -> ((X(!m)) && (X(X(!m))) && (X(X(X(!m)))) 
+                                           && X(X(X(X(m)))))))
+2. (!b) && (X(!b)) && (X(X(!b))) && (X(X(X(!b))))
+3. []( (m && !b) -> 
+       ( X(X(X(X(b)))) && 
+         X ( ( (!m) && 
+           (b -> X(X(X(X(b))))) && 
+           (!b -> X(X(X(X(!b))))) ) U m ) ) )
+4. [] ( (m && b) -> 
+        (X(X(X(X(!b)))) && 
+          (X ( (b && !m && X(X(X(X(!b))))) U 
+               (m || (!m && !b && X(X(X(X(b)))) && 
+                      X( ( !m && (b -> X(X(X(X(b))))) && 
+                          (!b -> X(X(X(X(!b))))) ) U m ) ) ) ) ) ) )
+\end{alltt}
+
+Scalable counter formulas of this form are automatically generated by \htmladdnormallink{LTLcounter.pl}{LTLcounter.pl.zip}. 
+Usage: \texttt{LTLcounter.pl number\_of\_bits}
+
+
+
+Note that this encoding creates formulas of length $O(n^2)$.
+A more compact encoding results in formulas of length $O(n)$.
+For example, we can replace formula (2) above with:
+
+\small 
+\begin{alltt}
+2. ((!b) && X((!b) && X((!b) && X(!b))))
+\end{alltt}
+\normalsize
+
+Scalable counter formulas of this form, with nested $\mathcal{X}$-operators, are automatically generated by \htmladdnormallink{LTLcounterLinear.pl}{LTLcounterLinear.pl.zip}. Usage: \texttt{LTLcounterLinear.pl number\_of\_bits}
+
+
+We can eliminate the use of $\mathcal{U}$-connectives in the formula by adding an atomic proposition $c$ representing the carry bit. The required properties of an $n$-bit counter with carry are as follows:
+\begin{center}
+\begin{tabular}{c | cccccccccc}
+\multicolumn{11}{c}{\bf A 4-bit Binary Counter} \\
+\hline
+m & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 \\
+b & 0000 & 0001 & 0010 & 0011 & 0100 & 0101 & 0110 & 0111 & 1000 & 1001 \\
+c & 0000 & 0001 & 0000 & 0011 & 0000 & 0001 & 0000 & 0111 & 0000 & 0001 \\
+\hline
+\multicolumn{11}{c}{ }\\
+\hline
+m & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & 0001 & \ldots \\
+b & 1010 & 1011 & 1100 & 1101 & 1110 & 1111 & 0000 & \ldots \\
+c & 0000 & 0011 & 0000 & 0001 & 0000 & 1111 & 0000 & \ldots \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip \noindent
+To describe the behavior of the counter, we describe six properties and \texttt{AND} them together. For example, here is the program output for a 4-bit counter:
+
+\begin{alltt}
+1) The marker consists of a repeated pattern of a 1 followed by n-1 0's.
+2) The first n bits are 0's.
+3) If m is 1 and b is 0 then c is 0 and n steps later b is 1.
+4) If m is 1 and b is 1 then c is 1 and n steps later b is 0.
+5) If there is no carry, then the next bit stays the same n steps later.
+6) If there is a carry, flip the next bit n steps later and adjust the carry.
+\end{alltt}
+
+For $n=4$, these properties are captured by the conjunction of the following formulas.
+
+\begin{alltt}
+1. (m) && ( [](m -> ((X(!m)) && (X(X(!m))) && (X(X(X(!m)))) 
+                                           && (X(X(X(X(m))))))))
+2. (!b) && (X(!b)) && (X(X(!b))) && (X(X(X(!b))))
+3. [] ( (m && !b) -> (!c && X(X(X(X(b))))) )
+4. [] ( (m && b) -> (c && X(X(X(X(!b))))) )
+5. [] (!c & X(!m)) -> 
+      ( X(!c) && (X(b) -> X(X(X(X(b))))) && 
+                 (X(!b) -> X(X(X(X(!b))))) )
+6. [] (c -> ( ( X(!b) -> ( X(!c) && X(X(X(X(!b)))) ) ) && 
+                         ( X(c) && X(X(X(X(b)))) ) ))
+\end{alltt}
+
+Scalable counter formulas of this form, using a carry bit and no $\mathcal{U}$-operators, are automatically generated by \htmladdnormallink{LTLcounterCarry.pl}{LTLcounterCarry.pl.zip}. Usage: \texttt{LTLcounterCarry.pl number\_of\_bits}
+
+
+Scalable counter formulas using a carry bit and nested $\mathcal{X}$-operators are automatically generated by \htmladdnormallink{LTLcounterCarryLinear.pl}{LTLcounterCarryLinear.pl.zip}. Usage: \texttt{LTLcounterCarryLinear.pl number\_of\_bits}
+
+
+
+\subsection{Pattern Formulas}
+
+These scripts generate formulas from the eight classes of scalable formulas defined by \cite{GH06} to evaluate the performance of model checking algorithms on temporally-complex formulas. 
+
+\medskip \noindent
+Run them like this:\\
+\texttt{formula.pl [-v] n}\\
+where $n$ is the number of variables (ie the size) of the formula you desire. The flag -v is for ``verbose.''
+
+\[E(n) = \bigwedge_{i=1}^{n} \Diamond p_i \]
+\[U(n) = (\ldots (p_1 \ \mathcal{U} \ p_2) \ \mathcal{U} \ \ldots) \ \mathcal{U} \ p_n \]
+\[R(n) = \bigwedge_{i=1}^{n} (\Box \Diamond p_i \vee \Diamond \Box p_{i+1}) \]
+\[U_2(n) = p_1 \ \mathcal{U} \ (p_2 \ \mathcal{U} \ (\ldots p_{n-1} \ \mathcal{U} \ p_n) \ldots ) \]
+\[C_1(n) = \bigvee_{i=1}^{n} \Box \Diamond p_i \]
+\[C_2(n) = \bigwedge_{i=1}^{n} \Box \Diamond p_i \]
+\[Q(n) = \bigwedge (\Diamond p_i \vee \Box p_{i+1}) \]
+\[S(n) = \bigwedge_{i=1}^{n} \Box p_i \]
+
+\begin{enumerate}
+\item \htmladdnormallink{Eformula.pl}{Eformula.pl.zip}
+\item \htmladdnormallink{Uformula.pl}{Uformula.pl.zip}
+\item \htmladdnormallink{Rformula.pl}{Rformula.pl.zip}
+\item \htmladdnormallink{U2formula.pl}{U2formula.pl.zip}
+\item \htmladdnormallink{C1formula.pl}{C1formula.pl.zip}
+\item \htmladdnormallink{C2formula.pl}{C2formula.pl.zip}
+\item \htmladdnormallink{Qformula.pl}{Qformula.pl.zip}
+\item \htmladdnormallink{Sformula.pl}{Sformula.pl.zip}
+\end{enumerate}
+
+
+\bibliographystyle{plain}
+\bibliography{benchmarking_scripts.bib}
+
+\end{document}

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+
+
+<title>Symbolic Tool Models</title>
+<meta name="description" content="Symbolic Tool Models">
+<meta name="keywords" content="benchmarking_scripts">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta name="Generator" content="LaTeX2HTML v2002-2-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="node2_files/benchmarking_scripts.css">
+
+<link rel="next" href="node3.html">
+<link rel="previous" href="node1.html">
+<link rel="up" href="benchmarking_scripts.html">
+<link rel="next" href="node3.html">
+</head><body>
+<!--Navigation Panel-->
+<a name="tex2html50" href="node3.html">
+<a name="tex2html48" href="benchmarking_scripts.html">
+<a name="tex2html42" href="node1.html">
+<br>
+<b> Next:</b> <a name="tex2html51" href="node3.html">Input Formulas</a>
+<b> Up:</b> <a name="tex2html49" href="benchmarking_scripts.html">Model Checking Benchmarking Scripts</a>
+<b> Previous:</b> <a name="tex2html43" href="node1.html">Explicit Tool Models</a>
+<br>
+<br>
+<!--End of Navigation Panel-->
+
+<h1><a name="SECTION00020000000000000000">
+Symbolic Tool Models</a>
+</h1>
+
+<p>
+We can also benchmark LTL formula modeling with CadenceSMV and NuSMV. To check whether a LTL formula <img src="node2_files/img4.png" alt="$\varphi $" width="14" align="middle" border="0" height="31"> is satisfiable, we model check <img src="node2_files/img5.png" alt="$\neg\varphi $" width="25" align="middle" border="0" height="31"> against a universal SMV model. For example, if <!-- MATH
+ $\varphi = (X (a))$
+ -->
+<img src="node2_files/img6.png" alt="$\varphi = (X (a))$" width="77" align="middle" border="0" height="32">, we provide the following input to NuSMV:
+</p><pre>MODULE main
+  VAR
+    a : boolean;
+    b : boolean;
+    c : boolean;
+  LTLSPEC !(X(a=1 ))
+  FAIRNESS
+    1
+</pre>(The ``FAIRNESS'' line varies with versions of NuSMV. The CadenceSMV model is very similar.) SMV negates the specification, <img src="node2_files/img5.png" alt="$\neg\varphi $" width="25" align="middle" border="0" height="31">, symbolically compiles <img src="node2_files/img4.png" alt="$\varphi $" width="14" align="middle" border="0" height="31"> into <img src="node2_files/img7.png" alt="$A_{\varphi }$" width="22" align="middle" border="0" height="31">, and conjoins <img src="node2_files/img7.png" alt="$A_{\varphi }$" width="22" align="middle" border="0" height="31"> with the universal model. If the automaton is not empty, then SMV finds a fair path, which satisfies the formula <img src="node2_files/img4.png" alt="$\varphi $" width="14" align="middle" border="0" height="31">. In this way, SMV acts as both a symbolic compiler and a search engine.
+
+<p>
+<br></p><hr>
+<address>
+Kristin Yvonne Rozier
+2007-05-10
+</address>
+</body></html>
