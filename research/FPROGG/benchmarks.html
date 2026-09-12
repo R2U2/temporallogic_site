@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>FPROGG &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        
+						<h2>FPROGG: A Formula Progression-Based MLTL Benchmark Generator</h2>
+						<!-- Authors -->
+						<h4>Alec Rosentrater, Kristin Yvonne Rozier, and Phillip Jones</h4>
+						<p> This webpage contains the MLTL Benchmark Library from "FPROGG: A Formula Progression-Based MLTL Benchmark Generator"</a><p>
+						<hr>
+
+						<a href="Benchmark_Library.zip"><h3 align=center><u>The Benchmark Library is available for download here (zip)</u></h3></a>
+                        <h3> Benchmark Library</h3>
+The MLTL Benchmark Library contains the MLTL benchmarks generated from FPROGG.
+
+An MLTL Benchmark is a 3-tuple consisting of an MLTL formula, a trace of variable assignments through time, and an oracle of time-verdict pairs which give the satisfaction result of evaluating the formula over the trace starting at each timestep.
+
+In this library, formulas are stored in batches in .mltl files, and traces and oracles are stored separately in .csv and .txt files respectively. 
+
+In creating this library, we generated all benchmarks to a trace length goal of 100, but some may be shorter due to the formula being unsatisfiable after some point.
+
+<h3>Library Organization</h3>
+The library is organized at a high-level according to the benchmark's formula properties as follows:<br>
+
+<ul>
+	<li>P0.x Where x The proportion of all operators in a formula which are temporal operators. The initial 200,000 benchmarks referenced in the paper are all of type P0.3. We have since generated additional benchmarks with P0.5, or half of all operators in the formula being temporal. </li>
+
+	<li>Ny Where y is the number of different atomic propositions used by the benchmark's formula. We provide benchmarks ranging from 1 to 5 variables </li>
+
+	<li>Lz Where z is the number of clauses in the benchmark's formula. We provide benchmarks ranging from 5 to 100 clauses in increments of 5.</li>
+</ul>
+
+<h3>Benchmark Grouping</h3>
+The benchmarks for formulas of the same type are grouped in batches of 500. The formulas are stored one per line in the .mltl files which are named according to the same organizational scheme as the library. 
+For instance, the file "P0.3N3L25M5T10.mltl" contains 500 mltl formulas which have 30% of their operators being temporal, 3 unique atomic propositions, and an overall length of 25. 
+
+The benchmarks for these formulas are then grouped according to their generation pattern and named according to the formula line number in the formula file. 
+Traces are stored in separate files from the verdict oracles to allow them to be ingested into other tools without additional data processing being required.
+
+
+<h3>Trace Values</h3>
+Some traces have a third value assignment to the propositions beyond '0' or '1'. This '2' assignment signifies that the formula does not constrain that particular variable value at that time. FPROGG uses this to avoid being too constrictive in assignments, as it does not support back-tracking if a particular assignment is later found to be non-extensible. 
+
+
+<h3>Library Size and Contributing</h3>
+
+Currently the library hosts approximately 417,000 benchmarks, but we plan to continue growing it.
+In the future we hope to add a community submission feature to enable participation from the research community.
+
+
+
+
+
+                    </div>
+				</div>
+			</main>
+
+<nav id="nav">
+    <div class="innertube">
+        <h3><a href=index.html class="active">Home</a></h3><hr>
+        <h3><a href=benchmarks.html>Benchmarks</a></h3><hr>
+        <h3><a href=artifact.html>Artifact</a></h3><hr>
+		<h3><a href=architecture.html>Architecture</a></h3><hr>
+        <h3><a href=contact.html>Contact</a></h3><hr>
+    </div>
+</nav>
+
+</div>
+</body>
+</html>

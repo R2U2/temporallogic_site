@@ -1,0 +1,10 @@
+Virtual Machine Image
+(Exactly the same as provided)
+
+We prepared the virtual machine image on a computer running Ubuntu 16.04, with 32GB RAM.
+Processor: Intel Core i7-4770S running at 3.10Ghz
+Core: 8
+
+For running the artifact, import the virtual machine image and run it.
+The directory for the artifact is on the desktop.
+Follow the README inside the directory for evaluation.

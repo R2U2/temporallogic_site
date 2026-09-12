@@ -1,0 +1,2 @@
+- Remove paragraph <p><\p> in references. 
+- For bibtex entry, change <pre><\pre> to <my><\my>

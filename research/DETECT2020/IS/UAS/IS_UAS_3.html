@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> IS_UAS_3 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The eastern velocity measurement difference from the <font face=courier>GPS</font> and the <font face=courier>IMU</font> should be less than <font face=courier>ERROR_VEL</font>. </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>VelE</font> (GPS), <font face=courier> AccE</font> (IMU)</p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>VelE_lt_PrevVA_plus_Error: VelE &lt; PREV_VelE + PREV_AccE + ERROR_VEL 
+VelE_gt_PrevVA_minus_Error: VelE > PREV_VelE +PREV_AccE - ERROR_VEL</code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> &not;&#9744;[0,3] &not;(VelE_lt_PrevVA_plus_Error &and; VelN_gt_PrevVA_minus_Error) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> The error of the eastern velocity between the GPS and the IMU is out of bounds. </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Acceleration component is multiplied by change in time, but for the Vapor dt=1 </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/IS_UAS_2_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Display of the relationship between the Acceleration East and the Velocity East.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/IS_UAS_2_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output of IS_UAS_3, showing that the Velocity East and Acceleration East follow their constrained relationship.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/IS_UAS_2_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Fault injected into the relationship between the Accelration East and Velocity East. Velocity is constantly, rapidly changing, when Acceleration in still zero. </figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/IS_UAS_2_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: R2U2's output return's a false reading during the time the fault is injected, showing that R2U2 is able to detect faults.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

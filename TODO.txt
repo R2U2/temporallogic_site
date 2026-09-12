@@ -1,0 +1,15 @@
+Upload these videos to the lab YouTube channel:
+[ ] research/R2U2/FORMATS_18_talk_BrianKempa.mp4
+[ ] research/DETECT2020/mcauwels_DETECT_2020.mp4
+[ ] research/R2U2/FORMATS_18_teaser_BrianKempa.mp4
+[ ] research/R2U2/R2U2-on-R2_demo.mp4
+[ ] research/R2U2/R2U2_Demo_08-2017.mov
+[ ] research/NFM21/Nova Somnium Launch.mp4
+
+[ ] Record the YouTube URL for each uploaded video.
+[ ] Update website links and video embeds to use those YouTube URLs.
+[ ] Verify the updated links and playback.
+
+For now, these video files remain on disk but are excluded from Git and
+publication through .gitignore. Existing website links may remain broken
+until the uploads and link updates are complete.

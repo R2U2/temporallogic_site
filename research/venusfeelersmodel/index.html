@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Feelers Model Benchmarks</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <h1>Venus Feelers Model Benchmarks</h1>
+    <h2>Commands for running NuXmv and checking your LTL specifications</h2>
+    check out the <a href="https://nuxmv.fbk.eu/downloads/nuxmv-user-manual.pdf" target="_blank">NuXmv User Manual</a>
+    for a description of each command <br>
+    <code>
+    > ./bin/nuxmv <yourfile.smv> <br>
+    > read_model <br>
+    > go <br>
+    > check_ltlspec <br>
+    </code>
+
+
+
+    <h2>Links for Benchmarks</h2>
+    <a href="model_0.html">See the model of the current design with bugs</a> <br>
+    <a href="model_1.html">Model 1</a> - Original design with bugs removed <br> <br>
+    The following models are not complete: <br>
+    <a href="model_2.html">Model 2</a> - Previous model and add the ability to collect a sample <br>
+    <a href="model_3.html">Model 3</a> - Previous model and add the ability to turn the rover <br>
+    <a href="model_4.html">Model 4</a> - Previous model and add sensors on the back of the rover<br>
+
+
+
+
+    <a href="bugtestmodel.html">Click Here to view model with known bugs removed</a>
+    <h2>Specifications</h2>
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th class="eng">Venus Feelers Model Validation Specifications</th>
+            <th>Formula</th>
+        </tr>
+        <tr>
+            <td>VF-1</td>
+            <td class="eng"">The rover will move forwards until the stop pin has been activated </td>
+            <td>&#9744;(forward &#8658; &#172;pin)</td>
+        </tr>
+        <tr>
+            <td>VF-2</td>
+            <td class=" eng""> The rover will not move forwards if the stop pin is active</td>
+            <td>&#9744;(pin &#8658; &#172;forward)</td>
+        </tr>
+        <tr>
+            <td>VF-3</td>
+            <td class="eng"">If the stop pin is activated (the rover encounters an obstacle), the rover will stop immediately and then reverse.</td>
+            <td>&#9744;((pin &#8743; (pp30 &#8744; pr30 &#8744; bar &#8744; drop)) &#8658; (X(&#172;forward &#8743;  &#172;reverse) &#8743; XX(reverse)))</td>
+        </tr>
+        <tr>
+            <td>VF-4</td>
+            <td class=" eng"">If the pitch of the pendulum, or the roll of the pendulum, or the height of the drop
+                wheels are greater than 30&deg;, or if the stop bar is activated, the stop pin will be activated.</td>
+            <td>&#9744;((pp30 &#8744; pr30 &#8744;bar &#8744; drop) &#8658; X(pin))</td>
+        </tr>
+        <tr>
+            <td>VF-5</td>
+            <td class="eng"">If the rover is reversed and the pitch of the pendulum is greater than 30&deg;then the stop pin will eventually be deactivated when the pitch of the pendulum is no longer greater than 30&deg;</td>
+            <td>&#9744;((reverse &#8743; pp30) &#8658;  &#9826;(&#172;pp30 &#8743; &#172;pin))</td>
+        </tr>
+        <tr>
+            <td>VF-6</td>
+            <td class=" eng"">If the rover is reversed and the roll of the pendulum is greater than 30&deg;then the
+                stop pin will eventually be deactivated when the roll of the pendulum is no longer greater than 30&deg;
+            </td>
+            <td>&#9744;((reverse &#8743; pr30) &#8658; &#9826;(&#172;pr30 &#8743; &#172;pin))</td>
+        </tr>
+        <tr>
+            <td>VF-7</td>
+            <td class="eng"">If the rover is reversed and bar stop is active, then the stop pin will eventually be deactivated when the height wheel is less than 30&deg;.</td>
+            <td>&#9744;((reverse &#8743; bar) &#8658;  &#9826;(&#172;bar &#8743; &#172;pin))</td>
+        </tr>
+        <tr>
+            <td>VF-8</td>
+            <td class=" eng"">If the rover is reversed and height wheel has dropped more than 30&deg;, then the stop
+                pin will eventually be deactivated when the bar stop is no longer active.</td>
+            <td>&#9744;((reverse &#8743; drop) &#8658; &#9826;(&#172;drop &#8743; &#172;pin))</td>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th class="eng">NASA Challenge Model Verification Specifications</th>
+            <th>Formula</th>
+        </tr>
+        <tr>
+            <td>NC-1</td>
+            <td class="eng"">Rocks smaller than 0.3m in height, or holes and valleys shallower than 0.3m deep or narrower than 0.1m wide or less than 0.5m long in the direction of travel, or Slopes less than 25&deg; must not trigger sensor.</td>
+            <td>&#9744;(&#172;(pp30 &#8744; pr30 &#8744; bar &#8744; drop) &#8658; X(&#172;pin))</td>
+        </tr>        
+        <tr>
+            <td>NC-2</td>
+            <td class=" eng"">Slopes greater than or equal to 30&deg; must trigger sensor</td>
+            <td>&#9744;((pp30 &#8744; pr30) &#8658; &#9826;pin)</td>
+        </tr>
+        <tr>
+            <td>NC-3</td>
+            <td class="eng"">Rocks greater than 0.35m in height must trigger sensor</td>
+            <td>&#9744;(bar &#8658; &#9826;pin)</td>
+        </tr>
+        <tr>
+            <td>NC-4</td>
+            <td class=" eng"">Holes and valleys greater than 0.35m deep (except for small holes) or holes greater than
+                0.1m wide and greater than 0.5m long must trigger sensor</td>
+            <td>&#9744;(drop &#8658; &#9826;pin)</td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+</body>
+
+</html>

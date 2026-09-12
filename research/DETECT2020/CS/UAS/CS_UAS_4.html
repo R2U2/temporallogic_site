@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> CS_UAS_4 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> If a UAS if flying toward as <font face=courier>STOP</font> waypoint, it will eventually decelerate. </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Subphase, AccD, AccE, AccN</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Subphase_eq_Stop: Subphase == "Stop"
+AccD_lt_0: AccD &lt; 0
+AccN_lt_0: AccN &lt; 0
+AccE_lt_0: AccE &lt; 0</code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> Subphase_eq_Stop &rarr; &#9826;[0,M] (AccD_lt_0 &and; AccN_lt_0 &and; AccE_lt_0) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> UAS is not slowing down while heading to a stop.</p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Until such a time that a test flight with the Vapor 55 can be completed, this specification is unable to be fully tested.</p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/CS_UAS_4_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Caption</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

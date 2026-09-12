@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Accelerating Parallel Verification via Complementary Property Partitioning and Strategy Exploration</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h2>Accelerating Parallel Verification via Complementary Property Partitioning and Strategy Exploration</h2>
+						<!-- Authors -->
+						<h4>Rohit Dureja, Jason Baumgartner, Robert Kanzelman, Mark Williams and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains supplementary experimental data for <a href=#>"Accelerating Parallel Verification via Complementary Property Partitioning and Strategy Exploration"</a> by R. Dureja, J. Baumgartner, R. Kanzelman, M. Williams, and K. Y. Rozier. </p>
+						<hr>
+
+						<p>Most of the experimental results are described in the paper. This webpage contains some additional results for tuning a localization portfolio and performance of benchmark sets B1, B2, and B3 with different portfolios (including the ones not described in the paper)</p>
+
+						<h4>Localization portfolios</h4>
+
+						We compare six different 6-process localization portfolios (the portfolios marked with * are different from the paper). These are derived from Fig. 13 in the paper.
+						<ol>
+							<li><b>base</b>: No property grouping or incremental repetition of properties; all processes iterate properties in forward order. This represents a standard state-of-the-art localization portfolio approach, without property grouping.</li>
+							<li><b>base+g</b>: extends <b>base</b> with affinity property grouping, including semantic partitioning in one <i>Fast-and-Lossy</i> and one <i>Aggressive</i> strategy. This represents a state-of-the-art localization portfolio with property grouping.</li>
+							<li><b>best-d</b>: extends <b>base+g</b> with incremental repetition (R) and irredundant iteration order (I), to reduce wall time.</li>
+							<li><b>best</b>: extends <b>best-d</b> with decomposition (D).</li>
+							<li>*<b>best/f-d</b>: similar to <b>best-d</b> except all localization processes use the <i>Fast-and-Lossy</i> strategy</li>
+							<li>*<b>best/f</b>: extends <b>best/f-d</b> with property decomposition (D).</li>
+						</ol>
+
+						For portfolios 1--4, the localization configuration and subsequent solving strategy of each process is identical across portfolios, except for the differences discussed below. Portfolios 5--6 use <i>Fast-and-Lossy</i> strategy for each process with different localization configuration.
+
+						<h4>Tuning the localization portfolio</h4>
+
+						We evaluate several settings for choosing optimal localization configurations on proprietary benchmarks. We evaluate 36 different localization configurations with 30 different proof strategies. The results are summarized in a <a href="assets/localization_configuration.xlsx"><u>spreadsheet</u></a>.
+
+
+						<h4>Basic localization settings</h4>
+
+						<h5>Portfolios 1--4 (from the paper)</h5>
+						S1 only performs counterexample-based refinement. S2 vs. S3 perform hybrid counterexample-based refinement with light PBA (capped SAT time limits) after every unsatisfiable BMC step vs. only before the subsequent solving strategy, respectively. Abstract-netlist gates remaining after PBA in S2 are considered committed and cannot be eliminated in further PBA steps. S3 utilizes a minimal unsatisfiable core to further reduce the abstract netlist. S1,S2 and S3 use a time-limit of 300 seconds per property/group. S4-S6 are identical to S1-S3, respectively, without imposed time-limits and modulo the subsequent solving strategy differences (<i>Fast-and-Lossy</i> vs. <i>Aggressive</i>).
+
+						<h5>Portfolios 5--6</h5>
+						S1, S2 and S3 are same as above. S4--S6 are identical to S1--S3, respectively, without imposed time-limits, use the same solving <i>Fast-and-Lossy</i> strategy and iterate properties in reverse order.
+
+						<h5><i>Fast-and-Lossy</i> strategy</h5>
+
+						This strategy uses counterexample-based refinement mainly with no or lighter PBA for faster BMC, yielding larger abstract netlists solved using light combinational rewriting, input elimination, then IC3.
+
+						<h5><i>Aggressive</i> strategy</h5>
+
+						This strategy uses both counterexample- and proof-based abstraction, yielding smallest abstract netlists solved using combinational rewriting; input elimination which is especially powerful after localization due to inserted cutpoints; min-area retiming; a nested induction-only gate-based sequential redundancy removal; then IC3.
+
+						<h4>Additional results</h4>
+
+						The plots in Fig. 1 and Fig. 2 shows the cumulative number of properties solved by each portfolio for sets B1 and B2. The interesting point to note is that while the number of properties solved is larger with Fast-and-Lossy in portfolios <b>best/f-d</b> and <b>best/f</b> compared to <b>base</b> and <b>base+g</b>, the <b>best</b> portfolio that uses balanced <i>Fast-and-Lossy</i> and <i>Aggressive</i> strategies, outperforms both <b>best/f-d</b> and <b>best/f</b>. This <u>emphasizes how critical the Aggressive strategy to solve difficult miters is to the overall redundancy removal process</u>.
+						<center>
+							<div class="row">
+							  <div class="column">
+							  	<figure>
+							    <img width="350" src="assets/set_b1.jpg" caption="Snow">
+							    <figcaption>Fig. 1: #Prop. solved vs time for set B1.</figcaption>
+							  </figure>
+							  </div>
+							  <div class="column">
+							  	<figure>
+							    <img width="350" src="assets/set_b2.jpg" alt="Forest" >
+							    <figcaption>Fig. 2: #Prop. solved vs time for set B2.</figcaption>
+							  	</figure>
+							  </div>
+							</div>
+						</center>
+
+						Fig. 3 shows the scatter plot for benchmark set B2 for <b>best</b> vs. different baselines. 
+						<center>
+							<div class="row">
+						  	<figure>
+						    <img width="210" src="assets/set_b1.4.jpg" caption="Snow">
+						    <img width="210" src="assets/set_b1.5.jpg" caption="Snow">
+						    <img width="210" src="assets/set_b1.6.jpg" caption="Snow">
+						    <figcaption>Fig. 3: <b>best</b> vs. baselines for set B2 (points below diagonal are in favor)</figcaption>
+							  </figure>
+							</div>
+						</center>
+
+						<h5>Raw data</h5>
+
+						The raw experimental data for each benchmark set (B1, B2, and B3), and the <b>big</b> benchmark can be downloaded below.
+						<ul>
+							<li>Set B1</li>
+							<ul>
+								<li> Cumulative number of properties solved vs. time (<a href="assets/set_b1_cumulative_time_vs_properties.csv"><u>.csv</u></a>)</li>
+								<li> Time per benchmark (<a href="assets/set_b1_time_per_benchmark.csv"><u>.csv</u></a>)</li>
+							</ul>
+							<li>Set B2</li>
+							<ul>
+								<li> Cumulative number of properties solved vs. time (<a href="assets/set_b2_cumulative_time_vs_properties.csv"><u>.csv</u></a>)</li>
+								<li> Time per benchmark (<a href="assets/set_b2_time_per_benchmark.csv"><u>.csv</u></a>)</li>
+							</ul>
+							<li>Set B3</li>
+							<ul>
+								<li> Cumulative number of properties solved vs. time (<a href="assets/set_b3_cumulative_time_vs_properties.csv"><u>.csv</u></a>)</li>
+							</ul>
+							<li><b>big</b> benchmark</li>
+							<ul>
+								<li> Number of properties solved vs. time (<a href="assets/big_property_vs_time.csv"><u>.csv</u></a>)</li>
+							</ul>
+
+						</ul>
+
+					</div>
+				</div>
+			</main>
+					
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=results.html class="active">Results</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> RC_UAS_3 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The vertical position (<font face=courier>PosD</font>) shall not change by more than <font face=courier>POS_DELTA_INC</font> or less than <font face=courier>POS_DELTA_DEC</font> each sample instance at any time </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>PosD</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs</h4>
+                        <pre><code>PosD_lt_Prev_Delta_Inc: PosD &lt; PREV_POSD + POSD_DELTA_INC
+PosD_gt_Prev_minus_Delta_Dec: |PosD| &gt; PREV_POSD - POSD_DELTA_DEC</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,M] (PosD_lt_Prev_Delta_Inc &and; PosD_gt_Prev_minus_Delta_Dec) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> Vertical Position is changing too fast </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> <font face=courier>POSD_DELTA_INC</font> is maximum increase in altitude, <font face=courier>POSD_DELTA_DEC</font> is maximum decrease in altitude. Corresponds with operating bounds spec for vertical velocity.  </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_3_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Changes in Position Down.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_3_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output showing that it was able to detect faults.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

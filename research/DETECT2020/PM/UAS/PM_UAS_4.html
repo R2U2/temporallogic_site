@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> PM_UAS_4 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The relationship between the <font face=courier>Long</font> and the <font face=courier>PosE</font> measurements shall be directly proportional by factor k2. The error between these two should be less than <font face=courier>ERROR_LONG_POSE</font>. If it is outside these error bounds, then allow 3 timesteps for recovery </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Long, PosE</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>PosErise = POSE - PREV_POSE
+LongRise = LONG - PREV_LONG
+ConvFact = PosErise/LongRise
+PosErise_geq_0.25: PosErise &#8805; 0.25
+PosErise_leq_0.25: PosErise &#8804; -0.25
+ConvFact_leq_k2_plus_Error: ConvFact &#8804; k2 + ERROR_LONG_POSE
+ConvFact_geq_k2_minus_Error: ConvFact &#8805; k2 - ERROR_LONG_POSE</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> (PosErise_geq_0.25 &or; PosErise_leq_0.25) &rarr; &not;&#9744;[0,3] (&not;ConvFact_leq_k2_plus_Error &or; &not;ConvFact_geq_k2_minus_Error) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> The relationship between the Longitude and Position East is outside the error bounds and are too widely varied. </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> k2 would have to be predefined and is mission dependent based on initial altitude. <font face=courier>ERROR_LONG_POSE</font> could be given a value like 25% of k2 </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_4_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Position East of Vapor 55.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_4_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output of PM_UAS_4, showing that R2U2 was able to detect any present faults.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

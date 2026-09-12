@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Combinatorial Model Checking Reduction</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h1>Combinatorial Model Checking Reduction</h1>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=#>"Combinatorial Model Checking Reduction"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+						<h3>Results</h3>
+						<p>Most of the experimental results have been described in the paper. This webpage contains some additional plots for the results. The data to regenerate these plots can be found <a href="artifact.html">here</a>.</p>
+
+						<h4>Validation</h4>
+						<p>
+						<center>
+						<figure>
+						<img width="300" src="images/fig64.jpg" />
+						<figcaption>Figure 1: Results for airspace validation.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig60.jpg" />
+						<figcaption>Figure 2: Results for nominal validation.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig61.jpg" />
+						<figcaption>Figure 3: Results for extended validation.</figcaption>
+						</figure>
+						</center>
+						</p>
+
+						<h4>Verification</h4>
+						These plots are the same as the ones in the paper, and are reproduced here for the sake of completeness.
+						<p>
+						<center>
+						<figure>
+						<img width="300" src="images/fig62.jpg" />
+						<figcaption>Figure 4: Results for nominal verification.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig63.jpg" />
+						<figcaption>Figure 5: Results for extended verification.</figcaption>
+						</figure>
+						</center>
+						</p>
+
+						<h4>Overall Results</h4>
+						These plots show cumulative LTL properties checked in the original set of models, and after applying the CMCR algorithm, for nominal and extended verification. A total of 54 verification properties are checked for each of the nominal and extended models.
+						<ul>
+							<li> <b>Before:</b> 54 * 1,620 = 87,480 verification properties are checked each for nominal and extended models.
+							<li> <b>After:</b> A total of 44,451 verification properties are checked for nominal models with a median 44, mean 43 properties per model.
+							<li> <b>After:</b> A total of 42,924 verification properties are checked for extended models with a median 44, mean 44 properties per model.
+						</ul>
+
+						<p>
+						<center>
+						<figure>
+						<img width="300" src="images/fig70.jpg" />
+						<figcaption>Figure 6: Cumulative properties checked for nominal and extended verification.</figcaption>
+						</figure>
+						</center>
+						</p>
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=benchmark.html>Benchmark</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

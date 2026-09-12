@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="bibover.css" type="text/css" />
+<title></title>
+<script type="text/javascript" src="bibover.js">
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["action.js"],
+      Macros: {
+      B: "{\\mathbb B}",
+      A: "{\\mathbb A}",
+      C: "{\\mathbb C}",
+      tru: "{\\mathrm\{True\}}"
+    } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="proofs.html">Proofs</a></div>
+<div class="menu-item"><a href="artifacts.html">Artifacts</a></div>
+<div class="menu-item"><a href="implementation.html">Implementation</a></div>
+<div class="menu-item"><a href="contact.html">Contact</a></div>
+</td>
+<td id="layout-content">
+<div class="bibover noshow" id="bibover_Hariharan2022" onmousedown="javascript:lockMouse(event,'Hariharan2022')" onmouseup="javascript:unLockMouse(event,'Hariharan2022')"
+style="z-index: 10000">
+<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('Hariharan2022')">X</a></div>
+<p>
+<p>G. Hariharan, B. Kempa, T. Wongpiromsarn, P. H. Jones and K. Y. Rozier,
+<i>MLTL Multi-type: A logic to reason over signals of different types</i>,
+In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV), August, 2022<br />
+<a href="javascript:toggleBibtex('Hariharan2022')">[BibTeX]</a> <a href="https://research.temporallogic.org/papers/NSV22.pdf" target=&ldquo;blank&rdquo;>[PDF]</a></p>
+</p>
+<div id="bib_Hariharan2022" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
+<pre>
+@inproceedings{Hariharan2022,
+  author = {Gokul Hariharan, Brian Kempa, Tichakorm Wongpiromsarn, Phillip H. Jones, Kristin Y. Rozier},
+  title = {MLTL Multi-type: A logic to reason over signals of different types},
+  booktitle = {In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV)},
+  year = {2022},
+  pdf = {//research.temporallogic.org/papers/NSV22.pdf}
+}
+</pre></div>
+</div>
+<h1>MLTL Multi-type: A logic to reason over signals of different types</h1>
+<p><b><a href="https://gokulhari.github.io/webpage/" target="<u>blank">Gokul Hariharan*</a></b>, <b><a href="https://www.bckempa.io" target="</u>blank">Brian Kempa</a></b>, <b><a href="https://tichakorn.dev/" target="<u>blank">Tichakorn Wongpiromsarn</a></b>, <b><a href="https://www.engineering.iastate.edu/people/profile/phjones/" target="</u>blank">Phillip H. Jones</a></b>, and <b><a href="https://www.aere.iastate.edu/kyrozier/" target="_blank">Kristin Y. Rozier</a></b></p>
+<p><b>This webpage contains further details and artifacts for reproducibility in &ldquo;<a href="javascript:cite('Hariharan2022')">MLTL Multi-type: A logic to reason over signals of different types</a>&rdquo;</b></p>
+<p>*<a href="mailto:gokul@iastate.edu" target=&ldquo;blank&rdquo;>gokul@iastate.edu</a></p>
+<h2>Abstract</h2>
+<p>Modern cyber-physical systems (CPS) operate in complex systems of systems that must seamlessly work together to control safety- or mission-critical functions. Capturing specifications in a logic like LTL enables verification and validation of CPS requirements, yet an LTL formula specification can imply unrealistic assumptions, such as that all signals populating the variables in the formula are of type Boolean and agree on a standard time step. To achieve formal verification of CPS systems of systems, we need to write validate-able requirements that reason over (sub-)system signals of different types, such as signals with different timescales, or levels of abstraction, or signals with complex relationships to each other that populate variables in the same formula. Validation includes both transparency for human validation and tractability for automated validation, e.g., since CPS often run on resource-limited embedded systems. Specifications for correctness of numerical algorithms for CPS need to be able to describe global properties with precise representations of local components. Therefore, we introduce Mission-time Linear Temporal Logic Multi-type (MLTLM), a logic building on MLTL, to enable writing clear, formal requirements over finite input signals (e.g., sensor signals, local computations) of different types, cleanly coordinating the temporal logic and signal relationship considerations without significantly increasing the complexity of logical analysis, e.g., model checking, satisfiability, runtime verification (RV). We explore the common scenario of CPS systems of systems operating over different timescales, including a detailed analysis with a publicly-available implementation of MLTLM.
+We contribute:</p>
+<ol>
+<li><p>the definition and semantics of MLTLM, a lightweight extension of MLTL allowing a single temporal formula over variables of multiple types;</p>
+</li>
+<li><p>the construction and use of an MLTLM fragment for time-granularity, with proof of the language's expressive power; and</p>
+</li>
+<li><p>the design and empirical study of an MLTLM runtime engine suitable for real-time execution on embedded hardware.</p>
+</li>
+</ol>
+<div id="footer">
+<div id="footer-text">
+Page generated 2022-08-06 07:46:32 CDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+<!--
+//Get array of all anchors in the layout-content table cell
+var td=document.getElementById('layout-content');
+var anchs=td.getElementsByTagName('a');
+//Setup the regex pattern for finding cites
+var patt1 = /javascript:cite\(\'.*\'\)/;
+//Loop through all anchors
+for(var	i=0;i<anchs.length;i++) {
+    a=anchs[i];
+    //If the anchor contains a cite add event listeners
+    if(a.href.search(patt1)!=-1) {
+       a.addEventListener('mouseover',bibshow,false);
+       a.addEventListener('mouseout',bibhide,false);
+    }
+}
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>OpenUAS Version 1.0</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h2>OpenUAS Version 1.0</h2>
+						<!-- Authors -->
+						<h4>Christopher Johannsen, Marcella Anderson, William Burken, Ellie Diersen, John Edgren, Colton Glick, John Levandowski, Evelyn Moyer, Taylor Roquet, Alexander VandeLoo, Stephanie Jou and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains supplementary data for <a href=#>"OpenUAS Version 1.0"</a> by C. G. Johannsen, M. Anderson, W. Burken, E. Diersen, J. Edgren, C. Glick, J. Levandowski, E. Moyer, T. Roquet, A. VandeLoo, S. Jou and K. Y. Rozier. </p>
+						<hr>
+
+						<h4>Supplementary Motor Calculations</h4>
+
+						<table>
+							<tr>
+								<th>Data (Propellor)</th>
+								<th>Badass 560kv</th>
+								<th>Badass 650kv</th>
+								<th>Badass 710kv</th>
+								<th>Badass 790kv</th>
+								<th>Badass 970kv</th>
+								<th>Hacker A30-10XL v4</th>
+							</tr>
+							<tr>
+								<td>Current (12x10)</td>
+								<td>5.1A</td>
+								<td>5.1A</td>
+								<td>4.8A</td>
+								<td>5.1A</td>
+								<td>5.4A</td>
+								<td>5.2A</td>
+							</tr>
+							<tr>
+								<td>Current (13x10)</td>
+								<td>5A</td>
+								<td>4.7A</td>
+								<td>4.8A</td>
+								<td>5.2A</td>
+								<td>5.5A</td>
+								<td>4.8A</td>
+							</tr>
+							<tr>
+								<td>Current (14x10)</td>
+								<td>4.7A</td>
+								<td>4.4A</td>
+								<td>4.9A</td>
+								<td></td>
+								<td>5.3A</td>
+								<td>5.2A</td>
+							</tr>
+							<tr>
+								<td>Current (14x12)</td>
+								<td>4.5A</td>
+								<td>4.9A</td>
+								<td>4.5A</td>
+								<td>5.8A</td>
+								<td>5.5A</td>
+								<td>5.2A</td>
+							</tr>
+							<tr>
+								<td>Current (15x8)</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>4.5A</td>
+								<td>5.2A</td>
+								<td>4A</td>
+							</tr>
+							<tr>
+								<td>Efficiency (12x10)</td>
+								<td>53.6%</td>
+								<td>54.2%</td>
+								<td>56%</td>
+								<td>51.2%</td>
+								<td>48.4%</td>
+								<td>54.2%</td>
+							</tr>
+							<tr>
+								<td>Efficiency (13x10)</td>
+								<td>53%</td>
+								<td>53.6%</td>
+								<td>55.8%</td>
+								<td>51.1%</td>
+								<td>48.5%</td>
+								<td>53.3%</td>
+							</tr>
+							<tr>
+								<td>Efficiency (14x10)</td>
+								<td>51.6%</td>
+								<td>51.5%</td>
+								<td>55.4%</td>
+								<td></td>
+								<td>47.4%</td>
+								<td>53.5%</td>
+							</tr>
+							<tr>
+								<td>Efficiency (14x12)</td>
+								<td>55.5%</td>
+								<td>57%</td>
+								<td>57.3%</td>
+								<td>55.1%</td>
+								<td>50.8%</td>
+								<td>55.9%</td>
+							</tr>
+							<tr>
+								<td>Efficiency (15x8)</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>34.3%</td>
+								<td>34.2%</td>
+								<td>37.9%</td>
+							</tr>
+						</table>
+
+						<p>The BadAss 560kv with a 14x12 appeared to have the best numbers although the BadAss 650kv with a 14x12 appeared similar with a better efficiency, though with a higher current draw.</p>
+                        <figure>
+                            <img src="figs/560vs650.png" width= "500">
+                            <figcaption>Comparing Badass 560 and the 650 in cruise</figcaption>
+                        </figure>
+
+						<p>Looking at these two motors and prop combinations excess thrust:</p>
+
+						<figure>
+							<img src="figs/thrustavailablefullthrottle.png" width="500">
+							<figcaption>Comparing BadAss 560kv and BadAss 650kv full excess thrust</figcaption>
+						</figure>
+
+                        <p>Here it seems the 650kv has a higher access thrust over the entire velocity range than the Badass 560kv. </p>
+
+						<p>Assuming we can get a theoretical takeoff speed of 37mph, both these combinations will work, but the Badass 650Kv looks to be a good configuration that balances both efficiency with excess thrust, without drawing a lot of current. However to maximize thrust output, the team should use the BadAss 970kv with a 15x8 propellor. Although the 970 and the 15x8 prop have the lowest efficiency and highest current draw, this combination produces the most excess thrust out of any other combination, and would give the OpenUAS the most leeway during takeoff. </p>
+
+						<figure>
+							<img src="figs/970vs790vs650.png" width="700">
+							<figcaption>Comparing BadAss 650kv BadAdd 790kv, and BadAss 970kv</figcaption>
+						</figure>
+
+
+					</div>
+				</div>
+			</main>
+
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=data.html class="active">Data</a></h3><hr>
+          <h3><a href=files.html>Files</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

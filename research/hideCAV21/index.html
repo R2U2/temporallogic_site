@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>TACAS21 &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- <a href="https://github.com/lijwen2748/simplecar"><img style="position: relative; top: 0; right: 0; border: 0; margin: -20px;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" align='right'></a> -->
+						<!-- Title -->
+						
+						<h2>Model Predictive Runtime Verification for Embedded Platforms with Real-Time Deadlines</h2>
+						<!-- Authors -->
+						<h4>Pei Zhang, Rohit Dureja, Matthew Cauwels, Joseph Zambreno, Phillip H. Jones, Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=#>"Model Predictive Runtime Verification for Embedded Platforms with Real-Time Deadlines"</a><p>
+						<hr>
+
+												<a href="main.pdf"><h3 align=center><u>**The full version of the paper is available here (pdf)**</u></h3></a>
+
+
+						<h3>Abstract</h3>
+						<p>Reactive systems require mission-time verification that accurately captures future-time requirements.  On-board runtime verification (RV) requires real-time responsiveness that can be embedded within the limited resources (timing, power, weight, bandwidth, hardware, etc.) of the running system. For effective mitigation triggering, RV must detect faults as-early-as-possible, plus make best-possible predictions of future faults on-deadline. Effective on-board RV will always need to know or predict whether, e.g., the parachute needs to be deployed by the deadline for it to be effective (e.g., to cushion the aircraft's landing). To maximize accuracy and reduce mission-ending mistakes, RV must use real data whenever possible. We contribute a formal definition of real-time Model Predictive Runtime Verification (MPRV) that uniquely uses real data wherever possible, predicting only the minimum variable values required to make an on-deadline, best-as-possible requirement evaluation. MPRV carries a design-time model to runtime to fill in individual predictive values only when necessary. We devise a generic algorithm for MPRV on embedded platforms with limited resources, proving the worst-case execution time and memory usage. We contribute a specialized algorithm for implementing MPRV in FPGA hardware and argue for its correctness. We implement MPRV as a significant extension to the R2U2 RV engine, release a new version of that tool, and conduct an extensive experimental analysis demonstrating its utility and performance.</p>
+
+						<!-- <embed src="main.pdf" width="800px" height="2100px" /> -->
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

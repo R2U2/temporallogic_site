@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>More Scalable LTL Model Checking via Discovering Design-Space Dependencies (D<sup>3</sup>)</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h1>More Scalable LTL Model Checking via Discovering Design-Space Dependencies (D<sup>3</sup>)</h1>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains details and artifacts for reproducibility of the experiments in <a href=#>"More Scalable LTL Model Checking via Discovering Design-Space Dependencies"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+						<h3>Results</h3>
+						<p>Most of the experimental results have been described in the paper. This webpage contains some additional plots for the results. The data to regenerate these plots can be found <a href="artifact.html">here</a>.</p>
+
+						<h4>NASA's NextGen Air Traffic Control System Models</h4>
+
+						<p>The GenPC component of D<sup>3</sup> is able to reduce the 1,620 models to 1,028. The CheckRP + Maximum Dependence (H1) component of D<sup>3</sup> then reduces the number of properties that are checked for each model.
+							The <a href='benchmark.html'>phases</a> are categorized on the basis of the types of properties that are checked in the phase.</p>
+
+						<p>The timing results for the models are shown in Figures 1--5. The y-axis is the cumulative model checking time, and the x-axis is the count of models for which model-checking results are known by checking each of 1,620 models for all properties one-by-one (individual), checked reduced 1,028 instances for all properties (GenPC), checking all 1,620 models for reduced properties (CheckRP + H1), or checking reduced 1,028 instances for reduced properties (D<sup>3</sup> + H1).  </p>
+						<p>
+						<center>
+						<figure>
+						<img width="300" src="images/fig64.jpg" />
+						<figcaption>Figure 1: Timing results for Phase I.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig60.jpg" />
+						<figcaption>Figure 2: Timing results for Phase II.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig61.jpg" />
+						<figcaption>Figure 3: Timing results for Phase III.</figcaption>
+						</figure>
+						</center>
+						</p>
+
+						<p>The plots are the same as the ones in the paper, and are reproduced here for the sake of completeness.</p>
+						<p>
+						<center>
+						<figure>
+						<img width="300" src="images/fig62.jpg" />
+						<figcaption>Figure 4: Timing results for Phase IV.</figcaption>
+						</figure>
+						<figure>
+						<img width="300" src="images/fig63.jpg" />
+						<figcaption>Figure 5: Timing results for Phase V.</figcaption>
+						</figure>
+						</center>
+						</p>
+
+						<p>The number properties checked by D<sup>3</sup> for every model vary. This is due to the fact that the next property
+to check is chosen to maximize the number of yet-to-be-checked properties
+for which the result can be determined from inter-property dependencies. Figures 6--7 show the number of LTL properties checked per model in phase IV and V, respectively by D<sup>3</sup>. <b>Note that in neither of the phases, all 54 LTL properties are checked for a model.</b></p>
+
+						<p>
+						<center>
+						<figure>
+						<img width="500" src="images/fig50.jpg" />
+						<figcaption>Figure 6: Properties checked per model in Phase IV.</figcaption>
+						</figure>
+						<br>
+						<figure>
+						<img width="500" src="images/fig51.jpg" />
+						<figcaption>Figure 7: Properties checked per model in Phase V.</figcaption>
+						</figure>
+						</center>
+						</p>
+
+						<h4>Boeing AIR 6110 Wheel Braking System Models</h4>
+
+						<p>D<sup>3</sup> is evaluated against this benchmark to measure its performance in multi-property verification workflows. The CheckRP component of D<sup>3</sup> is run in three modes:</p>
+						<ul>
+							<li>CheckRP with no heuristic - properties checked using inter-property dependencies.</li>
+							<li>CheckRP with Maximum Dependence - unchecked property with the maximum dependent properties is checked.</li>
+
+							<li>CheckRP with Property Affinity - properties are pairwise grouped and grouped properties with the maximum property affinity are checked.</li>
+						</ul>
+						<p>The three configurations of CheckRP are compared against checking all properties one-by-one. Figure 8 shows the number of properties that are checked for the seven models in the benchmark using different configurations.</p>
+
+						<p>
+						<center>
+						<figure>
+						<img width="600" src="images/multi_property.jpg" />
+						<figcaption>Figure 8: Properties checked per model using different CheckRP configurations.</figcaption>
+						</figure>
+					</center>
+				</p>
+
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=benchmark.html>Benchmarks</a></h3><hr>
+					<h3><a href=docs/proofs.pdf>Proofs</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

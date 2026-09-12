@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="141.42857"
+     inkscape:cy="842.59086"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1274"
+     inkscape:window-height="794"
+     inkscape:window-x="111"
+     inkscape:window-y="6"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="56"
+       y="92.362183"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="56"
+         y="92.362183"
+         style="font-size:100px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Copperplate;-inkscape-font-specification:Copperplate Bold"><tspan
+           style="font-size:100px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#a71930;fill-opacity:1;font-family:Copperplate;-inkscape-font-specification:Copperplate Bold"
+           id="tspan3759">R2</tspan><tspan
+           style="font-size:100px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#723cb0;fill-opacity:1;font-family:Copperplate;-inkscape-font-specification:Copperplate Bold"
+           id="tspan6024">U2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#a71930;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="60"
+       y="132.36218"
+       id="text6026"
+       sodipodi:linespacing="101%"><tspan
+         sodipodi:role="line"
+         id="tspan6028"
+         x="60"
+         y="132.36218"
+         style="font-size:41px;font-weight:bold;font-family:Copperplate;-inkscape-font-specification:Copperplate;line-height:101%"><tspan
+           style="font-size:48px;line-height:101%"
+           id="tspan6052">R</tspan><tspan
+           style="fill:#000000;fill-opacity:1;font-size:41px;line-height:101%"
+           id="tspan6036">ealizable</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="177.36218"
+         id="tspan6030"
+         style="font-size:41px;font-weight:bold;font-family:Copperplate;-inkscape-font-specification:Copperplate;line-height:101%"><tspan
+           style="font-size:48px;line-height:101%"
+           id="tspan6048">R</tspan><tspan
+           style="fill:#000000;fill-opacity:1;font-size:41px;line-height:101%"
+           id="tspan6038">esponsive</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="222.36218"
+         id="tspan6032"
+         style="font-size:41px;font-weight:bold;fill:#723cb0;fill-opacity:1;font-family:Copperplate;-inkscape-font-specification:Copperplate;line-height:101%"><tspan
+           style="font-size:48px;line-height:101%"
+           id="tspan6046">U</tspan><tspan
+           style="fill:#000000;fill-opacity:1;font-size:41px;line-height:101%"
+           id="tspan6040">nobtrusive</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="267.36218"
+         id="tspan6034"
+         style="font-size:41px;font-weight:bold;fill:#723cb0;fill-opacity:1;font-family:Copperplate;-inkscape-font-specification:Copperplate;line-height:101%"><tspan
+           style="font-size:48px;line-height:101%"
+           id="tspan6044">U</tspan><tspan
+           style="fill:#000000;fill-opacity:1;font-size:41px;line-height:101%"
+           id="tspan6042">nit</tspan></tspan></text>
+  </g>
+</svg>

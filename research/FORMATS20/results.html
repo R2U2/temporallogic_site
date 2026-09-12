@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+						<p> This webpage contains supplementary specifications for <a href=#>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier <p>
+
+						<h3>Complete Specification List</h3>
+						<p>This webpage presents the complete list of specifications developed for the UTM system, whereas only a few specifications were listed within Table III.</p>
+
+						<h4>Support Vector Computation (Multiple COI)</h4>
+
+						<p>The figures below show information for all 174 benchmarks from the HWMCC 2013 multi-property verification track. <b>These benchmarks are not reduced in any way.</b></p>
+
+						<center>
+						<div class="row">
+					  <div class="column">
+					  	<figure>
+					    <img width="300" src="images/scc_compute_time.jpg" caption="Snow">
+					    <figcaption>Figure 1: SCC computation time using Tarjan's</figcaption>
+					  </figure>
+					  </div>
+					  <div class="column">
+					  	<figure>
+					    <img width="300" src="images/vector_length_ratio.jpg" alt="Forest" >
+					    <figcaption>Figure 2: Vector length ratio with and without SCC compression</figcaption>
+					  	</figure>
+					  </div>
+						</div>
+						<div class="row">
+					  <div class="column">
+					  	<figure>
+							<img width="300" src="images/vector_number_ratio.jpg" />
+							<figcaption>Figure 3: Maximum number of active bitvectors in memory</figcaption>
+						</figure>
+					  </div>
+					  <div class="column">
+					  	<figure>
+						<img width="300" src="images/support_compute_time.jpg" />
+						<figcaption>Figure 4: Multi-COI computation time relative to one-by-one (iterative) computation</figcaption>
+						</figure>
+					  </figure>
+					  </div>
+						</div>
+						</center>
+
+						<p>
+						<b>Figure 1</b> shows time taken to compute SCCs for all benchmarks using the linear-time Tarjan's algorithm. The support bitvectors can be packed by representing every SCC as a single weighted support variable; SCC bits have weight equal to the the number of registers in the SCC, while others have unit-weight.
+						<b>Figure 2</b> shows the ratio of vector lengths with and without packing. The peak memory usage can be reduced by freeing up bitvectors for intermediate gates. The bitvector for a non-property gate is freed after traversing its fanout.
+						<b>Figure 3</b> shows the ratio of the maximum number of active bitvectors in memory with and without garbage collection.
+						Lastly, <b>Figure 4</b> shows the overall bitvector-support computation time using our employed approach [9] versus iterative netlist sweeps for each property.
+						</p>
+
+						<h4>Verification Impact of Grouping</h4>
+
+						<p>Table 1</b> (<a href="docs/baseline_gt100_all.pdf">PDF</a>) shows our full experimental results of 48 selected benchmarks from HWMCC. These are obtained by simplifying all the benchmarks by standard logic synthesis (similar to &dc2 in ABC) to solve easy properties, and disjunctive decomposition to fragment each OR-gate property into a sub-property of its literals. Each property, or property group, is solved using a portfolio comprising BMC, IC3, and localization (LOC) without semantic partitioning. Each can process multiple properties: IC3 and BMC in a time- sharing manner, and LOC concurrently abstracting a set of properties which are solved using IC3. The experiment setup used is detailed in the paper. <u>Verification time for 'Level-n' signifies grouping is performed at all levels up to and including n.</u> <i>The data in the table below is used to generate Figure 9, Figure 10, and Table I in the paper.</i></p>
+
+						<center>
+						<img width="750" src="images/baseline_gt100_all.jpg" style="margin-left: 0px"/>
+					</center>
+
+					<h4>Grouping Impact on Localization</h4>
+
+						<p>We select 24 benchmarks having at least 50 properties solved by LOC. Properties not solved by localization are not considered. Table 2</b> (<a href="docs/loc_gt100_all.pdf">PDF</a>) shows our complete results on running localization on grouped properties. <u>'Random' grouping is done by sorting properties by COI size, and partitioning into equally-sized N groups.</u> <i>The data in the table below is used to generate Figure 11 in the paper.</i></p>
+
+						<center>
+						<img width="700" src="images/loc_gt100_all.jpg" style="margin-left: 0px"/>
+					</center>
+
+
+
+</p>
+</p>
+</div>
+</div>
+</main>
+					
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=results.html class="active">Complete Specification List</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

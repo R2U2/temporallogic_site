@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>More Scalable LTL Model Checking via Discovering Design-Space Dependencies (D<sup>3</sup>)</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h1>More Scalable LTL Model Checking via Discovering Design-Space Dependencies (D<sup>3</sup>)</h1>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains details and artifacts for reproducibility of the experiments in <a href=#>"More Scalable LTL Model Checking via Discovering Design-Space Dependencies"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+						<h3>NASA's NextGen Air Traffic Control System Models</h3>
+
+						<p>In the early phases of design, there is a need for the ability to analyze different design solutions. The family of NASA’s NextGen air traffic control (ATC) system models are a portfolio of potential design solutions to be compared with respect to different functional allocations, and overall reliability of the system. The entire design space consists of more than 20,000 designs. Each of the design is modeled as a labeled transition system and checked against a set of properties. The designs differ in terms of the parameters configured (different functional allocations).</p>
+						<p>Of the more than 20,000 designs, the relevant 1,620 are analyzed exhaustively. The model checking problem is split in to five phases;</p>
+							<ul>
+								<li>Phase I: Airspace validation</li>
+								<li>Phase II: Nominal validation</li>
+								<li>Phase III: Extended validation</li>
+								<li>Phase IV: Nominal verification</li>
+								<li>Phase V: Extended verification</li>
+							</ul>
+							<p>The nominal and extended models differ in terms of the faults modeled with the latter containing several possible faults. The airspace model captures the system without separation assurance agents (only contain aircraft). Each of the 1,620 models can be seen as instances of a combinatorial transition system with 7 enumerated parameters. Each of the 1620 instances is checked against a total of 346 properties, of which 191 are LTL properties, and the rest are CTL. The combinatorial transition system is modeled in the SMV language, uses <a href="https://ocra.fbk.eu/">OCRA</a> for compositional modeling. The parameters to the system are specified using preprocessor directives.</p>
+						<p>More details on the benchmark can be found on the <a href="https://es-static.fbk.eu/projects/nasa-aac/">project website</a>.</p>
+
+					<h3>Boeing AIR 6110 Wheel Braking System Models</h3>
+
+					<p>AIR 6110 employs informal methods to examine several WBS architectures which meet the same requirements with different degrees of reliability. In the published case study, </p>
+					<ul>
+						<li>AIR 6110 is analyzed with formal methods. </li>
+						<li>WBS architectures
+in Air6110 are created in a formal manner.</li>
+<li>The several architectures are automatically analyzed and compared.</li>
+					 </ul>
+
+					<p>From the perspective of a benchmark, these are a set of seven real-world
+nuXmv models representing possible designs for the Boeing AIR 6110 wheel
+braking system. Each model in set is checked against approximately 200 LTL properties. We evaluate D<sup>3</sup> against this benchmark to measure its performance in multi-property verification workflows. </p>
+
+					<p>More details on the benchmark can be found on the <a href="https://es-static.fbk.eu/projects/air6110/">project website</a>.</p>
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=benchmark.html>Benchmarks</a></h3><hr>
+					<h3><a href=docs/proofs.pdf>Proofs</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

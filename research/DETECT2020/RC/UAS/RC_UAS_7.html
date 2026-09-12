@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> RC_UAS_7 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> There should be noise in the <font face=courier>Pres</font> measurement when <font face=courier>Phase</font> is not "Ready" such that the change is at a minimum <font face=courier>PRES_DELTA_MIN</font>, but if there is not, allow 3 timesteps to recover </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Pres, Phase</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Phase_eq_Ready: Phase == "Ready"
+Pres_gt_Prev_plus_Delta: Pres &gt; PREV_PRES +  PRES_DELTA_MIN
+Pres_lt_Prev_minus_Delta: Pres &lt; PREV_PRES - PRES_DELTA_MIN</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> Original: &not;&#9744;[0,3] {&not;Phase_eq_Ready &rarr; (&not;Pres_gt_Prev_plus_Delta &and; &not;Pres_lt_Prev_minus_Delta) } </p>
+                        <p> Updated:(&not;&#9744;[0,3] {&not;Phase_eq_Ready &rarr; (&not;Pres_gt_Prev_plus_Delta &and; &not;Pres_lt_Prev_minus_Delta) }) &and; (&#9744;[0,3] {&not;Phase_eq_Ready &rarr; (&not;Pres_gt_Prev_plus_Delta &and; &not;Pres_lt_Prev_minus_Delta) })
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> Pressure is changing too slowly </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> <font face=courier>PRES_DELTA_MIN</font> can be made a small non-zero number to be conservative. If there isn't noise, there is an issue with the sensor </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_7_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Changes in pressure measured from the barometer.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults --> 
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_7_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output that shows it was able to detect faults in the data.</figcaption>
+                        </figure>
+                        <!-- R2U2's output with updated formula -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_7_Updated_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 3: R2U2's output of RC_UAS_7 updated's formula, debouncing the results from Fig. 2.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

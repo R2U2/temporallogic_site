@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Elucidation and Analysis of Specification Patterns in Aerospace System Telemetry</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<main>
+			<div id="content">
+				<div class="innertube">
+					<!-- Title -->
+					<h2>Elucidation and Analysis of Specification Patterns <br> in Aerospace System Telemetry</h2>
+					<!-- Authors -->
+					<h4>Zachary Luppen, Michael Jacks, Nathan Baughman, Muhamed Stilic, Ryan Nasers, Benjamin Hertz, James Cutler, Dae-Young Lee, and Kristin Yvonne Rozier</h4>
+					<p> This webpage contains research artifacts from <a href="/research/NFM2022/AerospaceSystemsManuscript.pdf" style="font-weight:bold">"Elucidation and Analysis of Specification Patterns <br> in Aerospace System
+							Telemetry"</a> by Z. Luppen, M. Jacks, N. Baughman, M. Stilic, R. Nasers, B. Hertz, J. W. Cutler, D. Y. Lee, K. Y. Rozier
+					<p>
+						<hr>
+					<h3>Automation Levels</h3>
+					<p>In a nutshell, the automation level is a metric used to describe how easily a computer can create a specification automatically. Generally, this doesn’t mean difficulty as in the complexity of a given specification but rather whether or
+						not an understanding of the system is required or documentation is missing. This metric we used comes in three stages as described below.</p>
+
+					<h4>Level 1 easily automatable - No human input required</h4>
+
+					<p>This is the lowest level on our scale and represents the easiest of all specifications written. For example, a temperature sensor has a manufactures authorized safe range that is either set by the engineers or the factory. This upper and
+						lower limit is generally described in detail within the parts documentation. A computer could easily pull this information and elicit a specification using these boundaries for a RNG specification. A RAT specification can also be created
+						using this same data as it is reasonable to assume the parts collection value should never change more than the magnitude of the entire operating range. A great example of this is the temperature specifications within GRIFEX’s FCPU.</p>
+
+					<p>We know the temperature range from the documentation that the FCPU should always be between -55 and 130 degrees celsius
+						Computer takes this value and writes the following specifications...</p>
+					<p>RNG: G[0,M] (a0&a1) where a0: FCPU TEMP 0 >= -55, a1: FCPU TEMP 0 <= 130</p>
+							<p>RAT: G[0,M] (a0(i)) where a0(i): (abs(FCPU TEMP 0[i-1] - FCPU TEMP 0[i])) <= 185</p>
+
+									<h4>Level 2 indicates moderate difficulty in automation - Average human input required</h4>
+
+									<p>Specifications here more often than not are given this rating because documentation is missing and/or an assumption had to be made. A reasonable range can be given to a certain variable but not guaranteed defined values verified
+										by documentation. For example, if the temperature onboard a satellite did not have any manufacturer safe ranges then one could assume the sensor could not read absolute zero or temperatures exceeding that of the surface of the
+										sun. Thus a general range is born and the subsequent RNG and RAT specifications are created.</p>
+
+									<h4>Level 3 is very hard to automate if at all - 100% human input required</h4>
+
+									<p>Level three specification are made completely by human as the documentation may not exist or other issues have emerged preventing the obvious solution from being the correct one. In a few of the specifications, the documentation
+										in fact contradicted what was considered normal telemetry, R2U2 would flag every single collection of data since the crafts creation if the documentation was to be followed. Wether this is a problem with the documentation or
+										something else, interpretation and human input is required to fully create the specification. Here is an example of the MARINA experiment onboard GRIFEX that sends a value of 0 in telemetry for a large portion of it’s lifespan.
+										The documentation states that a 0 should not exist and therefore the computer would not realize that 0 is in fact normal in aerospace System Telemetry</p>
+				</div>
+			</div>
+		</main>
+
+		<nav id="nav">
+			<div class="innertube">
+				<h3><a href=index.html>Home</a></h3>
+				<hr>
+				<h3><a href=list.html>Specification Spreadsheets</a></h3>
+				<hr>
+				<h3><a href=SystemTelemetry.html>System<br>Telemetry</a></h3>
+				<hr>
+				<h3><a href=AutomationLevel.html class="active">Automation<br>Level</a></h3>
+				<hr>
+				<h3><a href=about.html>Lab Space</a></h3>
+				<hr>
+				<h3><a href=reproduce.html>Reproducibility</a></h3>
+				<hr>
+				<h3><a href=contact.html>Contact</a></h3>
+				<hr>
+				<h3><a href=ReferencesList.html>References</a></h3>
+				<hr>
+			</div>
+		</nav>
+
+	</div>
+</body>
+
+</html>

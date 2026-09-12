@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> PM_UAS_3 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The relationship between the <font face=courier>Lat</font> and the <font face=courier>PosN</font> measurements shall be directly proportional by factor k1. The error between these two should be less than <font face=courier>ERROR_LAT_POSN</font>. If it is outside these error bounds, then allow 3 timesteps for recovery </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Lat, PosN</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>PosNrise = POSN - PREV_POSN
+LatRise = LAT - PREV_LAT
+ConvFact = PosNrise/LatRise
+PosNrise_geq_0.25: PosNrise &#8805; 0.25
+PosNrise_leq_0.25: PosNrise &#8804 -0.25
+ConvFact_leq_k1_plus_Error: ConvFact &#8804 k1 + ERROR_LAT_POSN
+ConvFact_geq_k1_minus_Error: ConvFact &#8805 k1 - ERROR_LAT_POSN</code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> (PosNrise_geq_0.25 &or; PosNrise_leq_0.25) &rarr; &not;&#9744;[0,3] (&not;ConvFact_leq_k1_plus_Error &or; &not;ConvFact_geq_k1_minus_Error) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> The relationship between the Latitude and Position North is outside the error bounds and are too widely varied. </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> k1 would have to be predefined and is mission dependent based on initial altitude. <font face=courier>ERROR_LAT_POSN</font> could be given a value like 25% of k1 </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_3_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Relationship between Latitude and Position North.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_3_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output of PM_UAS_3, showing that the Latitude and Position North stayed within error bounds.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_3_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Injected fault into Position North.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_3_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: R2U2 detects the injected fault, returning false.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

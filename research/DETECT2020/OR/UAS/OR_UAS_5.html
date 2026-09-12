@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> OR_UAS_5 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The flight time will be bounded by <font face=courier>FT_OR_MAX</font> at all instances. </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Time</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>FlightTime = Time - StartTime
+FlightTime_leq_MAX: FlightTime &#8804; FT_OR_MAX</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,M] (FlightTime_leq_MAX) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> <font face=courier>FlightTime</font> is exceeding maximum possible flighttime </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> <font face=courier>FT_OR_MAX</font> based on maximum flight time while hovering in the air in ideal conditions (~2 hours) </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_5_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Hours, Minutes, and Seconds of the Vapor 55 internal clock.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_5_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output for OR_UAS_5, showing that the time never exceeded the maximum Flight Time.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_5_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Injected fault into hours, increasing it from 13 to 15.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_5_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: R2U2's output, showing it detecte the jump in time and that it exceeded the maximum flight time.</figcaption>
+                        </figure>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

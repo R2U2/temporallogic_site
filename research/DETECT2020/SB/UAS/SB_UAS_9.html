@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> SB_UAS_9 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The UAS's position will exist on Earth GPS coordinates. <font face=courier>Lat</font> will be bounded in (-90, 90) deg and <font face=courier>Long</font> will be bounded in (-180, 180) deg at all instances </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Lat, Long</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Lat_gt_90: Lat &gt; -90
+Lat_lt_90: Lat &lt; 90
+Long_gt_180: Long &gt; -180
+Long_lt_180: Long &lt; 180</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,M] (Lat_gt_90 &and; Lat_lt_90 &and; Long_gt_180 &and; Long_lt_180) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> UAS is outside of latitude and/or longitude earth bounds. </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p>  </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/SB_UAS_9_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Latitude and Longitude with physically possible bounds.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/SB_UAS_9_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output of SB_UAS_9, showing that the latitude and longitude never exceed the bounds.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/SB_UAS_9_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: A fault injected into the latitude and longitude to exceed the upper bounds.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/SB_UAS_9_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: R2U2's output of Fig. 3, showing it was able to detect the injected fault.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

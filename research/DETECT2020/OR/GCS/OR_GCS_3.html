@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> OR_GCS_3 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The <font face=courier>Start</font> time of any flight plan should be greater than the <font face=courier>Time_Filed</font> of the flight plan </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Start, Time_Filed</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4>Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Start_geq_TimeFiled = True;
+for(i = 0; i &lt; NumWp; i++)
+{
+    if(Start &lt; Time_Filed[i])
+    {
+        Start_geq_TimeFiled = False;
+    }
+}						</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> Start_geq_TimeFiled </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> You cannot file a flightplan that started in the past </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_GCS_3_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_GCS_3_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: Caption</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/OR_GCS_3_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/OR_GCS_3_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: Caption </figcaption>
+                        </figure>
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <figure>
+                            <img width="600" src="figures/OR_GCS_3_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: Caption</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

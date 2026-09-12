@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> PM_UTM_4 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> If the <font face=courier>Ang</font> from a UAS's telemetry is between 270 and 360 degrees, then, if the UAS's <font face=courier>Vel</font> is greater than zero, the UAS's <font face=courier>Lat</font> and <font face=courier>Lon</font> should be decreasing each telemetry stream </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Ang, Vel, Lat, Lon</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4>Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Ang_geq_270: Ang &#8805; 270.0
+Ang_leq_360: Ang &#8804; 360.0
+Vel_gt_0: Vel &gt; 0.0
+Lat_minus_Prev_lt_0: Lat - PrevLat &lt; 0
+Lon_minus_Prev_lt_0: Lon - PrevLon &lt; 0</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> (Ang_geq_270 &and; Ang_leq_360 &and; Vel_gt_0) &rarr; (Lat_minus_Prev_lt_0 &and; Lon_minus_Prev_lt_0)  </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> The UAS's bearing is between 270 and 360 degrees, but the Latitude and/or Longitude is increasing whearas they should be decreasing </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p>Assuming the UTM is operating in North America, there should be a correlation between heading and Lat/Lon, if the UAS's velocity is nonzero </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/PM_UTM_4_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/PM_UTM_4_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: Caption</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/PM_UTM_4_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/PM_UTM_4_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: Caption </figcaption>
+                        </figure>
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <figure>
+                            <img width="600" src="figures/PM_UTM_4_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: Caption</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

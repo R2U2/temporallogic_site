@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> PM_UAS_2 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> When the <font face=courier>VelE</font> is positive and not small (&gt;0.25m/s), the change in <font face=courier>Long</font> shall be greater than 0 at all instances (in the northern hemisphere). The opposite shall be true when <font face=courier>VelE</font> is negative and not small (&lt;0.25m/s). </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>VelE, Long</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>DeltaLong = Long - PREV_LONG
+VelE_gt_0.25: VelE &gt; 0.25
+VelE_lt_0.25: VelE &lt; -0.25
+DeltaLong_gt_0: DeltaLong &gt; 0
+DeltaLong_lt_0: DeltaLong &lt; 0</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,M] [(VelE_gt_0.25 &and; DeltaLong_gt_0) &or; (VelE_lt_0.25 &and; DeltaLong_lt_0)] </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> There is no change in Longitude due to the Velocity East, where there should be.</p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Need magnitude of <font face=courier>VelE</font> to be small so that a DeltaLong should be non 0. This accounts for some of minor disturbances that might occur when stationary. </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_2_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Graph showing the Relationship between Velocity East and change Longitude.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/PM_UAS_2_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: Output of R2U2 for PM_UAS_2, showing that it was able to return false when detecting an error.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

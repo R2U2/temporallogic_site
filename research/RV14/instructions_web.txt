@@ -1,0 +1,761 @@
+------------UPWARD PATH------------
+Hardware Block, id= 0
+  Addr: 0 | AC:   32 | Alu:  3 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  19 | Loc2: 2 | Id2:  3 | cid: 34, false o: 0 | ~~ indicator cX netPar[3]
+  Addr: 1 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 2 | AC:   33 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  0 [31]  | Loc2: 10 | Id2:  0 | cid: 32, false o: 0 | ~~ bus + reload Alu2
+  Addr: 3 | AC:   59 | Alu:  3 | Mode: 0 | Save: 1 | Loc1: 5 | Id1:  1 | Loc2: 10 | Id2:  0 | cid: 32, false o: 1 | ~~ indicator cX reload Alu2
+  Addr: 4 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 5 | AC:   573 | Alu:  3 | Mode: 1 | Save: 3 | Loc1: 10 | Id1:  0 | Loc2: 2 | Id2:  1 | cid: 36, false o: 0 | ~~ reload Alu2 x netPar[1], save to bus
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 7 | AC:   62 | Alu:  3 | Mode: 1 | Save: 2 | Loc1: 10 | Id1:  0 | Loc2: 2 | Id2:  2 | cid: 25, false o: 0 | ~~ reload Alu2 x netPar[2], save to bus
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 9 | AC:   29 | Alu:  3 | Mode: 0 | Save: 0 | Loc1: 2 | Id1:  3 | Loc2: 5 | Id2:  15 | cid: 15, false o: 0 | ~~ netPar[3] cX indicator
+  Addr: 10 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 11 | AC:   30 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  1 [28]  | Loc2: 10 | Id2:  0 | cid: 9, false o: 0 | ~~ bus + reload Alu2
+  Addr: 12 | AC:   50 | Alu:  1 | Mode: 1 | Save: 1 | Loc1: 1 | Id1:  0 [48]  | Loc2: 2 | Id2:  2 | cid: 9, false o: 1 | ~~ bus x netPar[2]
+  Addr: 13 | AC:   564 | Alu:  3 | Mode: 1 | Save: 3 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 9, false o: 2 | ~~ reload Alu1 x reload Alu2, save to bus
+  Addr: 14 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 15 | AC:   54 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 1 | Id1:  0 [36]  | Loc2: 10 | Id2:  0 | cid: 4, false o: 0 | ~~ bus x reload Alu2
+  Addr: 16 | AC:   55 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 1 | Id1:  1 [51]  | Loc2: 1 | Id2:  3 [36]  | cid: 4, false o: 1 | ~~ bus x bus
+  Addr: 17 | AC:   57 | Alu:  3 | Mode: 2 | Save: 1 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 4, false o: 2 | ~~ reload Alu1 + reload Alu2
+  Addr: 18 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 19 | AC:   86 | Alu:  2 | Mode: 0 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  7 | cid: 2, false o: 0 | ~~ reload Alu2 cX indicator
+  Addr: 20 | AC:   84 | Alu:  1 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  1 [83]  | Loc2: 1 | Id2:  0 [82]  | cid: 2, false o: 1 | ~~ bus + bus
+  Addr: 21 | AC:   88 | Alu:  3 | Mode: 1 | Save: 1 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 2, false o: 2 | ~~ reload Alu1 x reload Alu2
+  Addr: 22 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 23 | AC:   89 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 2 | Id1:  0 | Loc2: 1 | Id2:  0 [87]  | cid: 0, false o: 0 | ~~ netPar[0] x bus
+  Addr: 24 | AC:   90 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 10 | Id1:  0 | Loc2: 2 | Id2:  1 | cid: 0, false o: 1 | ~~ reload Alu2 x netPar[1]
+  Addr: 25 | AC:   1023 | Alu:  3 | Mode: 2 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 0, false o: 2 | ~~  output node of upward path
+  Addr: 26 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 27 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 2, e: 111100110011001100 (249036)[0.95]
+a: 1, p: 3, e: 000011001100110011 (13107)[0.05]
+a: 2, p: 0, e: 000110011001100110 (26214)[0.1]
+a: 3, p: 1, e: 111001100110011001 (235929)[0.9]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 31, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 560, repeat: 0
+a: 2, busScheduleMemAddr: 1, acNode: 28, repeat: 0
+a: 3, busScheduleMemAddr: 1, acNode: 563, repeat: 0 
+a: 4, busScheduleMemAddr: 0, acNode: 548, repeat: 0 
+a: 5, busScheduleMemAddr: 0, acNode: 82, repeat: 0
+a: 6, busScheduleMemAddr: 1, acNode: 83, repeat: 0
+a: 7, busScheduleMemAddr: 0, acNode: 599, repeat: 0
+a: 8, busScheduleMemAddr: 0, acNode: 52, repeat: 0, dw, comment:  from downward path
+a: 9, busScheduleMemAddr: 0, acNode: 62, repeat: 1, dw, comment:  from downward path
+a: 10, busScheduleMemAddr: 1, acNode: 61, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 1
+  Addr: 0 | AC:   31 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  18 | Loc2: 2 | Id2:  3 | cid: 33, false o: 0 | ~~ indicator cX netPar[3], save to bus
+  Addr: 1 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 2 | AC:   58 | Alu:  3 | Mode: 0 | Save: 1 | Loc1: 5 | Id1:  18 | Loc2: 5 | Id2:  0 | cid: 31, false o: 0 | ~~ indicator cX indicator
+  Addr: 3 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 4 | AC:   572 | Alu:  3 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  2 | Loc2: 10 | Id2:  0 | cid: 35, false o: 0 | ~~ netPar[2] x reload Alu2, save to bus
+  Addr: 5 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 6 | AC:   40 | Alu:  2 | Mode: 0 | Save: 1 | Loc1: 2 | Id1:  1 | Loc2: 5 | Id2:  12 | cid: 22, false o: 0 | ~~ netPar[1] cX indicator
+  Addr: 7 | AC:   42 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  16 | Loc2: 10 | Id2:  0 | cid: 22, false o: 1 | ~~ indicator cX reload Alu2, save to bus
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 9 | AC:   66 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  1 [60]  | Loc2: 1 | Id2:  0 [62]  | cid: 18, false o: 0 | ~~ bus + bus
+  Addr: 10 | AC:   69 | Alu:  3 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  8 | Loc2: 10 | Id2:  0 | cid: 18, false o: 1 | ~~ indicator cX reload Alu2
+  Addr: 11 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 12 | AC:   73 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  0 [71]  | Loc2: 10 | Id2:  0 | cid: 12, false o: 0 | ~~ bus + reload Alu2
+  Addr: 13 | AC:   78 | Alu:  3 | Mode: 0 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  4 | cid: 12, false o: 1 | ~~ reload Alu2 cX indicator
+  Addr: 14 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 15 | AC:   80 | Alu:  2 | Mode: 1 | Save: 1 | Loc1: 2 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 5, false o: 0 | ~~ netPar[0] x reload Alu2
+  Addr: 16 | AC:   82 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  10 | Loc2: 10 | Id2:  0 | cid: 5, false o: 1 | ~~ indicator cX reload Alu2, save to bus
+  Addr: 17 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 18 | AC:   85 | Alu:  1 | Mode: 0 | Save: 1 | Loc1: 1 | Id1:  0 [56]  | Loc2: 5 | Id2:  6 | cid: 1, false o: 0 | ~~ bus cX indicator
+  Addr: 19 | AC:   84 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  1 [83]  | Loc2: 10 | Id2:  0 | cid: 1, false o: 1 | ~~ bus + reload Alu2
+  Addr: 20 | AC:   599 | Alu:  3 | Mode: 1 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 1, false o: 2 | ~~ reload Alu1 x reload Alu2, save to bus
+  Addr: 21 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 22 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 4, e: 111111010111000010 (259522)[0.99]
+a: 1, p: 1, e: 111001100110011001 (235929)[0.9]
+a: 2, p: 2, e: 111100110011001100 (249036)[0.95]
+a: 3, p: 0, e: 000110011001100110 (26214)[0.1]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 62, repeat: 0
+a: 1, busScheduleMemAddr: 1, acNode: 572, repeat: 0
+a: 2, busScheduleMemAddr: 0, acNode: 71, repeat: 0
+a: 3, busScheduleMemAddr: 0, acNode: 568, repeat: 0
+a: 4, busScheduleMemAddr: 1, acNode: 83, repeat: 0
+a: 5, busScheduleMemAddr: 0, acNode: 87, repeat: 0, dw, comment:  from downward path
+a: 6, busScheduleMemAddr: 0, acNode: 82, repeat: 0, dw, comment:  from downward path
+a: 7, busScheduleMemAddr: 0, acNode: 42, repeat: 0, dw, comment:  from downward path
+a: 8, busScheduleMemAddr: 1, acNode: 60, repeat: 1, dw, comment:  from downward path
+a: 9, busScheduleMemAddr: 0, acNode: 31, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 2
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  2 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 2 cycles
+  Addr: 1 | AC:   37 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  16 | Loc2: 2 | Id2:  1 | cid: 29, false o: 0 | ~~ indicator cX netPar[1], save to bus
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   39 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  0 [38]  | cid: 24, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 4 | AC:   41 | Alu:  1 | Mode: 0 | Save: 1 | Loc1: 5 | Id1:  13 | Loc2: 2 | Id2:  1 | cid: 24, false o: 1 | ~~ indicator cX netPar[1]
+  Addr: 5 | AC:   44 | Alu:  3 | Mode: 1 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 24, false o: 2 | ~~ reload Alu1 x reload Alu2, save to bus
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 7 | AC:   45 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  0 [42]  | Loc2: 10 | Id2:  0 | cid: 16, false o: 0 | ~~ bus + reload Alu2
+  Addr: 8 | AC:   47 | Alu:  3 | Mode: 0 | Save: 1 | Loc1: 5 | Id1:  20 | Loc2: 10 | Id2:  0 | cid: 16, false o: 1 | ~~ indicator cX reload Alu2
+  Addr: 9 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 10 | AC:   49 | Alu:  2 | Mode: 1 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 2 | Id2:  0 | cid: 8, false o: 0 | ~~ reload Alu2 x netPar[0]
+  Addr: 11 | AC:   563 | Alu:  3 | Mode: 0 | Save: 3 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  14 | cid: 8, false o: 1 | ~~ reload Alu2 cX indicator, save to bus
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 13 | AC:   54 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 1 | Id1:  1 [36]  | Loc2: 1 | Id2:  0 [52]  | cid: 3, false o: 0 | ~~ bus x bus
+  Addr: 14 | AC:   53 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  2 | Loc2: 10 | Id2:  0 | cid: 3, false o: 1 | ~~ indicator cX reload Alu2
+  Addr: 15 | AC:   568 | Alu:  3 | Mode: 2 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 3, false o: 2 | ~~ reload Alu1 + reload Alu2, save to bus
+  Addr: 16 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 17 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 1, e: 111001100110011001 (235929)[0.9]
+a: 1, p: 0, e: 000110011001100110 (26214)[0.1]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 38, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 42, repeat: 0
+a: 2, busScheduleMemAddr: 0, acNode: 564, repeat: 0
+a: 3, busScheduleMemAddr: 1, acNode: 548, repeat: 0
+a: 4, busScheduleMemAddr: 0, acNode: 56, repeat: 0, dw, comment:  from downward path
+a: 5, busScheduleMemAddr: 0, acNode: 51, repeat: 0, dw, comment:  from downward path
+a: 6, busScheduleMemAddr: 0, acNode: 44, repeat: 0, dw, comment:  from downward path
+a: 7, busScheduleMemAddr: 0, acNode: 37, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 3
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  2 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 2 cycles
+  Addr: 1 | AC:   38 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 5 | Id2:  17 | cid: 30, false o: 0 | ~~ netPar[1] cX indicator, save to bus
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   40 | Alu:  1 | Mode: 0 | Save: 1 | Loc1: 2 | Id1:  1 | Loc2: 5 | Id2:  12 | cid: 23, false o: 0 | ~~ netPar[1] cX indicator
+  Addr: 4 | AC:   39 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 1 | Id1:  0 [37]  | Loc2: 10 | Id2:  0 | cid: 23, false o: 1 | ~~ bus + reload Alu2
+  Addr: 5 | AC:   43 | Alu:  3 | Mode: 1 | Save: 0 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 23, false o: 2 | ~~ reload Alu1 x reload Alu2
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 7 | AC:   46 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  0 [44]  | cid: 17, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 8 | AC:   560 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  21 | cid: 17, false o: 1 | ~~ reload Alu2 cX indicator, save to bus
+  Addr: 9 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 10 | AC:   76 | Alu:  3 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  11 | Loc2: 2 | Id2:  1 | cid: 11, false o: 0 | ~~ indicator cX netPar[1]
+  Addr: 11 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 12 | AC:   77 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  1 [75]  | cid: 6, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 13 | AC:   81 | Alu:  1 | Mode: 1 | Save: 1 | Loc1: 2 | Id1:  0 | Loc2: 1 | Id2:  0 [79]  | cid: 6, false o: 1 | ~~ netPar[0] x bus
+  Addr: 14 | AC:   83 | Alu:  3 | Mode: 1 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 6, false o: 2 | ~~ reload Alu1 x reload Alu2, save to bus
+  Addr: 15 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 16 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 5, e: 000000101000111101 (2621)[0.01]
+a: 1, p: 1, e: 111001100110011001 (235929)[0.9]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 37, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 44, repeat: 0
+a: 2, busScheduleMemAddr: 0, acNode: 591, repeat: 0
+a: 3, busScheduleMemAddr: 1, acNode: 75, repeat: 0
+a: 4, busScheduleMemAddr: 0, acNode: 83, repeat: 1, dw, comment:  from downward path
+a: 5, busScheduleMemAddr: 0, acNode: 48, repeat: 0, dw, comment:  from downward path
+a: 6, busScheduleMemAddr: 0, acNode: 38, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 4
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   63 | Alu:  3 | Mode: 1 | Save: 0 | Loc1: 1 | Id1:  0 [60]  | Loc2: 2 | Id2:  0 | cid: 26, false o: 0 | ~~ bus x netPar[0]
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   67 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  0 [62]  | cid: 19, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 4 | AC:   70 | Alu:  3 | Mode: 0 | Save: 0 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  8 | cid: 19, false o: 1 | ~~ reload Alu2 cX indicator
+  Addr: 5 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 6 | AC:   74 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  0 [72]  | cid: 13, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 7 | AC:   591 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  5 | cid: 13, false o: 1 | ~~ reload Alu2 cX indicator, save to bus
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 9 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 0, e: 000110011001100110 (26214)[0.1]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 572, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 62, repeat: 0
+a: 2, busScheduleMemAddr: 0, acNode: 72, repeat: 0
+a: 3, busScheduleMemAddr: 0, acNode: 79, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 5
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   64 | Alu:  3 | Mode: 1 | Save: 3 | Loc1: 2 | Id1:  1 | Loc2: 1 | Id2:  0 [61]  | cid: 27, false o: 0 | ~~ netPar[1] x bus, save to bus
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   71 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 10 | Id1:  0 | Loc2: 5 | Id2:  9 | cid: 20, false o: 0 | ~~ reload Alu2 cX indicator, save to bus
+  Addr: 4 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 5 | AC:   75 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  10 | Loc2: 2 | Id2:  0 | cid: 10, false o: 0 | ~~ indicator cX netPar[0], save to bus
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 7 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 0, e: 000110011001100110 (26214)[0.1]
+a: 1, p: 1, e: 111001100110011001 (235929)[0.9]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 573, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 75, repeat: 0, dw, comment:  from downward path
+a: 2, busScheduleMemAddr: 0, acNode: 71, repeat: 0, dw, comment:  from downward path
+a: 3, busScheduleMemAddr: 0, acNode: 64, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 6
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   65 | Alu:  3 | Mode: 1 | Save: 0 | Loc1: 1 | Id1:  0 [60]  | Loc2: 2 | Id2:  0 | cid: 28, false o: 0 | ~~ bus x netPar[0]
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   68 | Alu:  2 | Mode: 2 | Save: 1 | Loc1: 10 | Id1:  0 | Loc2: 1 | Id2:  0 [64]  | cid: 21, false o: 0 | ~~ reload Alu2 + bus
+  Addr: 4 | AC:   72 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  9 | Loc2: 10 | Id2:  0 | cid: 21, false o: 1 | ~~ indicator cX reload Alu2, save to bus
+  Addr: 5 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 6 | AC:   34 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  2 | Loc2: 2 | Id2:  1 | cid: 7, false o: 0 | ~~ indicator cX netPar[1]
+  Addr: 7 | AC:   35 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 2 | Id1:  0 | Loc2: 5 | Id2:  3 | cid: 7, false o: 1 | ~~ netPar[0] cX indicator
+  Addr: 8 | AC:   548 | Alu:  3 | Mode: 2 | Save: 2 | Loc1: 11 | Id1:  0 | Loc2: 10 | Id2:  0 | cid: 7, false o: 2 | ~~ reload Alu1 + reload Alu2, save to bus
+  Addr: 9 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 10 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 1, e: 111001100110011001 (235929)[0.9]
+a: 1, p: 0, e: 000110011001100110 (26214)[0.1]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 572, repeat: 0
+a: 1, busScheduleMemAddr: 0, acNode: 64, repeat: 0
+a: 2, busScheduleMemAddr: 0, acNode: 36, repeat: 1, dw, comment:  from downward path
+a: 3, busScheduleMemAddr: 0, acNode: 72, repeat: 0, dw, comment:  from downward path
+
+Hardware Block, id= 7
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  4 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 4 cycles
+  Addr: 1 | AC:   28 | Alu:  3 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  14 | Loc2: 2 | Id2:  0 | cid: 14, false o: 0 | ~~ indicator cX netPar[0], save to bus
+  Addr: 2 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: -1, false | ~~  end of computing block
+  Addr: 3 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 12 | Id1:  0 | Loc2: 12 | Id2:  0 | ~~  transition to downward path
+
+Network Parameter: 
+a: 0, p: 0, e: 000110011001100110 (26214)[0.1]
+BusScheduleMemory: 
+a: 0, busScheduleMemAddr: 0, acNode: 28, repeat: 0, dw, comment:  from downward path
+
+------------DOWNWARD PATH------------
+Hardware Block, id= 0
+  Addr: 0 | AC:   91 | Alu:  1 | Mode: 2 | Save: 6 | Loc1: 6 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 0, true | ~~ regA + regB, save to regA,regB
+  Addr: 1 | AC:   2 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  3 | Loc2: 6 | Id2:  0 | cid: 0, false | ~~ dyndown[3] x regA
+  Addr: 2 | AC:   87 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 6 | Id2:  0 | cid: 0, false | ~~ netPar[0] x regA, save to bus
+  Addr: 3 | AC:   88 | Alu:  2 | Mode: 1 | Save: 7 | Loc1: 2 | Id1:  1 | Loc2: 7 | Id2:  0 | cid: 0, false | ~~ netPar[1] x regB, save to regC
+  Addr: 4 | AC:   3 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 4 | Id1:  9 | Loc2: 7 | Id2:  0 | cid: 0, false | ~~ down[9] x regB
+  Addr: 5 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 0, false | ~~  end of computing block
+  Addr: 6 | AC:   88 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 2, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 7 | AC:   86 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  8 | Loc2: 8 | Id2:  0 | cid: 2, false | ~~ down[8] x regC, save to regA
+  Addr: 8 | AC:   84 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  7 | Loc2: 8 | Id2:  0 | cid: 2, false | ~~ down[7] x regC, save to regB
+  Addr: 9 | AC:   57 | Alu:  1 | Mode: 0 | Save: 7 | Loc1: 5 | Id1:  7 | Loc2: 6 | Id2:  0 | cid: 2, false | ~~ indicator cX regA, save to regC
+  Addr: 10 | AC:   13 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  6 | Loc2: 6 | Id2:  0 | cid: 2, false | ~~ down[6] x regA, save to bus
+  Addr: 11 | AC:   83 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 2, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 12 | AC:   82 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 2, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 13 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 2, false | ~~  end of computing block
+  Addr: 14 | AC:   57 | Alu:  1 | Mode: 2 | Save: 6 | Loc1: 8 | Id1:  0 | Loc2: 2 | Id2:  1023 | cid: 4, true | ~~ regC + netPar[ZERO], save to regA,regB
+  Addr: 15 | AC:   36 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  5 | Loc2: 6 | Id2:  0 | cid: 4, false | ~~ down[5] x regA, save to bus
+  Addr: 16 | AC:   52 | Alu:  1 | Mode: 1 | Save: 7 | Loc1: 9 | Id1:  2 | Loc2: 6 | Id2:  0 | cid: 4, false | ~~ dyndown[2] x regA, save to regC
+  Addr: 17 | AC:   51 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 9 | Id1:  2 | Loc2: 7 | Id2:  0 | cid: 4, false | ~~ dyndown[2] x regB, save to bus
+  Addr: 18 | AC:   36 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 9 | Id1:  1 | Loc2: 7 | Id2:  0 | cid: 4, false | ~~ dyndown[1] x regB, save to bus
+  Addr: 19 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 4, false | ~~  end of computing block
+  Addr: 20 | AC:   52 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 9, true | ~~ bus + regC, save to regC
+  Addr: 21 | AC:   30 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  4 | Loc2: 8 | Id2:  0 | cid: 9, false | ~~ down[4] x regC, save to regA
+  Addr: 22 | AC:   50 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 9, false | ~~ down[3] x regC, save to regB
+  Addr: 23 | AC:   28 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 9, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 24 | AC:   29 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 9, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 25 | AC:   48 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  2 | Loc2: 7 | Id2:  0 | cid: 9, false | ~~ netPar[2] x regB, save to bus
+  Addr: 26 | AC:   0 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 9, false | ~~ dyndown[0] x regB
+  Addr: 27 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 9, false | ~~  end of computing block
+  Addr: 28 | AC:   29 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 15, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 29 | AC:   1 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  15 | Loc2: 8 | Id2:  0 | cid: 15, false | ~~ indicator cX regC
+  Addr: 30 | AC:   21 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 15, false | ~~ netPar[3] x regC, save to bus
+  Addr: 31 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 15, false | ~~  end of computing block
+  Addr: 32 | AC:   62 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 25, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 33 | AC:   61 | Alu:  1 | Mode: 1 | Save: 7 | Loc1: 2 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: 25, false | ~~ netPar[2] x regC, save to regC
+  Addr: 34 | AC:   0 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 4 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: 25, false | ~~ down[2] x regC
+  Addr: 35 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 25, false | ~~  end of computing block
+  Addr: 36 | AC:   59 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 32, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 37 | AC:   33 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 32, false | ~~ indicator cX regC, save to regA
+  Addr: 38 | AC:   7 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 32, false | ~~ down[0] x regC, save to bus
+  Addr: 39 | AC:   31 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 32, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 40 | AC:   32 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 32, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 41 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 32, false | ~~  end of computing block
+  Addr: 42 | AC:   32 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 34, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 43 | AC:   25 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 34, false | ~~ netPar[3] x regC, save to bus
+  Addr: 44 | AC:   1 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  19 | Loc2: 8 | Id2:  0 | cid: 34, false | ~~ indicator cX regC
+  Addr: 45 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 34, false | ~~  end of computing block
+  Addr: 46 | AC:   61 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 36, true | ~~ bus + regC, save to regC
+  Addr: 47 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 36, false | ~~  end of computing block
+
+Hardware Block, id= 1
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  1 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 1 cycles
+  Addr: 1 | AC:   87 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 1, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 2 | AC:   85 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  7 | Loc2: 8 | Id2:  0 | cid: 1, false | ~~ down[7] x regC, save to regA
+  Addr: 3 | AC:   84 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  6 | Loc2: 8 | Id2:  0 | cid: 1, false | ~~ down[6] x regC, save to regB
+  Addr: 4 | AC:   56 | Alu:  1 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  6 | Loc2: 6 | Id2:  0 | cid: 1, false | ~~ indicator cX regA, save to bus
+  Addr: 5 | AC:   12 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 9 | Id1:  1 | Loc2: 6 | Id2:  0 | cid: 1, false | ~~ dyndown[1] x regA, save to bus
+  Addr: 6 | AC:   83 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 1, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 7 | AC:   82 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 1, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 1, false | ~~  end of computing block
+  Addr: 9 | AC:   82 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 5, true | ~~ bus + regC, save to regC
+  Addr: 10 | AC:   80 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  10 | Loc2: 8 | Id2:  0 | cid: 5, false | ~~ indicator cX regC, save to regA
+  Addr: 11 | AC:   16 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  5 | Loc2: 8 | Id2:  0 | cid: 5, false | ~~ down[5] x regC, save to bus
+  Addr: 12 | AC:   4 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 4 | Id1:  4 | Loc2: 6 | Id2:  0 | cid: 5, false | ~~ down[4] x regA
+  Addr: 13 | AC:   78 | Alu:  1 | Mode: 1 | Save: 7 | Loc1: 2 | Id1:  0 | Loc2: 6 | Id2:  0 | cid: 5, false | ~~ netPar[0] x regA, save to regC
+  Addr: 14 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 5, false | ~~  end of computing block
+  Addr: 15 | AC:   78 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 12, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 16 | AC:   10 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 12, false | ~~ down[3] x regC, save to bus
+  Addr: 17 | AC:   73 | Alu:  2 | Mode: 0 | Save: 5 | Loc1: 5 | Id1:  4 | Loc2: 8 | Id2:  0 | cid: 12, false | ~~ indicator cX regC, save to regB
+  Addr: 18 | AC:   71 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 12, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 19 | AC:   69 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 12, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 20 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 12, false | ~~  end of computing block
+  Addr: 21 | AC:   69 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 18, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 22 | AC:   66 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  8 | Loc2: 8 | Id2:  0 | cid: 18, false | ~~ indicator cX regC, save to regA
+  Addr: 23 | AC:   14 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: 18, false | ~~ down[2] x regC, save to bus
+  Addr: 24 | AC:   60 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 18, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 25 | AC:   62 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 18, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 26 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 18, false | ~~  end of computing block
+  Addr: 27 | AC:   42 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 22, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 28 | AC:   40 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  16 | Loc2: 8 | Id2:  0 | cid: 22, false | ~~ indicator cX regC, save to regA
+  Addr: 29 | AC:   22 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 22, false | ~~ down[1] x regC, save to bus
+  Addr: 30 | AC:   1 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  12 | Loc2: 6 | Id2:  0 | cid: 22, false | ~~ indicator cX regA
+  Addr: 31 | AC:   18 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 6 | Id2:  0 | cid: 22, false | ~~ netPar[1] x regA, save to bus
+  Addr: 32 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 22, false | ~~  end of computing block 
+  Addr: 33 | AC:   60 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  1 | cid: ??, ?? | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 34 | AC:   58 | Alu:  1 | Mode: 1 | Save: 7 | Loc1: 2 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: ??, ?? | ~~ netPar[2] * regC, save to regC
+  Addr: 35 | AC:   24 | Alu:  1 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 31, false | ~~ indicator cX regC, save to bus
+  Addr: 36 | AC:   6 | Alu:  2 | Mode: 0 | Save: 2 | Loc1: 5 | Id1:  18 | Loc2: 8 | Id2:  0 | cid: 31, false | ~~ indicator cX regC, save to bus
+  Addr: 37 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 31, false | ~~  end of computing block
+  Addr: 38 | AC:   31 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 33, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 39 | AC:   24 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 33, false | ~~ netPar[3] x regC, save to bus
+  Addr: 40 | AC:   0 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  18 | Loc2: 8 | Id2:  0 | cid: 33, false | ~~ indicator cX regC
+  Addr: 41 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 33, false | ~~  end of computing block
+ 
+Hardware Block, id= 2
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  2 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 2 cycles
+  Addr: 1 | AC:   56 | Alu:  1 | Mode: 2 | Save: 6 | Loc1: 1 | Id1:  0 | Loc2: 2 | Id2:  1023 | cid: 3, true | ~~ bus + netPar[ZERO], save to regA,regB
+  Addr: 2 | AC:   36 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 9 | Id1:  0 | Loc2: 6 | Id2:  0 | cid: 3, false | ~~ dyndown[0] x regA, save to bus
+  Addr: 3 | AC:   52 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 9 | Id1:  1 | Loc2: 6 | Id2:  0 | cid: 3, false | ~~ dyndown[1] x regA, save to bus
+  Addr: 4 | AC:   8 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  5 | Loc2: 7 | Id2:  0 | cid: 3, false | ~~ down[5] x regB, save to bus
+  Addr: 5 | AC:   51 | Alu:  2 | Mode: 0 | Save: 7 | Loc1: 5 | Id1:  2 | Loc2: 7 | Id2:  0 | cid: 3, false | ~~ indicator cX regB, save to regC
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 3, false | ~~  end of computing block
+  Addr: 7 | AC:   51 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 8, true | ~~ bus + regC, save to regC
+  Addr: 8 | AC:   20 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  4 | Loc2: 8 | Id2:  0 | cid: 8, false | ~~ down[4] x regC, save to bus
+  Addr: 9 | AC:   49 | Alu:  2 | Mode: 0 | Save: 5 | Loc1: 5 | Id1:  14 | Loc2: 8 | Id2:  0 | cid: 8, false | ~~ indicator cX regC, save to regB
+  Addr: 10 | AC:   47 | Alu:  2 | Mode: 1 | Save: 7 | Loc1: 2 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 8, false | ~~ netPar[0] x regB, save to regC
+  Addr: 11 | AC:   1 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 4 | Id1:  3 | Loc2: 7 | Id2:  0 | cid: 8, false | ~~ down[3] x regB
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 8, false | ~~  end of computing block
+  Addr: 13 | AC:   47 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 16, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 14 | AC:   45 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  20 | Loc2: 8 | Id2:  0 | cid: 16, false | ~~ indicator cX regC, save to regA
+  Addr: 15 | AC:   26 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: 16, false | ~~ down[2] x regC, save to bus
+  Addr: 16 | AC:   42 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 16, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 17 | AC:   44 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 16, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 18 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 16, false | ~~  end of computing block
+  Addr: 19 | AC:   44 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 24, true | ~~ bus + regC, save to regC
+  Addr: 20 | AC:   39 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 24, false | ~~ down[1] x regC, save to regA
+  Addr: 21 | AC:   41 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 24, false | ~~ down[0] x regC, save to regB
+  Addr: 22 | AC:   37 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 24, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 23 | AC:   38 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 24, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 24 | AC:   19 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 7 | Id2:  0 | cid: 24, false | ~~ netPar[1] x regB, save to bus
+  Addr: 25 | AC:   0 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  13 | Loc2: 7 | Id2:  0 | cid: 24, false | ~~ indicator cX regB
+  Addr: 26 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 24, false | ~~  end of computing block
+  Addr: 27 | AC:   37 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 29, true | ~~ bus + regC, save to regC
+  Addr: 28 | AC:   22 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 29, false | ~~ netPar[1] x regC, save to bus
+  Addr: 29 | AC:   0 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  16 | Loc2: 8 | Id2:  0 | cid: 29, false | ~~ indicator cX regC
+  Addr: 30 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 29, false | ~~  end of computing block
+
+Hardware Block, id= 3
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  2 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 2 cycles
+  Addr: 1 | AC:   83 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 6, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 2 | AC:   77 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  4 | Loc2: 8 | Id2:  0 | cid: 6, false | ~~ down[4] x regC, save to regA
+  Addr: 3 | AC:   81 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  3 | Loc2: 8 | Id2:  0 | cid: 6, false | ~~ down[3] x regC, save to regB
+  Addr: 4 | AC:   76 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 6, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 5 | AC:   75 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 6, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 6 | AC:   5 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 6, false | ~~ dyndown[0] x regB
+  Addr: 7 | AC:   79 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 6, false | ~~ netPar[0] x regB, save to bus
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 6, false | ~~  end of computing block
+  Addr: 9 | AC:   76 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 11, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 10 | AC:   17 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 11, false | ~~ netPar[1] x regC, save to bus
+  Addr: 11 | AC:   1 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  11 | Loc2: 8 | Id2:  0 | cid: 11, false | ~~ indicator cX regC
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 11, false | ~~  end of computing block
+  Addr: 13 | AC:   48 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 17, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 14 | AC:   27 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  2 | Loc2: 8 | Id2:  0 | cid: 17, false | ~~ down[2] x regC, save to bus
+  Addr: 15 | AC:   46 | Alu:  2 | Mode: 0 | Save: 5 | Loc1: 5 | Id1:  21 | Loc2: 8 | Id2:  0 | cid: 17, false | ~~ indicator cX regC, save to regB
+  Addr: 16 | AC:   43 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 17, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 17 | AC:   44 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 17, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 18 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 17, false | ~~  end of computing block
+  Addr: 19 | AC:   43 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 23, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 20 | AC:   40 | Alu:  1 | Mode: 1 | Save: 4 | Loc1: 4 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 23, false | ~~ down[1] x regC, save to regA
+  Addr: 21 | AC:   39 | Alu:  2 | Mode: 1 | Save: 5 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 23, false | ~~ down[0] x regC, save to regB
+  Addr: 22 | AC:   1 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  12 | Loc2: 6 | Id2:  0 | cid: 23, false | ~~ indicator cX regA
+  Addr: 23 | AC:   18 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 6 | Id2:  0 | cid: 23, false | ~~ netPar[1] x regA, save to bus
+  Addr: 24 | AC:   37 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 23, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 25 | AC:   38 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 23, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 26 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 23, false | ~~  end of computing block
+  Addr: 27 | AC:   38 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 30, true | ~~ bus + regC, save to regC
+  Addr: 28 | AC:   1 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  17 | Loc2: 8 | Id2:  0 | cid: 30, false | ~~ indicator cX regC
+  Addr: 29 | AC:   23 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 30, false | ~~ netPar[1] x regC, save to bus
+  Addr: 30 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 30, false | ~~  end of computing block
+
+Hardware Block, id= 4
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   79 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 13, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 2 | AC:   11 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 13, false | ~~ down[1] x regC, save to bus
+  Addr: 3 | AC:   74 | Alu:  2 | Mode: 0 | Save: 5 | Loc1: 5 | Id1:  5 | Loc2: 8 | Id2:  0 | cid: 13, false | ~~ indicator cX regC, save to regB
+  Addr: 4 | AC:   70 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 13, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 5 | AC:   72 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 13, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 13, false | ~~  end of computing block
+  Addr: 7 | AC:   70 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 19, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 8 | AC:   14 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 19, false | ~~ down[0] x regC, save to bus
+  Addr: 9 | AC:   67 | Alu:  2 | Mode: 0 | Save: 5 | Loc1: 5 | Id1:  8 | Loc2: 8 | Id2:  0 | cid: 19, false | ~~ indicator cX regC, save to regB
+  Addr: 10 | AC:   63 | Alu:  2 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 19, false | ~~ netPar[ZERO] + regB, save to regC
+  Addr: 11 | AC:   62 | Alu:  2 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 7 | Id2:  0 | cid: 19, false | ~~ netPar[ZERO] + regB, save to bus
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 19, false | ~~  end of computing block
+  Addr: 13 | AC:   63 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 26, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 14 | AC:   60 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 26, false | ~~ netPar[0] x regC, save to bus
+  Addr: 15 | AC:   0 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 26, false | ~~ dyndown[0] x regC
+  Addr: 16 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 26, false | ~~  end of computing block
+
+Hardware Block, id= 5
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   75 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 10, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 2 | AC:   16 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 10, false | ~~ netPar[0] x regC, save to bus
+  Addr: 3 | AC:   0 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  10 | Loc2: 8 | Id2:  0 | cid: 10, false | ~~ indicator cX regC
+  Addr: 4 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 10, false | ~~  end of computing block
+  Addr: 5 | AC:   71 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 20, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 6 | AC:   64 | Alu:  1 | Mode: 0 | Save: 7 | Loc1: 5 | Id1:  9 | Loc2: 8 | Id2:  0 | cid: 20, false | ~~ indicator cX regC, save to regC
+  Addr: 7 | AC:   15 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 20, false | ~~ down[0] x regC, save to bus
+  Addr: 8 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 20, false | ~~  end of computing block
+  Addr: 9 | AC:   64 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 1 | Id1:  0 [1023]  | Loc2: 8 | Id2:  0 | cid: 27, true | ~~ bus + regC, save to regC
+  Addr: 10 | AC:   1 | Alu:  1 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 27, false | ~~ dyndown[0] x regC
+  Addr: 11 | AC:   61 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 8 | Id2:  0 | cid: 27, false | ~~ netPar[1] x regC, save to bus
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 27, false | ~~  end of computing block
+
+Hardware Block, id= 6
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  3 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 3 cycles
+  Addr: 1 | AC:   36 | Alu:  1 | Mode: 2 | Save: 6 | Loc1: 1 | Id1:  0 | Loc2: 2 | Id2:  1023 | cid: 7, true | ~~ bus + netPar[ZERO], save to regA,regB
+  Addr: 2 | AC:   8 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  1 | Loc2: 6 | Id2:  0 | cid: 7, false | ~~ netPar[1] x regA, save to bus
+  Addr: 3 | AC:   0 | Alu:  1 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  2 | Loc2: 6 | Id2:  0 | cid: 7, false | ~~ indicator cX regA
+  Addr: 4 | AC:   1 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  3 | Loc2: 7 | Id2:  0 | cid: 7, false | ~~ indicator cX regB
+  Addr: 5 | AC:   9 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 7 | Id2:  0 | cid: 7, false | ~~ netPar[0] x regB, save to bus
+  Addr: 6 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 7, false | ~~  end of computing block
+  Addr: 7 | AC:   72 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 21, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 8 | AC:   68 | Alu:  1 | Mode: 0 | Save: 4 | Loc1: 5 | Id1:  9 | Loc2: 8 | Id2:  0 | cid: 21, false | ~~ indicator cX regC, save to regA
+  Addr: 9 | AC:   15 | Alu:  2 | Mode: 1 | Save: 2 | Loc1: 4 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 21, false | ~~ down[0] x regC, save to bus
+  Addr: 10 | AC:   65 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 21, false | ~~ netPar[ZERO] + regA, save to regC
+  Addr: 11 | AC:   64 | Alu:  1 | Mode: 2 | Save: 2 | Loc1: 2 | Id1:  1023 | Loc2: 6 | Id2:  0 | cid: 21, false | ~~ netPar[ZERO] + regA, save to bus
+  Addr: 12 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 21, false | ~~  end of computing block
+  Addr: 13 | AC:   65 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 8 | Id2:  0 | cid: 28, true | ~~ netPar[ZERO] + regC, save to regC
+  Addr: 14 | AC:   60 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 28, false | ~~ netPar[0] x regC, save to bus
+  Addr: 15 | AC:   1 | Alu:  2 | Mode: 1 | Save: 0 | Loc1: 9 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 28, false | ~~ dyndown[0] x regC
+  Addr: 16 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 28, false | ~~  end of computing block
+
+Hardware Block, id= 7
+  Addr: 0 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 13 | Id1:  4 | Loc2: 13 | Id2:  0 | cid: -1, false | ~~  NOP instruction, delaying for 4 cycles
+  Addr: 1 | AC:   28 | Alu:  1 | Mode: 2 | Save: 7 | Loc1: 2 | Id1:  1023 | Loc2: 1 | Id2:  0 | cid: 14, true | ~~ netPar[ZERO] + bus, save to regC
+  Addr: 2 | AC:   20 | Alu:  1 | Mode: 1 | Save: 2 | Loc1: 2 | Id1:  0 | Loc2: 8 | Id2:  0 | cid: 14, false | ~~ netPar[0] x regC, save to bus
+  Addr: 3 | AC:   0 | Alu:  2 | Mode: 0 | Save: 0 | Loc1: 5 | Id1:  14 | Loc2: 8 | Id2:  0 | cid: 14, false | ~~ indicator cX regC
+  Addr: 4 | AC:   0 | Alu:  0 | Mode: 0 | Save: 0 | Loc1: 14 | Id1:  0 | Loc2: 14 | Id2:  0 | cid: 14, false | ~~  end of computing block
+
+------------EVIDENCE INDICATORS------------
+a: 0, p: 6, e: 0.0,t: !H_FG_Sensor
+a: 1, p: 7, e: 0.0,t: H_FG_Sensor
+a: 2, p: 8, e: 0.0,t: !FG_bad_packet_rate_in_range
+a: 3, p: 9, e: 0.0,t: FG_bad_packet_rate_in_range
+a: 4, p: 10, e: 0.0,t: !H_FC_RxUR
+a: 5, p: 11, e: 0.0,t: H_FC_RxUR
+a: 6, p: 12, e: 0.0,t: !H_FC_RxOVR
+a: 7, p: 13, e: 0.0,t: H_FC_RxOVR
+a: 8, p: 14, e: 0.0,t: !FG_data_change_in_range
+a: 9, p: 15, e: 0.0,t: FG_data_change_in_range
+a: 10, p: 16, e: 0.0,t: !FG_log_data_valid
+a: 11, p: 17, e: 0.0,t: FG_log_data_valid
+a: 12, p: 18, e: 0.0,t: !H_FG_TxError
+a: 13, p: 19, e: 0.0,t: H_FG_TxError
+a: 14, p: 20, e: 0.0,t: !FG_packet_transmission_rate_in_range
+a: 15, p: 21, e: 0.0,t: FG_packet_transmission_rate_in_range
+a: 16, p: 22, e: 0.0,t: !FG_number_bad_packets_in_range
+a: 17, p: 23, e: 0.0,t: FG_number_bad_packets_in_range
+a: 18, p: 24, e: 0.0,t: !FG_XYZ_data_valid
+a: 19, p: 25, e: 0.0,t: FG_XYZ_data_valid
+a: 20, p: 26, e: 0.0,t: !H_FG_TxOVR
+a: 21, p: 27, e: 0.0,t: H_FG_TxOVR
+
+-----------Downward transfer map----------
+hwBlock, level: [1,1] node 87 of compBlock 1 is transferred from [0]
+hwBlock, level: [1,2] node 82 of compBlock 5 is transferred from [2]
+hwBlock, level: [2,2] node 56 of compBlock 3 is transferred from [1]
+hwBlock, level: [3,2] node 83 of compBlock 6 is transferred from [2, 1]
+hwBlock, level: [0,3] node 52 of compBlock 9 is transferred from [3]
+hwBlock, level: [2,3] node 51 of compBlock 8 is transferred from [4]
+hwBlock, level: [4,3] node 79 of compBlock 13 is transferred from [6]
+hwBlock, level: [5,3] node 75 of compBlock 10 is transferred from [6]
+hwBlock, level: [6,3] node 36 of compBlock 7 is transferred from [4, 3]
+hwBlock, level: [3,4] node 48 of compBlock 17 is transferred from [9]
+hwBlock, level: [5,4] node 71 of compBlock 20 is transferred from [12]
+hwBlock, level: [6,4] node 72 of compBlock 21 is transferred from [13]
+hwBlock, level: [7,4] node 28 of compBlock 14 is transferred from [9]
+hwBlock, level: [0,5] node 62 of compBlock 25 is transferred from [19, 18]
+hwBlock, level: [1,5] node 42 of compBlock 22 is transferred from [16]
+hwBlock, level: [2,5] node 44 of compBlock 24 is transferred from [17]
+hwBlock, level: [5,5] node 64 of compBlock 27 is transferred from [21]
+hwBlock, level: [0,6] node 61 of compBlock 36 is transferred from [27]
+hwBlock, level: [1,6] node 60 of compBlock 35 is transferred from [28, 26]
+hwBlock, level: [2,6] node 37 of compBlock 29 is transferred from [23]
+hwBlock, level: [3,6] node 38 of compBlock 30 is transferred from [24]
+hwBlock, level: [1,8] node 31 of compBlock 33 is transferred from [32]
+
+-----------ResultXferRepsMemContent matrix----------
+ evidenceIndicator: 6 -> 1x
+ evidenceIndicator: 7 -> 1x
+ evidenceIndicator: 8 -> 2x
+ evidenceIndicator: 9 -> 1x
+ evidenceIndicator: 10 -> 1x
+ evidenceIndicator: 11 -> 1x
+ evidenceIndicator: 12 -> 1x
+ evidenceIndicator: 13 -> 1x
+ evidenceIndicator: 14 -> 2x
+ evidenceIndicator: 15 -> 2x
+ evidenceIndicator: 16 -> 2x
+ evidenceIndicator: 17 -> 1x
+ evidenceIndicator: 18 -> 2x
+ evidenceIndicator: 19 -> 1x
+ evidenceIndicator: 20 -> 2x
+ evidenceIndicator: 21 -> 1x
+ evidenceIndicator: 22 -> 2x
+ evidenceIndicator: 23 -> 1x
+ evidenceIndicator: 24 -> 2x
+ evidenceIndicator: 25 -> 1x
+ evidenceIndicator: 26 -> 1x
+ evidenceIndicator: 27 -> 1x
+
+-----------Master Buffer Schedule ----------
+@ 0 acNode: 60, from cb: 35 is retransferred at Levels: [4] to [[18]]
+@ 1 acNode: 60, from cb: 18 is retransferred at Levels: [6] to [[35]], dw
+
+-----------Scheduler matrix----------
+[0,   -,  -,  -,  -,  -,  -,  -]
+[2,   1,  -,  -,  -,  -,  -,  -]
+[4,   5,  3,  6,  -,  -,  -,  -]
+[9,  12,  8, 11, 13, 10,  7,  -]
+[15, 18, 16, 17, 19, 20, 21, 14]
+[25, 22, 24, 23, 26, 27, 28,  -]
+[36, 35, 29, 30,  -,  -,  -,  -]
+[32, 31,  -,  -,  -,  -,  -,  -]
+[34, 33,  -,  -,  -,  -,  -,  -]
+
+-----------Comp blocks----------
+Nodes: 
+id: 0, dist: 0, top : 91
+	 first ALU: 89
+	 	 i1: 2
+	 	 i2: 87
+	 sec ALU: 90
+	 	 i1: 88
+	 	 i2: 3
+id: 1, dist: 1, top : 87
+	 first ALU: 85
+	 	 i1: 56
+	 	 i2: 12
+	 sec ALU: 84
+	 	 i1: 83
+	 	 i2: 82
+id: 2, dist: 1, top : 88
+	 first ALU: 86
+	 	 i1: 57
+	 	 i2: 13
+	 sec ALU: 84
+	 	 i1: 83
+	 	 i2: 82
+id: 3, dist: 2, top : 56
+	 first ALU: 54
+	 	 i1: 36
+	 	 i2: 52
+	 sec ALU: 53
+	 	 i1: 8
+	 	 i2: 51
+id: 4, dist: 2, top : 57
+	 first ALU: 54
+	 	 i1: 36
+	 	 i2: 52
+	 sec ALU: 55
+	 	 i1: 51
+	 	 i2: 36
+id: 5, dist: 2, top : 82
+	 first ALU: 80
+	 	 i1: 4
+	 	 i2: 78
+	 sec ALU: 16
+id: 6, dist: 2, top : 83
+	 first ALU: 77
+	 	 i1: 76
+	 	 i2: 75
+	 sec ALU: 81
+	 	 i1: 5
+	 	 i2: 79
+id: 7, dist: 3, top : 36
+	 first ALU: 34
+	 	 i1: 8
+	 	 i2: 0
+	 sec ALU: 35
+	 	 i1: 1
+	 	 i2: 9
+id: 8, dist: 3, top : 51
+	 first ALU: 20
+	 sec ALU: 49
+	 	 i1: 47
+	 	 i2: 1
+id: 9, dist: 3, top : 52
+	 first ALU: 30
+	 	 i1: 28
+	 	 i2: 29
+	 sec ALU: 50
+	 	 i1: 48
+	 	 i2: 0
+id: 10, dist: 3, top : 75
+	 first ALU: 16
+	 sec ALU: 0
+id: 11, dist: 3, top : 76
+	 first ALU: 17
+	 sec ALU: 1
+id: 12, dist: 3, top : 78
+	 first ALU: 10
+	 sec ALU: 73
+	 	 i1: 71
+	 	 i2: 69
+id: 13, dist: 3, top : 79
+	 first ALU: 11
+	 sec ALU: 74
+	 	 i1: 70
+	 	 i2: 72
+id: 14, dist: 4, top : 28
+	 first ALU: 20
+	 sec ALU: 0
+id: 15, dist: 4, top : 29
+	 first ALU: 1
+	 sec ALU: 21
+id: 16, dist: 4, top : 47
+	 first ALU: 45
+	 	 i1: 42
+	 	 i2: 44
+	 sec ALU: 26
+id: 17, dist: 4, top : 48
+	 first ALU: 27
+	 sec ALU: 46
+	 	 i1: 43
+	 	 i2: 44
+id: 18, dist: 4, top : 69
+	 first ALU: 66
+	 	 i1: 60
+	 	 i2: 62
+	 sec ALU: 14
+id: 19, dist: 4, top : 70
+	 first ALU: 14
+	 sec ALU: 67
+	 	 i1: 63
+	 	 i2: 62
+id: 20, dist: 4, top : 71
+	 first ALU: 64
+	 sec ALU: 15
+id: 21, dist: 4, top : 72
+	 first ALU: 68
+	 	 i1: 65
+	 	 i2: 64
+	 sec ALU: 15
+id: 22, dist: 5, top : 42
+	 first ALU: 40
+	 	 i1: 1
+	 	 i2: 18
+	 sec ALU: 22
+id: 23, dist: 5, top : 43
+	 first ALU: 40
+	 	 i1: 1
+	 	 i2: 18
+	 sec ALU: 39
+	 	 i1: 37
+	 	 i2: 38
+id: 24, dist: 5, top : 44
+	 first ALU: 39
+	 	 i1: 37
+	 	 i2: 38
+	 sec ALU: 41
+	 	 i1: 19
+	 	 i2: 0
+id: 25, dist: 5, top : 62
+	 first ALU: 61
+	 sec ALU: 0
+id: 26, dist: 5, top : 63
+	 first ALU: 60
+	 sec ALU: 0
+id: 27, dist: 5, top : 64
+	 first ALU: 1
+	 sec ALU: 61
+id: 28, dist: 5, top : 65
+	 first ALU: 60
+	 sec ALU: 1
+id: 29, dist: 6, top : 37
+	 first ALU: 22
+	 sec ALU: 0
+id: 30, dist: 6, top : 38
+	 first ALU: 1
+	 sec ALU: 23
+id: 31, dist: 7, top : 58
+	 first ALU: 24
+	 sec ALU: 6
+id: 32, dist: 7, top : 59
+	 first ALU: 33
+	 	 i1: 31
+	 	 i2: 32
+	 sec ALU: 7
+id: 33, dist: 8, top : 31
+	 first ALU: 24
+	 sec ALU: 0
+id: 34, dist: 8, top : 32
+	 first ALU: 25
+	 sec ALU: 1
+id: 35, dist: 6, top : 60
+	 first ALU: 2
+	 sec ALU: 58
+id: 36, dist: 6, top : 61
+	 first ALU: 59
+	 sec ALU: 3
+Edges: 
+	(0 -> 2)
+	(0 -> 1)
+	(1 -> 6)
+	(1 -> 5)
+	(1 -> 3)
+	(2 -> 6)
+	(2 -> 4)
+	(2 -> 5)
+	(3 -> 8)
+	(3 -> 7)
+	(3 -> 9)
+	(4 -> 8)
+	(4 -> 7)
+	(4 -> 9)
+	(5 -> 12)
+	(6 -> 13)
+	(6 -> 11)
+	(6 -> 10)
+	(8 -> 16)
+	(9 -> 14)
+	(9 -> 17)
+	(9 -> 15)
+	(12 -> 20)
+	(12 -> 18)
+	(13 -> 19)
+	(13 -> 21)
+	(16 -> 22)
+	(16 -> 24)
+	(17 -> 23)
+	(17 -> 24)
+	(18 -> 35)
+	(18 -> 25)
+	(19 -> 26)
+	(19 -> 25)
+	(20 -> 27)
+	(21 -> 28)
+	(21 -> 27)
+	(23 -> 29)
+	(23 -> 30)
+	(24 -> 29)
+	(24 -> 30)
+	(25 -> 36)
+	(26 -> 35)
+	(27 -> 36)
+	(28 -> 35)
+	(32 -> 33)
+	(32 -> 34)
+	(35 -> 31)
+	(36 -> 32)
+

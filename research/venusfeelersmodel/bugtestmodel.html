@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Feelers Bug Test Model</title>
+</head>
+<body>
+    <pre><code>
+        MODULE main
+            VAR
+            -- Declare set of system variables
+            pp30 : boolean;
+            pr30 : boolean;
+            bar : boolean;
+            drop : boolean;
+            pin : boolean;
+            forward : boolean;
+            reverse : boolean;
+
+            INIT
+            -- Initially, all states are false/off
+            pp30 = FALSE &
+            pr30 = FALSE &
+            bar = FALSE &
+            drop = FALSE &
+            pin = FALSE &
+            forward = FALSE &
+            reverse = FALSE;
+
+            TRANS
+
+            -- State 0 -> Rover is sitting still
+            ((!pp30 & !pr30 & !bar & !drop & !forward & !reverse) ->
+            -- State 0: Nothing changes.
+            -- ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin)) & (next(!forward)) & (next(!reverse))) |
+            -- State 1: Rover begins to move forward.
+            ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin)) & (next(forward)) & (next(!reverse)))
+            ) &
+
+            -- State 1 -> Rover is moving forward and all is well
+            ((!pp30 & !pr30 & !bar & !drop & forward & !reverse) ->
+            -- State 0: Rover stops moving forward, no violations are detected.
+            ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin)) & (next(!forward)) & (next(!reverse))) |
+            -- State 1: Nothing changes.
+            ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin)) & (next(forward)) & (next(!reverse))) |
+            -- State 2: Sensor detects anything obstacle.
+            ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin)) & (next(forward)) & (next(!reverse)))
+            ) &
+
+            -- State 2 -> Sensor system detects obstacle
+            ((pp30 | pr30 | bar | drop & !pin & forward & !reverse) ->
+            -- State 3: Stop pin is pressed by sensor system.
+            ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin)) & (next(!forward)) & (next(!reverse)))
+            ) &
+
+            -- State 3 -> Stop pin is pressed and the rover has stopped
+            ((pp30 | pr30 | bar | drop & pin & !forward & !reverse) ->
+            -- State 4: The rover has detected an obstacle and is reversing.
+            ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin)) & (next(!forward)) & (next(reverse)))
+            ) &
+
+            -- State 4 -> Rover is reversing
+            ((pp30 | pr30 | bar | drop & pin & !forward & reverse) ->
+            -- State 4: Rover keeps reversing.
+            -- ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin)) & (next(!forward)) & (next(reverse))) |
+            -- State 5: Sensor detects that the obstacle has been cleared.
+            ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(pin)) & (next(!forward)) & (next(reverse)))
+            ) &
+
+            -- State 5 -> Obstacle has been cleared
+            ((!pp30 & !pr30 & !bar & !drop & pin & !forward & reverse) ->
+            -- State 0: Rover is stopped and stop pin is no longer pressed
+            ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin)) & (next(!forward)) & (next(!reverse)))
+            )
+
+            -- Venus Feelers Specifications to check correctness of Model
+            LTLSPEC G(forward -> !pin)
+            LTLSPEC G(pin -> !forward)
+            LTLSPEC G((pp30 | pr30 | bar | drop) -> X(pin))
+            LTLSPEC G((pin & (pp30 | pr30 | bar | drop))-> (X(!forward & !reverse) -> X(X(reverse))))
+            LTLSPEC G((reverse & pp30) -> F(!pp30 & !pin))
+            LTLSPEC G((reverse & pr30) -> F(!pr30 & !pin))
+            LTLSPEC G((reverse & bar) -> F(!bar & !pin))
+            LTLSPEC G((reverse & drop) -> F(!drop & !pin))
+
+            -- NASA Specifications negated to find counter examples
+            LTLSPEC !(G((pp30 | pr30) -> F(pin)))
+            LTLSPEC !(G(!(pp30 | pr30 | bar | drop) -> X(!pin)))
+            LTLSPEC !(G(bar -> F(pin)))
+            LTLSPEC !(G(drop -> F(pin)))
+    </code></pre>
+</body>
+</html>

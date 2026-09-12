@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> RC_UAS_5 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> Yaw will not change by more than <font face=courier>YAW_DELTA_MAX</font> each sample instance when the <font face=courier>Subphase</font> is "Go to" at any time </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Subphase, Yaw</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Subphase_eq_GoTo: Subphase =="Go to"
+Yaw_lt_Prev_plus_Delta: Yaw &lt; PREV_YAW + YAW_DELTA_MAX
+Yaw_gt_Prev_minus_Delta: Yaw &gt; PREV_YAW - DELTA_MAX</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,M] (Subphase_eq_GoTo &rarr; (Yaw_lt_Prev_plus_Delta &and; Yaw_gt_Prev_minus_Delta) ) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> UAS should be flying relatively straight: it is turning more than typical </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> The rate at which the UAS can turn during "Go To" should be low because in the phase the aircraft should be flying in one direction. <font face=courier>YAW_DELTA_MAX</font> would need to be determined experimentally </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_5_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Changes in Yaw. Sudden, large spikes are cause by the Vapor rotating from -180&#8314; to 180&#8315; or vice-versa.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/RC_UAS_5_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output showing that the changes in yaw exceeded bounds while Subphase equals Go To</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

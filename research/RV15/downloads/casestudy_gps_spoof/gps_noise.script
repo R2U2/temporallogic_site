@@ -1,0 +1,11 @@
+param set SIM_GPS_BYTELOSS	1
+sleep 1
+param show SIM_GPS_BYTELOSS
+sleep 1
+param set SIM_GPS_NUMSATS	3
+sleep 1
+param show SIM_GPS_NUMSATS
+sleep 1
+param set SIM_GPS_BYTELOSS	0
+sleep 1
+param show SIM_GPS_NUMSATS

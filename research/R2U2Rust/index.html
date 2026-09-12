@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>R2U2 in Embedded Rust &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						
+						<h2>Towards a Safe, Verified Runtime
+							Monitor for Embedded Systems: R2U2 in Embedded Rust</h2>
+						<!-- Authors -->
+						<h4>Alexis Aurandt, Phillip H. Jones, and Kristin Yvonne Rozier</h4>
+                        <p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href="R2U2_Rust_Extended.pdf">"Towards a Safe, Verified Runtime
+							Monitor for Embedded Systems: R2U2 in Embedded Rust"</a><p>
+						<hr>
+
+						<a href="R2U2_Rust_Extended.pdf"><h3 align=center><u>**The full extended version of the paper is available here (pdf)**</u></h3></a>
+
+						<h3>Abstract</h3>
+						<p>Stream-based runtime monitors can effectively verify specified system behavior 
+							in a real-time online manner, but the effectiveness of these monitors relies heavily
+							on complying with the system’s timing and resource constraints and the correctness
+							of the monitor’s implementation. The R2U2 runtime monitoring framework provides
+							real-time guarantees and a resource-aware architecture; however, we further reduce
+							R2U2’s overhead by optimizing both Mission-time Linear Temporal Logic (MLTL) and
+							past-time MLTL (ptMLTL) operators and their corresponding instruction formats. We
+							evaluate our optimizations on a suite of benchmarks and observe a significant decrease
+							in latency and memory requirements. To improve the correctness guarantees of R2U2,
+							we manually transpile the previous C version to <em>safe</em> embedded Rust and verify the
+							correctness with hand-constructed proofs, testing, and code verification with Verus. We
+							specifically target safe <em>embedded</em> Rust (i.e., no std) to allow for deployment on embedded
+							platforms with bare-metal environments (e.g., microcontrollers), and we provide complete
+							proofs for all of R2U2’s operators and verify the Rust code implementation of 25 of
+							these operators with Verus code contracts.</p>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+					<h3><a href=benchmarks.html>Benchmarks</a></h3><hr>
+					<h3><a href=latency_analysis.html>Latency Analysis</a></h3><hr>
+					<h3><a href=rust_crate.html>Rust Crate</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

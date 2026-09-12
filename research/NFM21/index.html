@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into a Sounding Rocket Control System</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h2>Integrating Runtime Verification into a <br> Sounding Rocket Control System</h2>
+						<!-- Authors -->
+						<h4>Benjamin Hertz, Zachary Luppen, Kristin Y. Rozier</h4>
+						<p> This webpage contains research artifacts from <a href="https://link.springer.com/chapter/10.1007/978-3-030-76384-8_10">"Integrating Runtime Verification into a <br> Sounding Rocket Control System"</a> by B. Hertz, Z. Luppen, and K. Y. Rozier <p>
+						<hr>
+
+						<h3>Abstract</h3>
+						<p>An actuation fault in the aerobraking control system (ACS) took down Iowa State's <em>Nova Somnium</em> rocket during the 2019 Spaceport America Cup competition, prematurely ending the team's participation. The ACS engaged incorrectly before motor burnout, altering the rocket's trajectory and leading to a dangerous crash. The ability to detect this fault in real time on-board the ACS's Arduino microcontroller would have prevented an uncontrolled landing and rapid unscheduled disassembly, which posed a major safety threat and ended a year's worth of effort by the 50-student team. Runtime verification (RV) specializes in efficiently catching this type of scenario; the R2U2 RV engine uniquely fits in the project's resource constraints. We design specifications to detect and trigger the appropriate mitigations for the ACS faults. We discuss specification development, validation, coverage, and robustness against false positives. Experimental evaluation on the real, recorded flight data demonstrates that running R2U2 on the <em>Nova Somnium</em> ACS would have prevented this accident from occurring. We generalize our results and outline our plans for integrating runtime verification into future sounding rockets.</p>
+						<h3>NFM 2021 Presentation</h3>
+						<p>This video was developed for the presentation of our work at the NASA Formal Methods (NFM) Symposium 2021, which occurred from May 24th - 28th, 2021. This 15-minute presentation provides an overview of the manuscript along with additional explanation and visuals of the malfunction that took place with the Nova Somnium rocket's aerobraking control system (ACS).</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/p6dwT0sTdH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+					<h3><a href=list.html>Detailed Specification List</a></h3><hr>
+					<h3><a href=data.html><em>Nova Somnium</em> ACS Launch Data</a></h3><hr>
+					<h3><a href=cyroc.html>Cyclone Rocketry</a></h3><hr>
+					<h3><a href=reproduce.html>Reproducibility</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

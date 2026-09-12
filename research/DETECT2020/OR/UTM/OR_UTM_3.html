@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> OR_UTM_3 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The <font face=courier>Start</font> time of any flight plan should be greater than the <font face=courier>Time_Filed</font> of the flight plan </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Start, Time_Filed</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>Start_geq_TimeFiled = 1;
+for(i = 0; i &lt; NumUAS; i++)
+{
+    for(j = 0; j &lt; NumWp[i]; j++)
+    {
+        // if UAS i's Start is less than its End
+        // and both values are not "nan"
+        if((Start[i] > Time_Filed[i][j]) && (Start[i] == Start[i]) && (Time_Filed[i][j] == Time_Filed[i][j]))
+        {
+            Start_geq_TimeFiled = 0;
+        }
+    }
+}                       </code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> Original: Start_geq_TimeFiled </p>
+                        <!--<p> Updated: &#9744;[0,3] Start_geq_TimeFiled </p>-->
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> You cannot file a flightplan that started in the past </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> The UTM's scenario was developed so that the actual Vapor 55's flight was 20 minutes into the 50 minute scenario. Due to practical airstrip considerations, the Vapor 55 could not sit on the runway while waiting for the simulated flights to complete. Thus, the actual time the UTM started was around 18 minutes into the 50 minute scenario. So the UTM did see, and incorrectly approve of, flight plans that had started (and mostly ended) in the past. </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_3_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: The difference between a flight plan's start (<font face=courier>Start</font>) and filed (<font face=courier>Time_Filed</font>) times (<font face=courier>Start - Time_Filed</font>) from each GCS the UTM reads from the operational flight plan datatable. Note that there are 7 flight plans that violate this specification. This was due to shifting the scenario's start time to accomodate the real test flight.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_3_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: The output of R2U2's monitoring of specification OR_UTM_3, confirming that at least one flight plan is invalid, i.e., its start time is in the past.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_3_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Since Fig. 1 had no fpLat inputs that exceeded LatUB or LatLB, we manually injected a fault into a single UAS (purple).</figcaption>
+                        </figure>-->
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_3_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: The output of R2U2's monitoring of specification OR_UTM_3, showing that R2U2 catches when the injected fault occurs. However, notice that there is bouncing in the initial Boolean specificaiton, which can lead to undesireable false-positive alerts.</figcaption>
+                        </figure>-->
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_3_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: The output of R2U2's monitoring of the updated specification OR_UTM_3, showing that R2U2 catches when the injected fault occurs and the "G[0,3]" temporal operator acts as a sliding filter, debouncing R2U2's output.</figcaption>
+                        </figure>-->
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

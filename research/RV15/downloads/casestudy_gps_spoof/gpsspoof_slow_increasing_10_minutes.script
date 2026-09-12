@@ -1,0 +1,5057 @@
+param set SIM_GPS_BYTELOSS	1
+sleep 1
+param show SIM_GPS_BYTELOSS
+sleep 1
+param set SIM_GPS_NUMSATS	3
+sleep 1
+param show SIM_GPS_NUMSATS
+sleep 1
+param set SIM_GPS_BYTELOSS	0
+sleep 1
+param show SIM_GPS_NUMSATS
+sleep 1
+param set	SIM_GPS_GLITCH_Y	0.00000
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0001
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0002
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0003
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0004
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0006
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0007
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0008
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0009
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.001
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0011
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0012
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0013
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0014
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0016
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0017
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0018
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0019
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.002
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0021
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0022
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0023
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0024
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0026
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0027
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0028
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0029
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.003
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0031
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0032
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0033
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0034
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0036
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0037
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0038
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0039
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.004
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0041
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0042
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0043
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0044
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0046
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0047
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0048
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0049
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0051
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0052
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0053
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0054
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0056
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0057
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0058
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0059
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.006
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0061
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0062
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0063
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0064
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0066
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0067
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0068
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0069
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.007
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0071
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0072
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0073
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0074
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0076
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0077
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0078
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0079
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.008
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0081
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0082
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0083
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0084
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0086
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0087
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0088
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0089
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.009
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0091
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0092
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0093
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0094
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0096
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0097
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0098
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0099
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.00995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0101
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0102
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0103
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0104
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0106
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0107
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0108
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0109
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.011
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0111
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0112
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0113
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0114
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0116
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0117
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0118
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0119
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.012
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0121
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0122
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0123
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0124
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0126
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0127
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0128
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0129
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.013
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0131
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0132
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0133
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0134
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0136
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0137
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0138
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0139
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.014
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0141
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0142
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0143
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0144
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0146
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0147
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0148
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0149
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0151
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0152
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0153
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0154
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0156
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0157
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0158
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0159
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.016
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0161
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0162
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0163
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0164
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0166
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0167
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0168
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0169
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.017
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0171
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0172
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0173
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0174
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0176
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0177
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0178
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0179
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.018
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0181
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0182
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0183
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0184
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0186
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0187
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0188
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0189
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.019
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0191
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0192
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0193
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0194
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0196
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0197
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0198
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0199
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.01995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0201
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0202
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0203
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0204
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0206
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0207
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0208
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0209
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.021
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0211
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0212
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0213
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0214
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0216
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0217
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0218
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0219
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.022
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0221
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0222
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0223
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0224
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0226
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0227
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0228
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0229
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.023
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0231
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0232
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0233
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0234
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0236
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0237
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0238
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0239
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.024
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0241
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0242
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0243
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0244
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0246
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0247
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0248
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0249
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0251
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0252
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0253
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0254
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0256
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0257
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0258
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0259
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.026
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0261
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0262
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0263
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0264
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0266
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0267
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0268
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0269
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.027
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0271
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0272
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0273
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0274
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0276
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0277
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0278
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0279
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.028
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0281
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0282
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0283
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0284
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0286
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0287
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0288
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0289
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.029
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0291
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0292
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0293
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0294
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0296
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0297
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0298
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0299
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.02995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0301
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0302
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0303
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0304
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0306
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0307
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0308
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0309
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.031
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0311
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0312
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0313
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0314
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0316
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0317
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0318
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0319
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.032
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0321
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0322
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0323
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0324
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0326
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0327
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0328
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0329
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.033
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0331
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0332
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0333
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0334
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0336
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0337
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0338
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0339
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.034
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0341
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0342
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0343
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0344
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0346
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0347
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0348
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0349
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0351
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0352
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0353
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0354
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0356
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0357
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0358
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0359
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.036
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0361
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0362
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0363
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0364
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0366
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0367
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0368
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0369
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.037
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0371
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0372
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0373
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0374
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0376
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0377
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0378
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0379
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.038
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0381
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0382
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0383
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0384
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0386
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0387
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0388
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0389
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.039
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0391
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0392
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0393
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0394
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0396
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0397
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0398
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0399
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.03995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0401
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0402
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0403
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0404
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0406
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0407
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0408
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0409
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.041
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0411
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0412
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0413
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0414
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0416
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0417
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0418
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0419
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.042
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0421
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0422
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0423
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0424
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0426
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0427
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0428
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0429
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.043
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0431
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0432
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0433
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0434
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0436
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0437
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0438
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0439
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.044
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0441
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0442
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0443
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0444
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0446
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0447
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0448
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0449
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0451
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0452
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0453
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0454
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0456
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0457
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0458
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0459
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.046
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0461
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0462
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0463
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0464
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0466
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0467
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0468
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0469
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.047
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0471
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0472
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0473
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0474
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0476
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0477
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0478
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0479
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.048
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0481
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0482
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0483
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0484
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0486
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0487
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0488
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0489
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.049
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0491
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0492
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0493
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0494
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0496
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0497
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0498
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0499
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.04995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0501
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0502
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0503
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0504
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0506
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0507
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0508
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0509
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.051
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0511
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0512
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0513
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0514
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0516
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0517
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0518
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0519
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.052
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0521
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0522
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0523
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0524
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0526
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0527
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0528
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0529
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.053
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0531
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0532
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0533
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0534
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0536
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0537
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0538
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0539
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.054
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0541
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0542
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0543
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0544
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0546
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0547
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0548
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0549
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0551
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0552
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0553
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0554
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0556
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0557
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0558
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0559
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.056
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0561
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0562
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0563
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0564
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0566
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0567
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0568
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0569
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.057
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0571
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0572
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0573
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0574
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0576
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0577
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0578
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0579
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.058
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0581
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0582
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0583
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0584
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0586
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0587
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0588
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0589
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.059
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0591
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0592
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0593
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0594
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0596
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0597
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0598
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0599
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.05995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0601
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0602
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0603
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0604
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0606
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0607
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0608
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0609
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.061
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0611
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0612
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0613
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0614
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0616
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0617
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0618
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0619
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.062
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0621
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0622
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0623
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0624
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0626
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0627
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0628
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0629
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.063
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0631
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0632
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0633
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0634
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0636
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0637
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0638
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0639
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.064
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0641
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0642
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0643
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0644
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0646
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0647
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0648
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0649
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0651
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0652
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0653
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0654
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0656
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0657
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0658
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0659
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.066
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0661
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0662
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0663
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0664
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0666
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0667
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0668
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0669
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.067
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0671
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0672
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0673
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0674
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0676
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0677
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0678
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0679
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.068
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0681
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0682
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0683
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0684
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0686
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0687
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0688
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0689
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.069
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0691
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0692
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0693
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0694
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0696
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0697
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0698
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0699
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.06995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0701
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0702
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0703
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0704
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0706
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0707
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0708
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0709
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.071
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0711
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0712
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0713
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0714
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0716
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0717
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0718
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0719
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.072
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0721
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0722
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0723
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0724
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0726
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0727
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0728
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0729
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.073
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0731
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0732
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0733
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0734
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0736
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0737
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0738
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0739
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.074
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07405
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0741
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07415
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0742
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07425
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0743
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07435
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0744
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07445
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07455
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0746
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07465
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0747
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07475
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0748
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07485
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0749
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07495
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07505
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0751
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07515
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0752
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07525
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0753
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07535
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0754
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07545
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07555
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0756
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07565
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0757
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07575
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0758
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07585
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0759
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07595
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.076
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07605
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0761
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07615
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0762
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07625
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0763
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07635
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0764
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07645
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07655
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0766
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07665
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0767
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07675
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0768
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07685
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0769
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07695
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.077
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07705
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0771
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07715
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0772
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07725
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0773
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07735
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0774
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07745
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07755
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0776
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07765
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0777
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07775
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0778
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0779
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.078
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0781
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0782
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0783
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0784
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07845
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0785
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07855
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0786
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07865
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0787
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07875
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0788
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07885
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0789
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07895
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.079
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07905
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0791
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07915
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0792
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07925
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0793
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07935
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0794
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07945
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0795
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07955
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0796
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07965
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0797
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07975
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0798
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07985
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0799
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.07995
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08005
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0801
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08015
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0802
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08025
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0803
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08035
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0804
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08045
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0805
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08055
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0806
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08065
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0807
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08075
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0808
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08085
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0809
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08095
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.081
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08105
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0811
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08115
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0812
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08125
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0813
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08135
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0814
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08145
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0815
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08155
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0816
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08165
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0817
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08175
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0818
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08185
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0819
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08195
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.082
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08205
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0821
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08215
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0822
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08225
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0823
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08235
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0824
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08245
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0825
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08255
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0826
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08265
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0827
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08275
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0828
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08285
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0829
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08295
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.083
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08305
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0831
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08315
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0832
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08325
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0833
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08335
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0834
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08345
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0835
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08355
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0836
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08365
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0837
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08375
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0838
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08385
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.0839
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08395
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.084
+param show	SIM_GPS_GLITCH_Y	
+sleep	0.25	
+param set	SIM_GPS_GLITCH_Y	0.08405
+param show	SIM_GPS_GLITCH_Y	

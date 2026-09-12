@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> OR_UTM_2 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The <font face=courier>Start</font> time of any flight plan must be less than the flight plan's <font face=courier>End</font> time </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>Start, End</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4>Boolean Conversion of Signals to Atomic Inputs  </h4>
+                        <pre><code>Start_leq_End = 1;
+for(i = 0; i &lt; NumUAS; i++)
+{
+    // if UAS i's Start is less than its End
+    // and both values are not "nan"
+    if((Start[i] > End[i]) && (Start[i] == Start[i]) && (End[i] == End[i]))
+    { 
+        Start_leq_End = 0;
+    }
+}</code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> Original: Start_leq_End </p>
+                        <!-- Updated: &#9744;[0,3] Start_leq_End -->
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> The user should not be able to say they landed before they took off </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_2_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: The difference between a flight plan's start (<font face=courier>Start</font>) and end (<font face=courier>End</font>) times (<font face=courier>End - Start</font>) from each GCS the UTM reads from the operational flight plan datatable.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_2_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: The output of R2U2's monitoring of specification OR_UTM_2, confirming that no flight plan's start time (<font face=courier>Start</font>) preceeds its end time (<font face=courier>End</font>).</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_2_Fault.png" caption="Snow">
+                            <figcaption>Since Fig. 1 had no flight plans where <font face=courier>Start</font> preceeds <font face=courier>End</font>, we manually shift the <font face=courier>End</font> of a single flight plan (purple) so that it comes before <font face=courier>Start</font>.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_2_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: The output of R2U2's monitoring of specification OR_UTM_2, showing that R2U2 catches when the injected fault occurs.</figcaption>
+                        </figure>
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_2_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: Caption</figcaption>
+                        </figure>-->
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

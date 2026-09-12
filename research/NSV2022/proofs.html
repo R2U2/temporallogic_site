@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="bibover.css" type="text/css" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title></title>
+<script type="text/javascript" src="bibover.js">
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["action.js"],
+      Macros: {
+      B: "{\\mathbb B}",
+      A: "{\\mathbb A}",
+      C: "{\\mathbb C}",
+      tru: "{\\mathrm\{True\}}"
+    } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="proofs.html" class="current">Proofs</a></div>
+<div class="menu-item"><a href="artifacts.html">Artifacts</a></div>
+<div class="menu-item"><a href="implementation.html">Implementation</a></div>
+<div class="menu-item"><a href="contact.html">Contact</a></div>
+</td>
+<td id="layout-content">
+<div class="bibover noshow" id="bibover_Hariharan2022" onmousedown="javascript:lockMouse(event,'Hariharan2022')" onmouseup="javascript:unLockMouse(event,'Hariharan2022')"
+style="z-index: 10000">
+<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('Hariharan2022')">X</a></div>
+<p>
+<p>G. Hariharan, B. Kempa, T. Wongpiromsarn, P. H. Jones and K. Y. Rozier,
+<i>MLTL Multi-type: A logic to reason over signals of different types</i>,
+In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV), August, 2022<br />
+<a href="javascript:toggleBibtex('Hariharan2022')">[BibTeX]</a> <a href="https://research.temporallogic.org/papers/NSV22.pdf" target=&ldquo;blank&rdquo;>[PDF]</a></p>
+</p>
+<div id="bib_Hariharan2022" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
+<pre>
+@inproceedings{Hariharan2022,
+  author = {Gokul Hariharan, Brian Kempa, Tichakorm Wongpiromsarn, Phillip H. Jones, Kristin Y. Rozier},
+  title = {MLTL Multi-type: A logic to reason over signals of different types},
+  booktitle = {In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV)},
+  year = {2022},
+  pdf = {//research.temporallogic.org/papers/NSV22.pdf}
+}
+</pre></div>
+</div>
+<h1>MLTL Multi-type: A logic to reason over signals of different types</h1>
+<p><b><a href="https://gokulhari.github.io/webpage/" target="<u>blank">Gokul Hariharan*</a></b>, <b><a href="https://www.bckempa.io" target="</u>blank">Brian Kempa</a></b>, <b><a href="https://tichakorn.dev/" target="<u>blank">Tichakorn Wongpiromsarn</a></b>, <b><a href="https://www.engineering.iastate.edu/people/profile/phjones/" target="</u>blank">Phillip H. Jones</a></b>, and <b><a href="https://www.aere.iastate.edu/kyrozier/" target="_blank">Kristin Y. Rozier</a></b></p>
+<p><b>This webpage contains further details and artifacts for reproducibility in &ldquo;<a href="javascript:cite('Hariharan2022')">MLTL Multi-type: A logic to reason over signals of different types</a>&rdquo;</b></p>
+<p>*<a href="mailto:gokul@iastate.edu" target=&ldquo;blank&rdquo;>gokul@iastate.edu</a></p>
+<h2>Full proof of Theorem 1</h2>
+<p>In the <a href="javascript:cite('Hariharan2022')">paper</a> we present the MLTLM semantics:</p>
+<p style="text-align:center">
+\[
+    \begin{equation}\label{eq:semantics}
+        \sigma^\mathbb A[i] := \begin{cases}
+            \pi_p^\mathbb{A}[i] &amp;\text{if&nbsp;} \phi = p\\
+            \neg \sigma_1^\mathbb A[i] &amp;\text{if&nbsp;} \phi = \neg \phi_1\\
+            \sigma_1^\mathbb{A}[i] \wedge \sigma_2^\mathbb{A}[i] &amp;\text{if&nbsp;} \phi = \phi_1 \wedge \phi_2\\
+            \sigma_1^\mathbb{A}[i..]\; \mathrm U_{[lb,ub]} \sigma_2^\mathbb{A}[i..] &amp;\text{if&nbsp;} \phi = \phi_1 \mathrm U_{[lb,ub,\mathbb{A}]} \phi_2\\
+        \end{cases}
+    \end{equation}    
+\]
+</p><p>where a type change can occur via a projection operator,</p>
+<p style="text-align:center">
+\[
+    \begin{equation}\label{eq:projection}
+    T_\mathbb{A}^\mathbb{B}(\sigma^\mathbb{A}) = \sigma^\B
+    \end{equation}
+\]
+</p><p>The semantics are expressed in terms of signals, and we say that a formula \(\phi\) generates a signal, denoted by \(\phi \mapsto \sigma\).</p>
+<p>As discussed in Section 3.2 of the <a href="javascript:cite('Hariharan2022')">paper</a>, an MLTLM formula has many possible evaluations based on the placement of projections. We consider a specific placement of projections so that one formula has a single interpretation - the nearest ancestor type imposition as discussed in Section 4 of the paper. Furthermore, we consider a subset of MLTLM formulas that have a temporal operator at its AST's root (see Section 4 in the paper), and the output signal type is assumed to be the same as the type of this temporal operator.  </p>
+<p><b>Lemma 1</b> (<i>Adequate set of MLTL</i>) The operators \(\neg\), \(\wedge\) and \(\square\) form an adequate set, i.e., any MLTL formula can be equivalently expressed exclusively with these operators.
+<br />
+<br />
+<i>Proof:</i> In propositional logic the adequate set is {\(\neg\),\(\wedge\)}, and this extends directly to temporal logic as well. We need to only show that any formula \(\phi_1 \mathcal U_{[lb,ub]} \phi_2\) can be equivalently expressed in MLTL using only the \(\square\) operator. It is trivial to show from the definition of the until operator that,</p>
+<p style="text-align:center">
+\[
+\begin{align*}
+  \phi_1 \mathcal U_{[lb,ub]} \phi_2  \;=\;&amp; \square_{[lb,lb]}\phi_2 \\
+\; \; \; \vee (&amp;\square_{[lb,lb]} \phi_1 \wedge \square_{[lb+1,lb+1] }\phi_2)\\
+\; \; \;\vee (&amp;\square_{[lb,lb+1]} \phi_1 \wedge \square_{[lb+2,lb+2] }\phi_2)\\ 
+\; \; \;\vee (&amp;\square_{[lb,lb+2]} \phi_1 \wedge \square_{[lb+3,lb+3] }\phi_2)\\ 
+&amp;\; \; \; \vdots \\
+\; \; \;\vee (&amp;\square_{[lb,ub-1]} \phi_1 \wedge \square_{[ub,ub] }\phi_2),\\
+\;=\;&amp; \neg (\neg \square_{[lb,lb]}\phi_2 \\
+\; \; \; \wedge \neg (&amp;\square_{[lb,lb]} \phi_1 \wedge \square_{[lb+1,lb+1] }\phi_2)\\
+\; \; \;\wedge \neg (&amp;\square_{[lb,lb+1]} \phi_1 \wedge \square_{[lb+2,lb+2] }\phi_2)\\ 
+\; \; \;\wedge \neg (&amp;\square_{[lb,lb+2]} \phi_1 \wedge \square_{[lb+3,lb+3] }\phi_2)\\ 
+&amp;\; \; \; \vdots \\
+\; \; \;\wedge \neg (&amp;\square_{[lb,ub-1]} \phi_1 \wedge \square_{[ub,ub] }\phi_2))
+\end{align*}  
+\]
+</p><p>Q.E.D.</p>
+<p><b>Definition 1</b> (<i>Logical projection</i>) Consider a formula \(\phi = \square_{[lb,ub,\mathbb D]} \phi_1 \) where \(\phi_1 \mapsto \sigma^t\), where \(t \neq \mathbb D\). Let there exist a projection \(T_{t}^\mathbb D\) to match type \(\mathbb D\). The projection is called a logical projection if there exists a function \(p: \Phi \rightarrow \Phi\) such that \((p(\phi) \mapsto \sigma^t) \Leftrightarrow (\phi \mapsto \sigma^{\mathbb D})\) and \(p(\phi)\) has the closest descendent type of \(t\), where \(\Phi\) is the set of MLTLM formulas.</p>
+<p>The closest descendant type of a formula is the type on the closest child from the its AST's root (inclusive). For example, the closest descendant type of \(\square_{[1,2,\mathbb A]} (p \wedge q)\) is \(\mathbb A\). The closest descendant types of \(\square_{[1,2,\mathbb A]} (p) \wedge \square_{[1,2,\mathbb B]}(q)\) are \(\mathbb A\) and \(\mathbb B\).  </p>
+<p><b>Theorem 1</b> (<i>Expressive Equivalence of MLTL and MLTLM with Logical Projections</i>) Let \(F\) be a logical projection. Let \(\mathbb A\) be a type and \(\psi\) be an MLTL formula that outputs signals of type \(\mathbb A\).
+For every MLTLM formula \(\phi\) such that for every type \(t\) in \(\phi\) there exists a chain of logical projections from \(t\) to \(\mathbb A\), 
+the signal generated by \(\phi\) is equivalent to another signal generated by \(\psi\).
+<br /> 
+<br /> 
+The proof is completed by using induction on the structure of the formula in cunjunction with <b>Lemma 1</b>.</p>
+<p><i>Proof.</i>  The mathematical statement of the proof is to show </p>
+<p style="text-align:center">
+\[
+(\phi \mapsto \sigma^\mathbb D) \Leftrightarrow (\psi \mapsto \sigma^\mathbb A)    
+\]
+</p><p>i.e., an MLTLM formula \(\phi\) that generates a signal \(\sigma^\mathbb D\) is equivalent to an MLTL formula \(\psi\) that generates a signal of type \(\mathbb A\), given that we have a chain of logical projections, and that the all the atomic propositions generate signals of the same type, \(\mathbb A\). </p>
+<ol>
+<li><p><b>Base case</b>: The entire AST of \(\phi\) has temporal operators of the type \(\mathbb A\).</p>
+</li>
+<li><p><b>Hypothesis:</b>
+The children \(\phi_1\) and \(\phi_2\) of a formula, \(\phi \mapsto t\), where </p>
+<ol>
+<li><p>\( \neg \phi_{1}\)</p>
+</li>
+<li><p>\(\phi_{1} \wedge \phi_{2}\)</p>
+</li>
+<li><p>\(\square_{[lb,ub,t]} \phi_1\)</p>
+</li>
+</ol>
+
+</li>
+</ol>
+<dl>
+<dt>have equivalent MLTLM formulae such that they generate a signal of type \(\mathbb A\), then (to prove) the formula also has an equivalent MLTLM formula that generates a signal of type \(\A\)</dt>
+<dd><p></p></dd>
+</dl>
+<p>Cases (a) and (b) directly follow from the MLTLM semantics. As for Case (c), we assumed the existence of a chain of logical projections. Which means for Case (c) any formula \(\phi = \square_{[lb,ub,t]} \phi_1\) where \(\phi_1\mapsto t'\), such that \(t&rsquo; \neq t\), there exists a function \(p(\phi)\) such that \((p(\phi) \mapsto t&rsquo;) \Leftrightarrow (\phi \mapsto t)\). But from the hypothesis, it is clear that \(t&rsquo; = \A\). </p>
+<p>Q.E.D.</p>
+<p>The proof can be succinctly expressed using a recursive function \(q\),    </p>
+<p style="text-align:center">
+\[
+    \begin{equation}\label{eq:qphi}
+        q(\phi) :=
+         \begin{cases}
+         \phi, &amp; \text{if } \phi \text{ has only one type, \(\mathbb A\) in the entire formula},\\
+           p(\,\square_{[lb,ub,t]} q(\phi_1)\, ), &amp; \text{if } \phi = \square_{[lb,ub,t]} \phi_1 \text{ and } t \neq \mathbb A,\\
+           \square_{[lb,ub,\mathbb A]} q(\phi_1), &amp; \text{if } \phi = \square_{[lb,ub,\mathbb A ]} \phi_1,\\
+           \neg q(\phi_1), &amp; \text{if } \phi = \neg \phi_1,\\
+           q(\phi_1) \wedge q(\phi_2), &amp; \text{if } \phi = \phi_1 \wedge \phi_2.
+         \end{cases}
+       \end{equation}    
+\]
+</p><p>where we use a slight abuse of notation for the function \(p\) to represent any of the different, but respective functions of corresponding logical projections. This completes the proof. </p>
+<p>We derive the logical function for the modulo-reduction projection presented in the paper as an example. The modulo-reduction function \(f_s: \sigma^\mathcal{A} \rightarrow \sigma^\mathcal{B}\), where \(\sigma^\mathcal A\) and \(\sigma^\mathcal B\) are the sets of all signals of types \(\A\) and \(\B\) respectively,   implements the projection \(T_\mathbb{A}^\mathbb{B}(\sigma^\mathbb{A})\) with positive integer stride \(s\) such that,</p>
+<p style="text-align:center">
+\[
+  \begin{align}\label{eq:moduloReduction}
+  f_s(\sigma^\mathbb A) = \sigma^\mathbb B \text{ such that }\sigma^\mathbb B [i] = \sigma^\mathbb A [i \cdot s]        \end{align}
+  \]
+</p><p>Let, \(\phi = \square_{[lb,ub,\mathbb B]} \phi_1\) and \(\phi \mapsto \sigma^\mathbb B\) and let \(\phi_1 \mapsto \sigma^\mathbb A\), we have</p>
+<p style="text-align:center">
+\[
+  \begin{align*}
+    &amp;\sigma^\mathbb B [i] = \square_{[lb,ub,\B ]} \sigma^\B_1 [i ..],\\
+    \Leftrightarrow\;\; &amp; \sigma^\mathbb B [i] = \tru \text{ if } \forall j \in [i+lb, i+ ub],\; \sigma^\B_1 [j] = \tru,\\
+    \Leftrightarrow\;\; &amp; \sigma^\mathbb B [i] = \tru \text{ if } \forall j \in [i+lb, i+ ub],\; \sigma^\A [j \, s] = \tru,\\
+    \Leftrightarrow\;\; &amp; \sigma^\mathbb B [i] = \tru \text{ if } \forall j&rsquo; \in [i'+lb\, s, i'+ ub\, s ,\, s],\; \sigma^\A [j'] = \tru,\\
+    \Leftrightarrow\;\; &amp; \sigma^\mathbb A [i'] = \square_{[lb\, s,lb\, s]} (\sigma^\A[i'] \wedge \square_{[s,s]} \sigma^\A[i'] \wedge \square_{[2s,2s]}\sigma^\A[i'] \wedge \; \cdots \; \wedge \square_{[ub-lb,ub-lb]} \sigma^\A[i'] ),  
+  \end{align*}
+  \]
+</p><p>On using the formula notation, we have that \((p(\phi) \mapsto \sigma^\A) \Leftrightarrow (\phi \mapsto \sigma^\B)\) where </p>
+<p style="text-align:center">
+\[
+    p(\phi) \;= \; \square_{[lb\, s,lb\, s, \A]} (\phi_1 \wedge \square_{[s,s,\A]} \phi_1 \wedge \square_{[2s,2s,\A]}\phi_1 \wedge \; \cdots\;\wedge  \square_{[ub-lb,ub-lb,\A]} \phi_1 ). 
+    \]
+</p><div id="footer">
+<div id="footer-text">
+Page generated 2022-08-06 07:46:32 CDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+<!--
+//Get array of all anchors in the layout-content table cell
+var td=document.getElementById('layout-content');
+var anchs=td.getElementsByTagName('a');
+//Setup the regex pattern for finding cites
+var patt1 = /javascript:cite\(\'.*\'\)/;
+//Loop through all anchors
+for(var	i=0;i<anchs.length;i++) {
+    a=anchs[i];
+    //If the anchor contains a cite add event listeners
+    if(a.href.search(patt1)!=-1) {
+       a.addEventListener('mouseover',bibshow,false);
+       a.addEventListener('mouseout',bibhide,false);
+    }
+}
+-->
+</script>
+</body>
+</html>

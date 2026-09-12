@@ -1,0 +1,163 @@
+<h2>Previous model and add sensors on the back of the rover</h2>
+<pre>
+    <code>
+        MODULE main
+        VAR
+        -- Declare set of system variables
+        pp30 : boolean;
+        pr30 : boolean;
+        bar : boolean;
+        drop : boolean;
+        pin1 : boolean;
+        pin2 : boolean;
+        forward : boolean;
+        reverse : boolean;
+        tr : boolean;
+        tl : boolean;
+        sample : boolean;
+
+        INIT
+        -- Initially, all states are false/off
+        pp30 = FALSE &
+        pr30 = FALSE &
+        bar = FALSE &
+        drop = FALSE &
+        pin1 = FALSE &
+        pin2 = FALSE &
+        forward = FALSE &
+        reverse = FALSE &
+        tr = FALSE &
+        tl = FALSE &
+        sample = FALSE;
+
+        TRANS
+
+        -- State 0 -> Rover is sitting still
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & !forward & !reverse & !tr & !tl & !sample) ->
+        -- State 0: Nothing changes.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 1: Rover begins to move forward.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 6: The rover stops to collect a sample.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(sample))) |
+        -- State 7: The rover is moving forward and is turning
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(tr)) | (next(tl)) & (next(!sample))) |
+        -- State 8: The rover begins to reverse
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 9: The rover is reversing and turning
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(tr)) & (next(tl)) & (next(!sample)))
+        ) &
+
+        -- State 1 -> Rover is moving forward and all is well
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & forward & !reverse & !tr & !tl & !sample) ->
+        -- State 0: Rover stops moving forward, no violations are detected.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 1: Nothing changes.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 2: Sensor detects anything obstacle.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 7: The rover is moving forward and is turning
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(tr)) | (next(tl)) & (next(!sample)))
+        ) &
+
+        -- State 2 -> Sensor system detects obstacle while moving forward
+        ((pp30 | pr30 | bar | drop & !pin1 & !pin2 & forward & !reverse & !tr & !tl & !sample) ->
+        -- State 3: Forward stop pin is pressed by sensor system.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 3 -> The forward stop pin is pressed and the rover has stopped
+        ((pp30 | pr30 | bar | drop & pin1 & !pin2 & !forward & !reverse & !tr & !tl & !sample) ->
+        -- State 4: The rover has detected an obstacle in front of it and is reversing.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 4 -> Rover is reversing (obstacle detected)
+        ((pp30 | pr30 | bar | drop & pin1 & !pin2 & !forward & reverse & !tr & !tl & !sample) ->
+        -- State 4: Rover keeps reversing.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 5: Sensor detects that the obstacle has been cleared.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 5 -> Obstacle has been cleared (forward)
+        ((!pp30 & !pr30 & !bar & !drop & pin1 & !pin2 & !forward & reverse & !tr & !tl & !sample) ->
+        -- State 0: Rover is stopped and stop pin is no longer pressed
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 6 -> The rover stops to collect a sample
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & !forward & !reverse & !tr & !tl & sample) ->
+        -- State 0 -> The rover has finished collecting its sample and is stationary
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 7 -> The rover is moving forward and is turning
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & forward & !reverse & tr | tl & !sample) ->
+        -- State 0: Rover stops moving forward, no violations are detected.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 1: The rover continues to move forward but does not turn
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 7: The rover continues to move forward and is turning
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(forward)) & (next(!reverse)) & (next(tr)) | (next(tl)) & (next(!sample)))
+        ) &
+
+        -- State 8 -> The rover is reversing (no obstacle detected)
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & !forward & reverse & !tr & !tl & !sample) ->
+        -- State 0: The rover stops reversing, no violations are detected.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 8: Nothing changes.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 9: The rover continues to reverse and is turning.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(tr)) & (next(tl)) & (next(!sample))) |
+        -- State 10: The rover detects an obstacle behind it.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 9 -> The rover is reversing and turning (no obstacle detected)
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & !pin2 & !forward & reverse & tr & tl & !sample) ->
+        -- State 0: The rover stops reversing, no violations are detected.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 8: The rover continues to reverse without turning.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 9: Nothing changes.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(reverse)) & (next(tr)) & (next(tl)) & (next(!sample)))
+        ) &
+
+        -- State 10 -> The sensor detects an obstacle while reversing
+        ((pp30 | pr30 | bar | drop & !pin1 & !pin2 & !forward & reverse & !tr & !tl & !sample) ->
+        -- State 11: Rear stop pin is pressed by the sensor system.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin1)) & (next(pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 11 -> The rear stop pin has been pressed and the rover has stopped
+        ((pp30 | pr30 | bar | drop & !pin1 & pin2 & !forward & !reverse & !tr & !tl & !sample) ->
+        -- State 12: The rover has detected an obstacle behind it and is moving forward
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin1)) & (next(pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 12 -> The rover is moving forward (obstacle detected)
+        ((pp30 | pr30 | bar | drop & !pin1 & pin2 & forward & !reverse & !tr & !tl & !sample) ->
+        -- State 12: Rover keeps moving forward.
+        ((next(pp30)) | (next(pr30)) | (next(bar)) | (next(drop)) & (next(!pin1)) & (next(pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample))) |
+        -- State 13: Sensor detects that the obstacle has been cleared.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(pin2)) & (next(forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        ) &
+
+        -- State 13 -> Obstacle has been cleared (rear)
+        ((!pp30 & !pr30 & !bar & !drop & !pin1 & pin2 & forward & !reverse & !tr & !tl & !sample) ->
+        -- State 0: The rover stops moving.
+        ((next(!pp30)) & (next(!pr30)) & (next(!bar)) & (next(!drop)) & (next(!pin1)) & (next(!pin2)) & (next(!forward)) & (next(!reverse)) & (next(!tr)) & (next(!tl)) & (next(!sample)))
+        )
+
+        LTLSPEC !(G((pp30 | pr30) -> F(pin1 | pin2)))
+        LTLSPEC !(G((!pp30 & !pr30) -> !(pin1 | pin2)))
+        LTLSPEC !(G(bar -> F(pin1 | pin2)))
+        LTLSPEC !(G(!bar -> !(pin1 | pin2)))
+        LTLSPEC !(G(drop -> F(pin1 | pin2)))
+        LTLSPEC !(G(!drop -> !(pin1 | pin2)))
+        LTLSPEC !(G(!(sample & (forward | reverse))))
+        LTLSPEC !(G(!((pin1 | pin2) & (tr | tl))))
+        LTLSPEC !(G(!(pin1 & pin2)))
+    </code>
+</pre>

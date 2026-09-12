@@ -203,3 +203,21 @@ google*.html
 # Publish the complete photo collection.
 !/Photos/
 !/Photos/**
+
+# Publish all research materials and slides.
+!/research/
+!/research/**
+!/slides/
+!/slides/**
+
+# Keep the large CAV18 virtual machine image local.
+/research/CAV18/cav18ae_paper41.ova
+
+# Keep large videos local until they are hosted on the lab YouTube channel.
+/research/R2U2/FORMATS_18_talk_BrianKempa.mp4
+/research/DETECT2020/mcauwels_DETECT_2020.mp4
+/research/R2U2/FORMATS_18_teaser_BrianKempa.mp4
+/research/R2U2/R2U2-on-R2_demo.mp4
+/research/R2U2/R2U2_Demo_08-2017.mov
+/research/NFM21/Nova Somnium Launch.mp4
+!/TODO.txt

@@ -1,0 +1,355 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=ISO-8859-1">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+
+<title>
+R2U2: Monitoring and Diagnosis of Security Threats for
+Unmanned Aerial Systems
+</title>
+<meta name="description" content="PRISM">
+<meta name="keywords" content="PRISM">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+<p>
+
+</p><h1 align="center">
+R2U2: Monitoring and Diagnosis of Security Threats for
+Unmanned Aerial Systems
+</h1>
+<div>
+
+<p align="center"><strong>Johann Schumann, Patrick Moosbrugger, and Kristin Yvonne Rozier</strong></p>
+<p align="center"><strong>2015</strong></p>
+</div>
+
+<p>
+These pages contain further details of the experiments described in <a name="tex2html1" href="http://research.kristinrozier.com/papers/SchumannMoosbruggerRozierRV2015.pdf">"
+R2U2: Monitoring and Diagnosis of Security Threats for
+Unmanned Aerial Systems
+"</a>
+by Johann Schumann, Patrick Moosbrugger, and Kristin Yvonne Rozier. The BibTeX for this paper is available <A HREF="http://research.kristinrozier.com/BibTeX/SMR15.bib">here</A>.
+</p>
+
+<p>
+<h3 align = "left">Abstract: </h3>
+We present R2U2, a novel framework for runtime monitoring of security
+properties and diagnosing of security threats on-board Unmanned Aerial
+Systems (UAS). R2U2, implemented in FPGA hardware, is a real-time, <b>REALIZABLE</B>,
+<B>RESPONSIVE</B>, <B>UNOBTRUSIVE</B> <B>UNIT</B> for security threat detection. R2U2
+is designed to continuously monitor inputs from the GPS and the ground control
+station, sensor readings, actuator outputs, and flight software status. By simultaneously
+monitoring and performing statistical diagnosis, attack patterns and
+post-attack discrepancies in the UAS behavior can be detected. R2U2 uses runtime
+observer pairs for linear and metric temporal logics for property monitoring
+and Bayesian networks for diagnosis of security threats.We detail the design and
+implementation that now enables R2U2 to handle security threats and present results
+of simulations of several attack scenarios on the NASA DragonEye UAS
+running ArduPilot flight software.
+</p>
+
+<P> 
+</P>
+<HR>
+
+<P>
+ <BR>
+</P>
+
+<P>
+Our data files are compiled using the <strong>SamIam</strong> and <strong>Ace</strong> tools, which are free and open source and can be downloaded <A HREF="http://reasoning.cs.ucla.edu/">here</A>. Documentation is packaged in the tool downloads. 
+</P>
+
+
+<p>
+<strong>Disclaimer:</strong> The files distributed on this page contain research prototype code and examples published in the paper above. The files are compatible with SamIam release 3.0 and Ace version 2.0; we make no claims regarding compatibility with any other versions.  Please feel free to <A href="mailto:kyrozier@iastate.edu">email me</A> concerning clarifications, bugs, or other corrections.
+</p><p>
+
+<br></p>
+
+
+<P>
+
+<hr>
+
+
+
+<h2>Requirements for the SITL Simulation</h2>
+    <ul>
+      <li><a href=https://github.com/ArduPilot/MAVProxy target=_blank>MAVProxy (1.4.10) </a></li>
+      <li><a href=http://jsbsim.sourceforge.net/ target=_blank>JSBSim-0.1.2</a></li>
+      <li><a href=https://github.com/diydrones/ardupilot target=_blank>ArduPlane-3.1.2</a></li>
+      <li><a href=http://ardupilot.org/planner2/ target=_blank>APM Planner 2.0</a></li>
+    </ul>
+A manual on how to setup the SITL Simulation can be found 
+<a href="http://dev.ardupilot.com/wiki/simulation-2/sitl-simulator-software-in-the-loop/setting-up-sitl-on-linux" target=_blank>here</a>.
+
+<h2>Download casestudy data</h2>
+    <ul>
+      <li><a href=./downloads/casestudy_gps_spoof target=_blank>Casestudy GPS Spoofing</a></li>
+      <li><a href=./downloads/casestudy_oscillation target=_blank>Casestudy UAS Oscillation</a></li>
+	  <li><a href=./downloads/casestudy_dos_hijack target=_blank>Casestudy DoS Hijack</a></li>
+	</ul>
+
+<h2>Explore the Simulations Dataflash Logfiles</h2>
+You can go through our simulation dataflash logfiles using <a href=http://ardupilot.org/planner2/ target=_blank>APM Planner 2.0</a>.<br>
+Start APM Planner 2.0, and as shown in the picture, <br>
+switch to the "GRAPHS" view, go on "Open Log", <br>
+and select the apm_dataflash*.bin file from the casestudy directory.<br><br>
+
+<img src="img/planner1.png">
+<br><br>
+Now you can select the signals you want to display in the right pane.<br>
+Scaling can be changed by doubleclick on the vertical axis.<br>
+For example, to see some interesting signals for the GPS Spoofing casestudy,<br>
+display the signals as can be seen in the next figure.
+    <ul>
+      <li>AHR2.Lng (Aircraft's internal AHRS Longitude)</li>
+      <li>SIM.Lng (Actual Aircraft's Longitude)</li>
+	  <li>EKF4.OFN (EKF GPS Position Glitch Offset North) </li>
+	  <li>EKF4.EFE (EKF GPS Position Glitch Offset East) </li>
+	</ul>
+
+<img src="img/result_spoof_vs_nominal_raw.png">
+<br>
+
+
+<h2>Running the simulation scripts</h2>
+In order to run the SITL Simulation, please refer to the manual 
+<a href=http://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html  target=_blank>
+here</a>.<br>
+If you intend to run the simulation scripts from our casestudies, 
+you will need to install the MAVProxy modifications.<br>
+Simply overwrite the files in the MAVProxy installation directory with the files
+you can download <a href=./downloads/MAVProxy_modifications target=_blank>here</a>
+<br>
+Once the SITL simulation is running, you can execute this scripts using the <br>
+modified MAVProxy application by issuing the command "script &lt;path_to_script>".<br>
+To reproduce our results, you can follow the directions from our flight_plan.ods,
+which is located in each casestudy directory.<br>
+
+<h2>Interpreting the input traces for the R2U2 Framework (rtr2u2_uart_dump*.bin)</h2>
+The data trace, that is extracted from the Flightcomputer and sent to our monitoring framework <br>
+for online monitoring, is logged in the rtr2u2_uart_dump*.bin file for each casestudy.<br>
+The trace consists of a binary stream that is sent packet by packet.<br>
+In order to interpret these packets, please have a look at the <b>struct rtR2U2_packet</b>, <br>
+defined in the AP_Rtr2u2.h file from the casestudy directory, where they are defined<br>
+
+<!--
+
+<p>
+<h3 align = "left">Case Study: Fluxgate Magnetometer Buffer Overflow:</h3>
+
+Assuming a standard set of sensors sending input signals along the bus to the embedded FPGA...
+
+<h4> Step 0:</h4> Define a set of Linear/Metric Temporal Logic specifications over the set of signals.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/ltl.txt">ltl.txt</A> </td>
+            <td> Hand-coded file of temporal logic formulas for the buffer overflow example. Future work would be to automate this task.
+            </td>
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+<hr>
+
+
+<h4>Step 1:</h4> Use <A HREF="http://reasoning.cs.ucla.edu/samiam/">SamIam</A> to design Bayes Net reasoners that utilize the set of temporal logic formulas as inputs.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+           <td><A HREF="http://research.kristinrozier.com/RV14/net1.net">net1.net</A> </td>
+            <td> Output from SamIam. Input to Ace; compile with default compiler options.
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+<hr>
+
+
+<h4>Step 2:</h4> Compile the resulting arithmetic circuit using <A HREF="http://reasoning.cs.ucla.edu/ace/">Ace</A>.
+
+
+<h5>Compilation with Ace:</h5>
+<p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/net1.net">net1.net</A> </td>
+            <td> Output from SamIam. Input to Ace; compile with default compiler options. This is the main Bayes Net reasoner used in our case study.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.inst">net1.net.inst</A> </td>
+            <td> Input to Ace; needed to compile net1.net. This is the instantiation file needed for BN evaluation and it can be created automatically, but a predefined state of any node would influence the resulting arithmetic circuit. This version was hand-coded to ensure control over the structure of the resulting arithmetic circuit.<B>*</B>
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.ac">net1.net.ac</A> </td>
+            <td> Output from Ace, one instance (since algorithm is not deterministic and the number of nodes and the structure both change with every compilation cycle).
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.lmap">net1.net.lmap</A> </td>
+            <td> Output from Ace, one instance (since algorithm is not deterministic).
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.ac_visual.pdf">net1.net.ac_visual.pdf</A> </td>
+            <td> Visualization of net1.net.ac above using DOT.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</p>
+
+<B>*</B> Ace is programmed to heavily use optimasation. So, if the .inst file states that a certain Bayes node is always in a certain state, then this is exploited and the AC will get smaller. However, in our implementation, we cannot use this feature, because our BN will always have to adapt to new indicators. Therefore, Ace's pre-compilation optimizations would create a non-general arithmetic circuit that would be incorrect, but only for our specific framework. 
+
+Here is a specific example that illustrates why an automatically generated a .inst file it might contain states that don't change, that we need to change, and that would cause the resulting AC to be wrong in the context of the R2U2 framework because the unchanging states that should actually be changing states would be 'optimized' aka eliminated. 
+
+For example, in our evaluation of the barometric altimeter sensor data, a .inst file could look like this:
+
+<xmp>
+<?xml version="1.0" encoding="UTF-8"?>
+<instantiation date="Aug 25, 2006 9:23:45 AM">
+<inst id="S_BARO_ALT" value="increasing"/>
+</instantiation>
+
+</xmp>
+
+<P>
+This information is used by the Ace to
+evaluate the barometric altimeter is in the state "increasing." As Ace sees in this file that this state will not change, therefore Ace eliminates all
+nodes correlated to this information during compilation of the arithmetic circuit. However, the barometric altimeter will not always indicate an increasing altitude in real life. 
+That is why the .inst file is not that important for our approach and we
+better make an .inst file like this:
+
+<xmp>
+<?xml version="1.0" encoding="UTF-8"?>
+<instantiation date="Aug 25, 2006 9:23:45 AM">
+</instantiation>
+
+</xmp>
+
+<hr>
+
+
+<h4>Step 3:</h4> Run rt-R2U2 code to combine together all of the artifacts from previous steps, creating a combination of temporal logic runtime observers and Bayes Net reasoners, all in a format suitable for upload to an FPGA to program the gates in the array. (We do not currently have a stand-alone version of this code; the version run for the paper was part of a large and onerous java GUI. A new, more lithe, standalone version is being created as part of 'future work' that should be both scalable and executable on any high-performance Linux platform.)
+
+<h5>rt-R2U2 Compilation:</h5>
+
+<p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/ltl_web_readable.txt">ltl_web_readable.txt</A> </td>
+            <td> Output from rt-R2U2 code, though this version was hand-coded for the experimental evaluation used in this paper. Input file to FPGA containing readable instructions for the rt-R2U2 process.
+            </td>
+          </tr>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/rtR2U2-quick reference.pdf">rtR2U2-quick reference.pdf</A> </td>
+            <td> Quick reference file with basic documentation of our process. This is Johannes Geist's lab notebook and internal manual for BN compilation.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/instructions_web.txt">instructions_web.txt</A> </td>
+            <td> Output from rt-R2U2 code. Input file to FPGA containing readable instructions for the rt-R2U2 process.
+            </td>
+          </tr>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/RV14_code_snippets.html">RV14_code_snippets.html</A> </td>
+            <td> Page of code snippets executing the critical functions in the rt-R2U2 code.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</p>
+
+<strong>Legend for <A HREF="http://research.kristinrozier.com/RV14/instructions_web.txt">instructions_web.txt</A and <A HREF="http://research.kristinrozier.com/RV14/ltl_web_readable.txt">ltl_web_readable.txt</A>:</strong>
+
+<p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td> a
+            </td>
+            <td> atomic
+            </td>
+          </tr>
+          <tr>
+            <td> i
+            </td>
+            <td> intermediate (i.e. i1 = true and i0 = false)
+            </td>
+          </tr>
+          <tr>
+            <td> s
+            </td>
+            <td> instruction result (i.e. s1 = result of evaluating the line labeled 01:...)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</p>
+
+
+<hr>
+
+
+<h4>Step 4: [Optional]</h4> Preprocess the real test flight data using Matlab for data privacy reasons. In this paper, the real test flight data was normalized, preserving all pertinent properties of the data, but shifting the values to meet minimum requirements for data privacy at NASA.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/RV14_atomics_web.csv">RV14_atomics_web.csv</A> </td>
+            <td> Preprocessed input data file used for experimental evaluation in paper.
+          </tr>
+	  </tbody>
+      </table>
+<figure>
+    <img src="http://research.kristinrozier.com/RV14/packetsfigure_crop.jpg" height="350" style="margin: 0px;" alt="Additional View of Case Study Data" />
+    <figcaption>Normalized data for Acceptable Bad Packets (N^R_{tot}) and Bad Packets (N^R_b) used in Fluxgate Magnetometer case study. These values were used in evaluating three specifications: (a) "The fluxgate packet transmission rate is appropriate," (b) "The number of bad packets is low," and (c) "The bad packet rate is not increasing."</figcaption>
+</figure>
+</p>
+
+<hr>
+
+<h4>Step 5:</h4> Run the FPGA as if it were onboard, in the field, processing the .csv data as an input stream from the onboard sensors, programmed with the bundled binary versions of the program files <A HREF="http://research.kristinrozier.com/RV14/instructions_web.txt">instructions_web.txt</A> and <A HREF="http://research.kristinrozier.com/RV14/ltl_web_readable.txt">ltl_web_readable.txt</A>.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/serialinterface+data_clean.zip">serialinterface+data_clean.zip</A> </td>
+            <td> This .zip contains all of the sources and the binary files used to communicate to the FPGA in our case study: the C program used to send the preprocessed input data file <A HREF="http://research.kristinrozier.com/RV14/RV14_atomics_web.csv">RV14_atomics_web.csv</A> to the FPGA as if it were a sensor stream read off of the bus; all .c and .h files needed to build this code; along with a Makefile.
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+-->
+
+
+<br><hr>
+<address>
+Kristin Yvonne Rozier
+2015-04-27
+</address>
+</body></html>

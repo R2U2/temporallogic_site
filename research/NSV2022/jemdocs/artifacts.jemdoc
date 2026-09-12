@@ -1,0 +1,13 @@
+# jemdoc: menu{MENU}{artifacts.html},addpackage{amssymb},addpackage{mathrsfs},addpackage{amsmath}
+# jemdoc: addcss{bibover.css}
+# jemdoc: addcss{jemdoc.css}
+#include{UsedRefs.jeminc}
+
+= MLTL Multi-type: A logic to reason over signals of different types
+#include{header.jemdoc}
+
+*[mailto:gokul@iastate.edu]
+  
+== Download artifacts 
+You can download the artifacts [MLTLM_Artifacts.zip here], and the paper from [https://research.temporallogic.org/papers/NSV22.pdf here]. The artifacts directory can also be cloned from [https://github.com/gokulhari/MLTLM_NSV2022 Github].
+

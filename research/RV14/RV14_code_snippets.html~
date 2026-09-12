@@ -1,0 +1,285 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=ISO-8859-1">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+
+<title>Code Snippets from "Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems"</title>
+<meta name="description" content="PRISM">
+<meta name="keywords" content="PRISM">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+<p>
+
+</p><h1 align="center">Code Snippets from "Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems"</h1>
+<div>
+
+<p align="center"><strong>Johannes Geist, Kristin Yvonne Rozier, and Johann Schumann</strong></p>
+<p align="center"><strong>2014</strong></p>
+</div>
+
+<p>
+This page contains code snippets executing the critical functions in the rt-R2U2 code described in <a name="tex2html1" href="http://research.kristinrozier.com/papers/GeistRozierSchumannRV2014.pdf">"Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems"</a>
+by Johannes Geist, Kristin Yvonne Rozier, and Johann Schumann. The BibTeX for this paper is available <A HREF="http://research.kristinrozier.com/BibTeX/GRS14.bib">here</A>.
+</p>
+
+
+<hr>
+
+<h3>Code Snippets:</h3>
+
+
+<pre>
+FT IMPL:
+
+v_op_sync := this.op1_sync & this.op2_sync;
+            case (v_op_sync) is     
+              when FT_TRUE & FT_TRUE =>
+                nxt.result_sync := FT_TRUE;
+              when FT_TRUE & FT_FALSE =>
+                nxt.result_sync := FT_FALSE;
+              when FT_FALSE & FT_TRUE =>
+                nxt.result_sync := FT_TRUE;
+              when FT_FALSE & FT_FALSE =>
+                nxt.result_sync := FT_TRUE;
+              when FT_TRUE & FT_MAYBE =>
+                nxt.result_sync := FT_MAYBE;
+              when FT_MAYBE & FT_TRUE =>
+                nxt.result_sync := FT_TRUE;
+              when FT_FALSE & FT_MAYBE =>
+                nxt.result_sync := FT_TRUE;
+              when FT_MAYBE & FT_FALSE =>
+                nxt.result_sync := FT_MAYBE;
+              when FT_MAYBE & FT_MAYBE =>
+                nxt.result_sync := FT_MAYBE;
+              when others =>
+                null;
+            end case;
+
+FT LOAD OPERAND
+
+when LOAD_OP1 =>
+        case op1Type is
+          when "10" =>                  -- read from queue
+            nxt.op1      := queue_o.async;
+            nxt.op1_sync := queue_o.sync;
+            
+          when "11" =>                  -- read from mtl mumonitor
+            -- read from ptmtl mumonitor
+            nxt.op1.head.value := pt_data_memory_data;
+            nxt.op1.tail.value := pt_data_memory_data;
+            nxt.op1.head.time  := timestamp;
+            nxt.op1.tail.time  := timestamp;
+            nxt.op1.empty      := '0';
+            nxt.op1_sync       := "0" & pt_data_memory_data;
+            
+          when "00" =>                  -- read atomic
+            nxt.op1.head.value := this.atomics(conv_to_integer(this.command.op1.value(log2c(ATOMICS_WIDTH)-1 downto 0)));
+            nxt.op1.tail.value := this.atomics(conv_to_integer(this.command.op1.value(log2c(ATOMICS_WIDTH)-1 downto 0)));
+            nxt.op1.head.time  := timestamp;
+            nxt.op1.tail.time  := timestamp;
+            nxt.op1.empty      := '0';
+            nxt.op1_sync       := "0" & this.atomics(conv_to_integer(this.command.op1.value(log2c(ATOMICS_WIDTH)-1 downto 0)));
+            
+          when "01" =>                  -- immediate
+            nxt.op1.head.value := this.command.op1.value(0);
+            nxt.op1.tail.value := this.command.op1.value(0);
+            nxt.op1.head.time  := timestamp;
+            nxt.op1.tail.time  := timestamp;
+            nxt.op1.empty      := '0';
+            nxt.op1_sync       := "0" & this.command.op1.value(0);
+            
+          when others =>
+            null;
+        end case;
+
+PT CALC
+case i.reg.command is
+          when OP_FALSE =>
+            nxt.operand.now := '0';
+          when OP_TRUE =>
+            nxt.operand.now := '1';
+          when OP_ATOMIC =>
+            nxt.operand.now := nxt.operand.op1now;
+          when OP_NOT =>
+            nxt.operand.now := not nxt.operand.op1Now;
+          when OP_AND =>
+            nxt.operand.now := nxt.operand.op1Now and nxt.operand.op2Now;
+          when OP_OR =>
+            nxt.operand.now := nxt.operand.op1Now or nxt.operand.op2Now;
+          when OP_IMPLICIT =>
+            nxt.operand.now := (not nxt.operand.op1Now) or nxt.operand.op2Now;
+          when OP_EQUIVALENT =>
+            nxt.operand.now := nxt.operand.op1Now xnor nxt.operand.op2Now;
+          when OP_PREVIOUSLY =>
+            nxt.operand.now := nxt.operand.op1Pre;
+          when OP_EVENTUALLY =>
+            nxt.operand.now := nxt.operand.op1Now or nxt.operand.pre;
+          when OP_ALWAYS =>
+            nxt.operand.now := nxt.operand.op1Now and nxt.operand.pre;
+          when OP_START =>
+            nxt.operand.now := nxt.operand.op1Now and (not nxt.operand.op1Pre);
+          when OP_END =>
+            nxt.operand.now := (not nxt.operand.op1Now) and nxt.operand.op1Pre;
+          when OP_INTERVAL =>
+            nxt.operand.now := (not nxt.operand.op2Now) and (nxt.operand.op1Now or nxt.operand.pre);
+          when OP_SINCE =>
+            nxt.operand.now := nxt.operand.op2Now or (nxt.operand.op1Now and nxt.operand.pre);
+
+----------------------------------------------------------------------------------------------------
+when CALC_MTL =>
+        case this.command is
+          when OP_MTL_BOXBOX |  -- this evaluates the valid boxbox predicate
+            OP_MTL_DIAMONDDIAMOND =>
+            if op1RisingEdge_r = '1' then        -- rising edge
+              nxt.timestamp_buffer.valid := '1';
+              --nxt.timestampBuffethis.start.time := this.time;
+              --select_time                := S_TIME;
+              nxt.timestamp_buffer.time  := i.time;
+              o.boxMemory.write          <= '1';
+            elsif op1_falling_edge_r = '1' then  -- falling edge
+              nxt.timestamp_buffer.valid := '0';
+              --nxt.timestampBuffethis.start.time := time_1;
+              --select_time                := S_TIME_1;
+              --nxt.timestamp_buffer.time := this.time_1;
+              --o.dotMemory.timestamp     <= this.time_1;
+              o.boxMemory.write          <= '1';
+            else
+              nxt.timestamp_buffer := slv_to_ts(i.boxMemory.rdData);
+            end if;
+
+            if nxt.timestamp_buffer.valid = '0' then
+              nxt.operand.now := '0';
+            else
+              if this.time_intervalMax >= nxt.timestamp_buffer.time then
+                nxt.operand.now := '1';
+              else
+                nxt.operand.now := '0';
+              end if;
+            end if;
+          when OP_MTL_BOXDOT |  -- this evaluates the valid boxdot predicate
+            OP_MTL_DIAMONDDOT |
+            OP_MTL_SINCE =>
+
+            -- the first conjunct
+            if i.dotMemory.head.start.valid = '0' then  -- we have not received an edge yet
+              first_conjunct := '0';
+            else
+              if i.dotMemory.head.start.time <= this.time_intervalMax then
+                first_conjunct := '1';
+              else
+                first_conjunct := '0';
+              end if;
+            end if;
+
+            -- the second conjunct
+            if i.dotMemory.head.stop.valid = '0' then  -- t.end is infinite
+              second_conjunct := '1';
+            else
+              if i.dotMemory.head.stop.time >= this.time_intervalMin then
+                second_conjunct := '1';
+              else
+                second_conjunct := '0';
+              end if;
+            end if;
+
+            if this.command = OP_MTL_SINCE then
+              nxt.operand.now := not (first_conjunct and second_conjunct);
+            else
+              nxt.operand.now := first_conjunct and second_conjunct;
+            end if;
+          when others =>
+            null;
+        end case;
+
+CONSTANT Reasoning:
+  constant LOC_INVALID      : std_logic_vector(LOC_LEN-1 downto 0) := "0000";  -- 0
+  constant LOC_BUS          : std_logic_vector(LOC_LEN-1 downto 0) := "0001";  -- 1
+  constant LOC_NET_PARAM    : std_logic_vector(LOC_LEN-1 downto 0) := "0010";  -- 2
+  constant LOC_SHIFTER      : std_logic_vector(LOC_LEN-1 downto 0) := "0011";  -- 3
+  constant LOC_DOWN         : std_logic_vector(LOC_LEN-1 downto 0) := "0100";  -- 4
+  constant LOC_INDICATORS   : std_logic_vector(LOC_LEN-1 downto 0) := "0101";  -- 5
+  constant LOC_REG_A        : std_logic_vector(LOC_LEN-1 downto 0) := "0110";  -- 6
+  constant LOC_REG_B        : std_logic_vector(LOC_LEN-1 downto 0) := "0111";  -- 7
+  constant LOC_REG_C        : std_logic_vector(LOC_LEN-1 downto 0) := "1000";  -- 8
+  constant LOC_DYNAMIC_DOWN : std_logic_vector(LOC_LEN-1 downto 0) := "1001";  -- 9
+  constant LOC_INTERN       : std_logic_vector(LOC_LEN-1 downto 0) := "1010";  -- 10 self reload
+  constant LOC_ALU_1        : std_logic_vector(LOC_LEN-1 downto 0) := "1011";  -- 11 load from other alu
+  constant LOC_DUMMY_UP_FIN : std_logic_vector(LOC_LEN-1 downto 0) := "1100";  -- 12
+  constant LOC_NOP          : std_logic_vector(LOC_LEN-1 downto 0) := "1101";  -- 13
+  constant LOC_CYCLE_FIN    : std_logic_vector(LOC_LEN-1 downto 0) := "1110";  -- 14
+
+
+DESTINATION Reasoning:
+      when ST_DET_DESTINATION =>
+        case s_save_reg.save_info is
+          when SAVE_INFO_DOWN_MEM =>
+            data_save_state_next <= ST_WRITE_DOWN_MEM;
+          when SAVE_INFO_BUS =>
+            data_save_state_next <= ST_WRITE_BUS;
+          when SAVE_INFO_DOWN_MEM_AND_BUS =>
+            data_save_state_next <= ST_WRITE_DOWN_MEM_AND_BUS;
+          when SAVE_INFO_REG_A_AND_REG_B =>
+            data_save_state_next <= ST_WRITE_REG_A_AND_REG_B;
+          when SAVE_INFO_REG_A =>
+            data_save_state_next <= ST_WRITE_REG_A;
+          when SAVE_INFO_REG_B =>
+            data_save_state_next <= ST_WRITE_REG_B;
+          when SAVE_INFO_REG_C =>
+            data_save_state_next <= ST_WRITE_REG_C;
+          when others =>
+            data_save_state_next <= ST_ACKNOWLEDGE;
+        end case;
+
+DATA Handling Reasoning
+
+    s_operands_data(conv_to_integer(LOC_BUS)-1)            <= data_bus_op1_data;
+    s_operands_data(conv_to_integer(LOC_NET_PARAM)-1)      <= net_param_mem_data;
+    s_operands_data(conv_to_integer(LOC_SHIFTER)-1)        <= (others => '0');
+    s_operands_data(conv_to_integer(LOC_DOWN)-1)           <= down_mem_data;
+    s_operands_data(conv_to_integer(LOC_INDICATORS)-1)     <= (others => '0');
+    s_operands_data(conv_to_integer(LOC_REG_A)-1)          <= s_i_reg.a;
+    s_operands_data(conv_to_integer(LOC_REG_B)-1)          <= s_i_reg.b;
+    s_operands_data(conv_to_integer(LOC_REG_C)-1)          <= s_i_reg.c;
+    s_operands_data(conv_to_integer(LOC_DYNAMIC_DOWN)-1)   <= dynamic_down_mem_data;
+    s_operands_data(conv_to_integer(LOC_DYNAMIC_DOWN+1)-1) <= data_bus_op2_data;
+
+if(s_alu_data.operand_1_loaded = '0') then
+          if(s_alu_data.operand_1_delayed_load = '0') then
+            s_op_fetched_next(LOC_BUS_OP1) <= '0';
+            if(s_alu_data.loc_op_1 = LOC_BUS) then
+              if(s_operands_valid(LOC_BUS_OP1) = '1') then
+                s_alu_data_next.operand_1        <= s_operands_data(conv_to_integer(s_alu_data.loc_op_1)-1);
+                s_alu_data_next.operand_1_loaded <= '1';
+                s_op_fetched_next(LOC_BUS_OP1)   <= '1';
+              else
+                s_alu_data_next.operand_1        <= (others => '0');
+                s_alu_data_next.operand_1_loaded <= '0';
+              end if;
+            else
+              s_alu_data_next.operand_1        <= s_operands_data(conv_to_integer(s_alu_data.loc_op_1)-1);
+              s_alu_data_next.operand_1_loaded <= '1';
+            end if;
+          end if;
+        end if;
+</pre>
+
+
+
+<br><hr>
+<address>
+Kristin Yvonne Rozier
+2014-07-12
+</address>
+</body></html>

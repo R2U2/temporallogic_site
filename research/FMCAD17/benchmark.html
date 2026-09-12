@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>FuseIC3 &#183; Benchmarks</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<a href="https://github.com/rohitdureja/FuseIC3"><img style="position: relative; top: 0; right: 0; border: 0; margin: -20px;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" align='right'></a>
+						<!-- Title -->
+						<h1>FuseIC3</h1>
+						<h2>An Algorithm for Checking Large Design Spaces</h2>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=#>"FuseIC3: An Algorithm for Checking Large Design Spaces"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+						<h3>1. NASA's NextGen Air Traffic Control System Models (ATC)</h3>
+
+						<p>In the early phases of design, there is a need for the ability to analyze different design solutions. The family of NASA’s NextGen air traffic control (ATC) system models are a portfolio of potential design solutions to be compared with respect to different functional allocations, and overall reliability of the system. The entire design space consists of more than 20,000 designs. Each of the design is modeled as a labeled transition system and checked against a set of properties. The designs differ in terms of the parameters configured (different functional allocations).</p>
+						<p>Of the more than 20,000 designs, the relevant 1,620 are <a href=http://www.mattarei.eu/cristian/documents/cav2016.pdf>analyzed exhaustively</a>. Each of the 1620 instances is checked against a total of 54 LTL properties, of which 34 are safety properties, and the rest are liveness. In our evaluation we consider safety properties only. The set is modeled in the SMV language, and uses <a href="https://ocra.fbk.eu/">OCRA</a> for compositional modeling. The parameters to the system are specified using preprocessor directives. Each parameter configuration generates an unique model in the set. More details on the benchmark can be found on the <a href="https://es-static.fbk.eu/projects/nasa-aac/">project website</a>.</p>
+
+						<h3>2. Selected Benchmarks from HWMCC 2015</h3>
+
+						<p> We evaluate FuseIC3 against a total of 548 benchmark models from the single safety property track of the <a href="http://fmv.jku.at/hwmcc15/">Hardware Model Checking Competition 2015</a>. To create a model-set from each benchmarks, we generated 200 mutations of each. The original model was mutated to only modify the transition system, and not the safety property implicit in the AIGER file; 1% of the assignments were randomly modified. An assignment of the form g = g1 ∧ g2 was selected with probability 0.01 and changed to g = 0, g = 1, g = ¬g1 ∧ g2, g = g1 ∧ ¬g2, g = ¬g1 ∧ ¬g2, g = g1 ∧ g2, g = g1, g = ¬g1, g = g2, or g = ¬g2, with equal probability. </p>
+
+						<h3>3. Boeing's AIR 6110 Wheel Braking System Models (WBS)</h3>
+
+						<p>The Aerospace Information Report (AIR) is a document issued by SAE. It provides an example application of recommended processes (ARP4754A and ARP4761) to a specific aircrat function. The example of a wheel brake system (WBS) demonstrates the applicability of design and safety techniques. The WBS consists of a complex hydraulic plant controller by a computer with varying operating modes, and two landing gears each with four wheels. The AIR 6110 guides the reader through a manual process leading to the development of several architecture variants satisfying both functional and safety requirements.</p>
+
+						<p>In the <a href="https://es-static.fbk.eu/people/bozzano/publications/cav2015a.pdf">case study</a>, seven architectures of the WBS are exhaustively checked. The architectures are modeled compositionally using <a href="https://ocra.fbk.eu/">OCRA</a>, and <a href="https://xsap.fbk.eu/">xSAP</a> is used for safety analysis. For our analysis, we derive the seven SMV models from the compositional architecture. Each model is checked against approxmiately 300 safety properties (these properties were contracts in original design methodology used). More details on the benchmark can be found on the <a href="https://es-static.fbk.eu/projects/air6110/">project website</a>.</p>
+
+
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=benchmark.html class="active">Benchmarks</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+#item: Hariharan2022
+~~~
+{}{raw}
+<div class="bibover noshow" id="bibover_Hariharan2022" onmousedown="javascript:lockMouse(event,'Hariharan2022')" onmouseup="javascript:unLockMouse(event,'Hariharan2022')"
+style="z-index: 10000">
+<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('Hariharan2022')">X</a></div>
+<p>
+~~~
+
+G. Hariharan, B. Kempa, T. Wongpiromsarn, P. H. Jones and K. Y. Rozier,
+/MLTL Multi-type: A logic to reason over signals of different types/,
+In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV), August, 2022\n
+[/javascript:toggleBibtex('Hariharan2022') \[BibTeX\]] [https://research.temporallogic.org/papers/NSV22.pdf \[PDF\]]
+~~~
+{}{raw}
+</p>
+<div id="bib_Hariharan2022" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
+<pre>
+@inproceedings{Hariharan2022,
+  author = {Gokul Hariharan, Brian Kempa, Tichakorm Wongpiromsarn, Phillip H. Jones, Kristin Y. Rozier},
+  title = {MLTL Multi-type: A logic to reason over signals of different types},
+  booktitle = {In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV)},
+  year = {2022},
+  pdf = {//research.temporallogic.org/papers/NSV22.pdf}
+}
+</pre></div>
+</div>
+~~~

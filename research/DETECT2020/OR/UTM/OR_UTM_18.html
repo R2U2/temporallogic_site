@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specificaiton Name -->
+                        <h2> OR_UTM_18 </h2>
+                        <!-- Specificaiton Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> A conflict's estimated <font face=courier>Start</font> time (<font face=courier>conStart</font>) must always be less than the estimated <font face=courier>End</font> time (<font face=courier>conEnd</font>) </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>conStart, conEnd</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>conStart_leq_conEnd = 1;
+for(i = 0; i &lt; NumUAS; i++)
+{
+    // if UAS i's conStart is less than its conEnd
+    // and both values are not "nan"
+    if((conStart[i] > conEnd[i]) && (conStart[i] == conStart[i]) && (conEnd[i] == conEnd[i]))
+    { 
+        conStart_leq_conEnd = 0;
+    }
+}</code></pre>
+                        <!-- MLTL Specificaiton -->
+                        <h4> MLTL Specification </h4>
+                        <p> Original: conStart_leq_conEnd </p>
+                        <p> Updated: &#9744;[0,3] conStart_leq_conEnd
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> Conflicts cannot end before they begin </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Note that several bugs were present in the conflict logic during the December 16th flight test.</p>
+                        
+                        <p>(1) The labeling of which UAS are involved in the conflict is incorrect. The logged data shows that UAS 0-3 are involved in conflicts; hwoever, these UAS are not transmitting telemetry during these conflicts. It was discovered that an indexing value was being logged by the UTM instead of the UAS flight plan ID. </p>
+                        
+                        <p>(2) There are multiple conflicts detected for the same UAS at the same time, but with different end times. This was due to the jumbing of <font face=courier>conStart</font>, <font face=courier>conEnd</font>, and <font face=courier>conDetect</font> labels within the UTM. </p>
+                        
+                        <p>(3) There are several instances where end times preceed the start times, i.e., the difference is negative. Again, this was due to the mislabeling of font face=courier>conStart</font>, <font face=courier>conEnd</font>, and <font face=courier>conDetect</font> when logging data from the UTM.</p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_18_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: The difference between a conflict's start (<font face=courier>conStart</font>) and end (<font face=courier>conEnd</font>) times (<font face=courier>conEnd - conStart</font>) from each GCS the UTM reads from the operational flight plan datatable. Note that ther are several instances where the conflicts start time is greater than its end time, violating our specification. This was due to several erros within the UTM where the labeling of <font face=courier>conStart</font>, <font face=courier>conEnd</font>, and <font face=courier>conDetect</font> are jumbled.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_18_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: The output of R2U2's monitoring of specification OR_UTM_2, confirming that R2U2 catches when a conflict's start time (<font face=courier>conStart</font>) preceeds its end time (<font face=courier>conEnd</font>). However, notice that there is bouncing in the initial Boolean specificaiton, which can lead to undesireable false-positive alerts.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_18_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Caption</figcaption>
+                        </figure>-->
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <!--<figure>
+                            <img width="600" src="figures/OR_UTM_18_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: Caption </figcaption>
+                        </figure>-->
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <figure>
+                            <img width="600" src="figures/OR_UTM_18_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 3: The output of R2U2's monitoring of the updated specification OR_UTM_18, showing that R2U2's output still bounces, even with a "&#9744;[0,3]" temporal operator.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

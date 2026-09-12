@@ -1,0 +1,19 @@
+# jemdoc: menu{MENU}{index.html},addpackage{amssymb},addpackage{mathrsfs},addpackage{amsmath}
+# jemdoc: addcss{jemdoc.css}
+# jemdoc: addcss{bibover.css}
+#include{UsedRefs.jeminc}
+
+= MLTL Multi-type: A logic to reason over signals of different types
+#include{header.jemdoc}
+
+*[mailto:gokul@iastate.edu]
+
+== Abstract
+Modern cyber-physical systems (CPS) operate in complex systems of systems that must seamlessly work together to control safety- or mission-critical functions. Capturing specifications in a logic like LTL enables verification and validation of CPS requirements, yet an LTL formula specification can imply unrealistic assumptions, such as that all signals populating the variables in the formula are of type Boolean and agree on a standard time step. To achieve formal verification of CPS systems of systems, we need to write validate-able requirements that reason over (sub-)system signals of different types, such as signals with different timescales, or levels of abstraction, or signals with complex relationships to each other that populate variables in the same formula. Validation includes both transparency for human validation and tractability for automated validation, e.g., since CPS often run on resource-limited embedded systems. Specifications for correctness of numerical algorithms for CPS need to be able to describe global properties with precise representations of local components. Therefore, we introduce Mission-time Linear Temporal Logic Multi-type (MLTLM), a logic building on MLTL, to enable writing clear, formal requirements over finite input signals (e.g., sensor signals, local computations) of different types, cleanly coordinating the temporal logic and signal relationship considerations without significantly increasing the complexity of logical analysis, e.g., model checking, satisfiability, runtime verification (RV). We explore the common scenario of CPS systems of systems operating over different timescales, including a detailed analysis with a publicly-available implementation of MLTLM.
+We contribute:
+	. the definition and semantics of MLTLM, a lightweight extension of MLTL allowing a single temporal formula over variables of multiple types;
+	. the construction and use of an MLTLM fragment for time-granularity, with proof of the language's expressive power; and
+	. the design and empirical study of an MLTLM runtime engine suitable for real-time execution on embedded hardware.
+
+
+

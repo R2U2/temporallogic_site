@@ -1,0 +1,14 @@
+table {
+    border: 1px solid black;
+    }
+td, th{
+    border: 1px solid black;
+    padding: 1em;
+}
+.eng{
+    background-color: aqua;
+}
+li{
+    padding-bottom: 1em;
+}
+

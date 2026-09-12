@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> OR_UAS_1 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The motor <font face=courier>RPM</font> will be bounded by <font face=courier>RPM_OR_MIN</font> and <font face=courier>RPM_OR_MAX</font> while <font face=courier>Subphase</font> is not equal to <font face=courier>Landed, Test Actuator,</font> or <font face=courier>&lt;undefined>,</font> but if it exceeds it, allow 3 timesteps to recover. </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>RPM, Subphase</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4> Boolean Conversion of Signals to Atomic Inputs </h4>
+                        <pre><code>RPM_leq_MAX: RPM &#8804; RPM_OR_MAX
+RPM_geq_MIN: RPM &#8805; RPM_OR_MIN
+Subphase_neq_Undefined: Subphase &ne; &lt;undefined> 
+Subphase_neq_TestActuators: Subphase &ne; "Test Actuators"
+Subphase_neq_Landed: Subphase &ne; "Landed"</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> (Subphase_neq_Undefined &and; Subphase_neq_TestActuators &and; Subphase_neq_Landed) &rarr; &not;&#9744;[0,3] &not;(RPM_leq_MAX &and; RPM_geq_MIN) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> <font face=courier>RPM</font> present during when phase is <font face=courier>Landing, Test Actuators,</font> or <font face=courier>&lt;undefined&gt;</font> </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> <font face=courier>RPM_OR_MAX</font> and <font face=courier>RPM_OR_MIN</font> based on 20% of nominal <font face=courier>RPM (880)</font> would be <font face=courier>1056</font> and <font face=courier>704 RPM</font> respectively. </p>
+                        
+                        <!-- Figures -->
+						<h4> Figures </h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_1_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Graph of RPM.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/OR_UAS_1_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: R2U2's output of OR_UAS_1, showing that it caught a fault where the RPM was out of bounds during Subphase being Undefined, test actuaors, or landed.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

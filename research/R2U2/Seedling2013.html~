@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<!-- 1.  SITE TITLE -->
+<title>Intelligent Hardware-Enabled Sensor and Software Safety and Health Management for Autonomous UAS</title>
+
+<!-- 2.  METADATA-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="homestyle.css">
+
+</head>
+
+
+<body>
+<!-- begin banner -->
+<!--#include virtual="banner.html" -->
+<!-- end banner -->
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+<tbody><tr>
+
+<!-- begin left navigation -->
+<!--#include virtual="navigation.html" -->
+<!-- begin content area -->
+<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<!-- 5. PAGE TITLE -->
+<tr><td colspan="3" id="content"><h2><font color="#350e20">Intelligent Hardware-Enabled Sensor and Software Safety and Health Management for Autonomous UAS</font><br>
+A project funded by NARI via the ARMD Seedling Fund
+<br>
+</h2>
+</td></tr>
+<tr><td class="content-sub"><p>
+
+
+<!-- Actual Content -->
+
+<dt><B>Team Members</B></dt>
+
+<ul>
+<li> <B>PI:</B> Kristin Y. Rozier, civil servant, NASA Ames Research Center, Moffett Field, CA 94035, USA
+<li> <B>Co-I:</B> Johann Schumann, SGT, Inc., NASA Ames Research Center, Moffett Field, CA 94035, USA
+<li> <B>Co-I:</B> Corey Ippolito, civil servant, NASA Ames Research Center, Moffett Field, CA 94035, USA
+</ul>
+
+<!-- <dd>
+My current research focuses on expanding my work in storage system design
+and analysis to address the concerns of <A HREF="http://www.nsf.gov/news/news_summ.jsp?cntn_id=123607&org=NSF&from=news">big data</A>. 
+In order to deal with the core challenges from big data which 
+face a wide range of domains,
+from the financial sector to biomedicine and defense, a need exists to develop
+new technologies which will allow us to manage, store, analyze and curate
+large data sets which are both wide, and deep.  My research focuses on building
+partnerships between storage providers and customers with big data needs, 
+and through these collaborations developing an
+understanding the problem of big data from multiple perspectives.  Our goal
+is to design next-generation smart storage systems which provide better
+performance, security, and reliability in a trusted framework.  I am
+currently tackling this project by building intelligence into the storage
+stack in the form of application and user awareness that allows smart
+storage systems to dynamically reconfigure themselves from a performance
+and reliability stand point, while providing a greater utilization of available
+resouces. -->
+
+<img src="Seedling2013TeamPicture.jpeg">
+<p><b>Team</b></p>
+
+
+</dd>
+<p></p>
+<dt><B>Abstract</B></dt>
+
+</dd>
+<p></p>
+
+<p></p>
+<!-- Footer Stuff -->
+</td>
+
+<!-- Right column: Place your logo, images, contacts and related links here --><!--your logo or images should be no wider than 160 pixels-->
+<!-- "<td class="right_border">" is essential, DO NOT REMOVE -->
+<!--#include virtual="profile.html" -->
+<!--end Right column-->
+
+<!-- begin footer -->
+<!--#include virtual="footer.html" -->
+<!-- end footer -->	  
+

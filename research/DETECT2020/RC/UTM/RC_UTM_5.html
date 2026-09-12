@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> RC_UTM_5 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The rate at which an individual UAS's telemetry data is received by the UAS will be once per second while the UAS is in flight </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>ID, Time</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4>Boolean Conversion of Signals to Atomic Inputs</h4>
+                        <pre><code>Time_geq_PrevTime: Time(ID) &#8805; PrevTime(ID) + 3</code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> &#9744;[0,3] Time_geq_PrevTimeMargin </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> Loss of telemetry transmission for UAS ID </p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Telemetry is used to check for loss of communications </p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/RC_UTM_5_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/RC_UTM_5_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: Caption</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/RC_UTM_5_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Caption</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/RC_UTM_5_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: Caption </figcaption>
+                        </figure>
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <figure>
+                            <img width="600" src="figures/RC_UTM_5_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: Caption</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

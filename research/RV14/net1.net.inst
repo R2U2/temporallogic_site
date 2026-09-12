@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<instantiation date="Mar 12, 2014 11:19:20 AM">
+  <inst id="H_FG_TxError" value="ok"/>
+  <inst id="H_FG_Sensor" value="ok"/>
+  <inst id="FG_packet_transmission_rate_in_range" value="true"/> 
+  <inst id="H_FC_RxOVR" value="ok"/> 
+  <inst id="FG_data_change_in_range" value="true"/>
+  <inst id="FG_XYZ_data_valid" value="true"/>
+  <inst id="FG_log_data_valid" value="true"/>
+  <inst id="H_FG_TxOVR" value="ok"/>
+  <inst id="FG_number_bad_packets_in_range" value="true"/>
+  <inst id="FG_bad_packet_rate_in_range" value="true"/>
+  <inst id="H_FC_RxUR" value="ok"/>
+</instantiation>

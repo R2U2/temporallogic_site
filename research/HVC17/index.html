@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Combinatorial Model Checking Reduction</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h1>Combinatorial Model Checking Reduction</h1>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=#>"Combinatorial Model Checking Reduction"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+						<h3>Abstract</h3>
+						<p>Modern system design often requires comparing several models
+over a large design space. Different models arise out of a need to weigh
+different design choices, to check core capabilities of versions with varying
+features, or to analyze a future version against previous ones. The
+number of models is combinatorial in terms of assumptions, implementations,
+and behaviors. Model checking can compare different models;
+however, applying model checking off-the-shelf may not scale due to the
+large size of the design space for today’s complex systems.</p>
+<p>We exploit the a priori known relationships between different models of
+the same (or related) systems to optimize the model-checking search. Our
+algorithm, Combinatorial Model Checking Reduction (CMCR), preprocesses
+the design space and checks smaller model-checking instances, e.g.,
+using nuXmv, then automatically prunes the search space by reducing
+both the number of models to check, and the number of LTL properties
+that need to be checked for each model. We demonstrate the scalability
+of CMCR by checking 1,620 real-life models for NASA’s NextGen air
+traffic control system. Compared to checking each model individually,
+model validation and verification are 4.5× and 1.8× faster respectively
+using CMCR, reducing the number of models and properties checked by
+∼45%. CMCR is general, scalable, and amenable to optimizations.</p>
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=benchmark.html>Benchmark</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

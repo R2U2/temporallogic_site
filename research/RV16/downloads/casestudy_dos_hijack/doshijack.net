@@ -1,0 +1,178 @@
+net
+{
+	propagationenginegenerator1791944048146838126L = "edu.ucla.belief.approx.BeliefPropagationSettings@74e2667c";
+	recoveryenginegenerator6944530267470113528l = "edu.ucla.util.SettingsImpl@3bb692d7";
+	node_size = (130.0 55.0);
+}
+
+node att_pattern1
+{
+	states = ("pat_nomatch" "pat_match" );
+	position = (463 -337);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable2";
+	label = "att_pattern1";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node h_uplink
+{
+	states = ("h_up_good" "h_up_bad" );
+	position = (869 -240);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable0";
+	label = "h_uplink";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node unusual_nav_cmds
+{
+	states = ("detected" "ok" );
+	position = (181 -453);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable5";
+	label = "unusual_nav_cmds";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node signal_power
+{
+	states = ("bad" "ok" );
+	position = (884 -452);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable4";
+	label = "signal_power";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node periodic_cmd
+{
+	states = ("detected" "ok" );
+	position = (334 -456);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable5";
+	label = "periodic_cmd";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node bad_packets
+{
+	states = ("bad_packets" "no_bad_packets" );
+	position = (645 -451);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable0";
+	label = "bad_packets";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node uplink
+{
+	states = ("up_good" "up_bad" );
+	position = (766 -338);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable0";
+	label = "uplink";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node cause
+{
+	states = ("attack" "uplink" );
+	position = (609 -262);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable1";
+	label = "cause";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node h_attack
+{
+	states = ("ok" "under_attack" );
+	position = (327 -252);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable3";
+	label = "h_attack";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node dangerous_cmd
+{
+	states = ("detected" "ok" );
+	position = (478 -454);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable5";
+	label = "dangerous_cmd";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+potential ( att_pattern1 | cause h_attack )
+{
+	data = (((	1.0	0.0	)
+		(	0.0	1.0	))
+		((	1.0	0.0	)
+		(	1.0	0.0	)));
+}
+potential ( h_uplink | )
+{
+	data = (	0.7	0.3	);
+}
+potential ( unusual_nav_cmds | att_pattern1 )
+{
+	data = ((	0.03	0.97	)
+		(	0.5	0.5	));
+}
+potential ( signal_power | uplink )
+{
+	data = ((	0.05	0.95	)
+		(	0.95	0.05	));
+}
+potential ( periodic_cmd | att_pattern1 )
+{
+	data = ((	0.03	0.97	)
+		(	0.5	0.5	));
+}
+potential ( bad_packets | uplink att_pattern1 )
+{
+	data = (((	0.03	0.97	)
+		(	0.8	0.2	))
+		((	0.5	0.5	)
+		(	1.0	0.0	)));
+}
+potential ( uplink | h_uplink cause )
+{
+	data = (((	0.7	0.3	)
+		(	1.0	0.0	))
+		((	0.0	1.0	)
+		(	0.0	1.0	)));
+}
+potential ( cause | )
+{
+	data = (	0.5	0.5	);
+}
+potential ( h_attack | )
+{
+	data = (	0.95	0.05	);
+}
+potential ( dangerous_cmd | att_pattern1 )
+{
+	data = ((	0.03	0.97	)
+		(	0.5	0.5	));
+}

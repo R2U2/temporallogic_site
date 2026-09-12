@@ -1,0 +1,23 @@
+# jemdoc: menu{MENU}{contact.html}
+# jemdoc: addcss{jemdoc.css}
+# jemdoc: addcss{bibover.css}
+
+# jemdoc: menu{MENU}{artifacts.html},addpackage{amssymb},addpackage{mathrsfs},addpackage{amsmath}
+# jemdoc: addcss{bibover.css}
+# jemdoc: addcss{jemdoc.css}
+#include{UsedRefs.jeminc}
+
+= MLTL Multi-type: A logic to reason over signals of different types
+#include{header.jemdoc}
+
+*[mailto:gokul@iastate.edu]
+  
+
+== Contact
+
+If you have used +MLTLM+, please provide us with your feedback. You can contact [gokul@iastate.edu Gokul] with your comments and suggestions.
+
+If you find problems or bugs in our tools, please write to us and we'll to get back to you. If possible, please include the following information:
+    . Steps to reproduce the error
+    . Platform (Linux\/Windows\/Mac)
+    . Code that can reproduce the problem

@@ -1,0 +1,193 @@
+net
+{
+	propagationenginegenerator1791944048146838126L = "edu.ucla.belief.approx.BeliefPropagationSettings@7a07f1ac";
+	recoveryenginegenerator6944530267470113528l = "edu.ucla.util.SettingsImpl@6f1dde0c";
+	node_size = (130.0 55.0);
+}
+
+node FG_packet_transmission_rate_in_range
+{
+	states = ("true" "false" );
+	position = (34 -651);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable0";
+	label = "FG_packet_transmission_rate_in_range";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node FG_log_data_valid
+{
+	states = ("true" "false" );
+	position = (1047 -654);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable5";
+	label = "FG_log_data_valid";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node H_FG_Sensor
+{
+	states = ("ok" "bad" );
+	position = (202 -57);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "H_FG_Sensor";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node H_FC_RxOVR
+{
+	states = ("ok" "bad" );
+	position = (788 -53);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "H_FC_RxOVR";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node FG_bad_packet_rate_in_range
+{
+	states = ("true" "false" );
+	position = (445 -653);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable2";
+	label = "FG_bad_packet_rate_in_range";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node FG_XYZ_data_valid
+{
+	states = ("true" "false" );
+	position = (653 -653);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable3";
+	label = "FG_XYZ_data_valid";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node FG_number_bad_packets_in_range
+{
+	states = ("true" "false" );
+	position = (230 -654);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable1";
+	label = "FG_number_bad_packets_in_range";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node H_FG_TxError
+{
+	states = ("ok" "bad" );
+	position = (399 -57);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "H_FG_TxError";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node H_FG_TxOVR
+{
+	states = ("ok" "bad" );
+	position = (592 -57);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "H_FG_TxOVR";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node FG_data_change_in_range
+{
+	states = ("true" "false" );
+	position = (857 -655);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable4";
+	label = "FG_data_change_in_range";
+	DSLxSUBMODEL = "Root Submodel";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+node H_FC_RxUR
+{
+	states = ("ok" "bad" );
+	position = (980 -50);
+	excludepolicy = "include whole CPT";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "H_FC_RxUR";
+	DSLxEXTRA_DEFINITIONxDIAGNOSIS_TYPE = "AUXILIARY";
+	diagnosistype = "AUXILIARY";
+}
+potential ( FG_packet_transmission_rate_in_range | H_FG_TxOVR )
+{
+	data = ((	1.0	0.0	)
+		(	0.1	0.9	));
+}
+potential ( FG_log_data_valid | H_FC_RxUR H_FC_RxOVR )
+{
+	data = (((	1.0	0.0	)
+		(	1.0	0.0	))
+		((	0.1	0.9	)
+		(	0.1	0.9	)));
+}
+potential ( H_FG_Sensor | )
+{
+	data = (	0.95	0.05	);
+}
+potential ( H_FC_RxOVR | )
+{
+	data = (	0.95	0.05	);
+}
+potential ( FG_bad_packet_rate_in_range | H_FG_TxOVR H_FC_RxOVR )
+{
+	data = (((	1.0	0.0	)
+		(	0.1	0.9	))
+		((	0.1	0.9	)
+		(	0.1	0.9	)));
+}
+potential ( FG_XYZ_data_valid | H_FG_Sensor )
+{
+	data = ((	1.0	0.0	)
+		(	0.1	0.9	));
+}
+potential ( FG_number_bad_packets_in_range | H_FG_TxOVR H_FG_TxError )
+{
+	data = (((	1.0	0.0	)
+		(	0.1	0.9	))
+		((	0.1	0.9	)
+		(	0.1	0.9	)));
+}
+potential ( H_FG_TxError | )
+{
+	data = (	0.9	0.1	);
+}
+potential ( H_FG_TxOVR | )
+{
+	data = (	0.9	0.1	);
+}
+potential ( FG_data_change_in_range | H_FG_Sensor H_FC_RxUR )
+{
+	data = (((	1.0	0.0	)
+		(	0.1	0.9	))
+		((	0.1	0.9	)
+		(	0.1	0.9	)));
+}
+potential ( H_FC_RxUR | )
+{
+	data = (	0.99	0.01	);
+}

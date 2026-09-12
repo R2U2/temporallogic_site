@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>CySat-NFM2022 &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<h2>Runtime Verification Triggers Real-time, Autonomous Fault Recovery on the CySat-I</h2>
+						<!-- Authors -->
+						<h4>Alexis Aurandt, Phillip H. Jones, and Kristin Yvonne Rozier</h4>
+                        <p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href="Cysat-NFM22.pdf">"Runtime Verification Triggers Real-time, Autonomous Fault Recovery on the CySat-I"</a><p>
+						<hr>
+
+						<!-- <h3>Results</h3> -->
+        				<p>Code and data to regenerate all experiment and analysis plots in the paper can be found <a href="artifact.html">HERE</a>.</p>
+                        <p>The list containing the full specifications can be found <a href="specifications.html">HERE</a>.</p>
+        				<p>-------------------------------------</p>
+                        <h3>All eight specification faults are illustrated below.</h3>
+        				<img src="image/NFMGraph1.png" style="width:747px; height:447px" class="center">
+        				<p style="text-align:center;"><strong>Fig. 1.</strong> EPS Power Bus Fault Recovery. (a) The power status of the 5 volt, LUP 5 volt, and LUP 3.3 volt buses. (b) The enable status of the ADCS, payload, UHF, and boost board. An 'X' marker indicates an injection of an external fault. (c) (d) (e) (f) Output from R2U2 correctly determining the current state of specification 3, 16, 17, and 18 respectively. A shaded region indicates a time range where the OBC does not care about the output of R2U2 within its fault recovery.</p>
+                        <img src="image/NFMGraph2.png" style="width:716px; height:238px" class="center">
+                        <p style="text-align:center;"><strong>Fig. 2.</strong> EPS Power Bus Fault Recovery. (a) The power status of the battery charge regulator (BCR) bus and the battery bus. An 'X' marker indicates an injection of an external fault. (b) Output from R2U2 correctly determining the current state of specification 4.</p>
+                        <img src="image/NFMGraph3.png" style="width:747px; height:447px" class="center">
+                        <p style="text-align:center;"><strong>Fig. 3.</strong> EPS Battery Heater Fault Recovery. (a) The battery temperature of the four battery cells. (b) The enable status of the three battery heaters. An 'X' marker indicates an injection of an external fault. (c) (d) (e) Output from R2U2 correctly determining the current state of specification 8, 9, and 10 respectively. A shaded region indicates a time range where the OBC does not care about the output of R2U2 within its fault recovery.</p>
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+                    <h3><a href=index.html class="active">Home</a></h3><hr>
+                    <h3><a href=status.html>CySat-I Status</a></h3><hr>
+                    <h3><a href=results.html>Results</a></h3><hr>
+                    <h3><a href=specifications.html>Specifications</a></h3><hr>
+                    <h3><a href=artifact.html>Artifacts</a></h3><hr>
+                    <h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

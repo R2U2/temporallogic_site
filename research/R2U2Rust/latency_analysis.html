@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>R2U2 in Embedded Rust &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">						
+						<h2>Towards a Safe, Verified Runtime
+							Monitor for Embedded Systems: R2U2 in Embedded Rust</h2>
+						<!-- Authors -->
+						<h4>Alexis Aurandt, Phillip H. Jones, and Kristin Yvonne Rozier</h4>
+                        <p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href="R2U2_Rust_Extended.pdf">"Towards a Safe, Verified Runtime
+							Monitor for Embedded Systems: R2U2 in Embedded Rust"</a><p>
+						<hr>
+
+						<h3>Latency Analysis</h3>
+                        <img src="Latency.png" alt="latency" class="center">
+                        <p>In <a href="R2U2_Rust_Extended.pdf">Section 3.5</a>, we observed the 95% tail latency (i.e., 95% of recorded latencies are less than or
+                            equal to the given latency) for each time step where | π |=1,000,000 on a 2.8 GHz Quad-Core
+                            Intel® i7 processor with 16GB of RAM as given in the image above. More specifically, a 1.5–10.5x decrease in latency was observed depending
+                            on the benchmark, which can mostly be accredited to the reduction of instructions through direct
+                            encodings. This latency decrease is also a result of a handful of other factors:
+                            <ol type="1">
+                                <li>The L1 Cache of the i7 processor is 32KB; therefore, the larger memory requirements of R2U2 v3.0 will actually lead to more cache misses. 
+                                    (Refer to the memory requirements displayed below.)
+                                </li>
+                                <li>Our implementation in safe Rust required less <a href="https://c9x.me/x86/html/file_module_x86_id_176.html">MOV</a> assembly instructions compared to the C version due to removal of utilizing memcpy and redundant pointer dereferencing.
+
+                                </li>
+                                <li>The CySat and Sounding Rocket benchmarks were required to run with the original atomic checker in R2U2 C v3.0 due to a lack of support for the `rate` 
+                                    function in the booleanizer. In R2U2 Rust, the booleanizer was utilized as support of the `rate` function was added.
+                                </li>
+                            </ol>
+							<p>It is important to note that we do not observe as substantial of a latency decrease for the ptMLTL benchmark; this is a result of the following factors: </p>
+							<ol type="1">
+                                <li>We observe a reduction of instructions in terms of boolean operators but not in terms of temporal operators as R2U2 C v3.0 already provided direct encodings for all temporal operators.
+                                </li>
+                                <li>R2U2 C v3.0 encoded ptMTL instead of ptMLTL and did not evaluate as early-as-possible. In order to implement ptMLTL correctly, R2U2 encounters a 
+									higher latency for each temporal instruction.
+                                </li>
+                            </ol>
+                        </p>
+                        <h4>
+                            For reference, here are the queue memory requirements:
+                        </h4>
+						<img src="QueueMemory.png" alt="queue" class="center">
+						<h4>
+                            For reference, here are the instruction memory requirements:
+                        </h4>
+						<img src="InstructionMemory.png" alt="instruction" class="center">
+
+
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+					<h3><a href=benchmarks.html>Benchmarks</a></h3><hr>
+					<h3><a href=latency_analysis.html>Latency Analysis</a></h3><hr>
+					<h3><a href=rust_crate.html>Rust Crate</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

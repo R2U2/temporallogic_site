@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into a Sounding Rocket Control System</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<!-- Title -->
+						<h2>Integrating Runtime Verification into a <br> Sounding Rocket Control System</h2>
+						<!-- Authors -->
+						<h4>Benjamin Hertz, Zachary Luppen, Kristin Y. Rozier</h4>
+						<p> This webpage contains research artifacts from <a href="https://link.springer.com/chapter/10.1007/978-3-030-76384-8_10">"Integrating Runtime Verification into a <br> Sounding Rocket Control System"</a> by B. Hertz, Z. Luppen, and K. Y. Rozier <p>
+						<hr>
+
+						<p>The full dataset can be found here: <a href="SACLaunchData.csv">DATA.csv</a></p>
+						<h4>Launch Video</h4>
+						<p>This video shows the launch of Nova Somnium. About 4 seconds into flight, the rocket abruptly veers due to premature aerobraking control system (ACS) actuation. ACS deployed while the solid rocket motor was still burning, creating severe stress and ultimately causing a material failure in the mechanical braking system. The mechanical failure led to asymmetrical air brake pad actuation, creating the large moment that sent the rocket veering horizontally. </p>
+						<iframe width="600" height="338" src="https://www.youtube.com/embed/A75Pv4FI940?autoplay=1&mute=1"></iframe>
+						<h4>Explanation of Failure</h4>
+						<p>The ACS made an incorrect decision to deploy while the motor was still burning. Although the system was designed to only actuate after burnout was completed, a review of the flight data showed that the system incorrectly determined that the rocket motor had already burnt out. The failure led to two undesirable results. First, the rocket was unable to reach its target altitude. Second, the rocket was travelling much faster at apogee than expected, causing the parachute recovery system to shred and subsequently destroying the rocket upon high-speed impact. </p>
+						<p>The exact details of what happened in the few seconds before catastrophe are uncertain, but we believe that the system power momentarily flickered when the motor first ignited, causing a restart. The system was designed with a 10 time-step startup phase for sensor calibration before assuming initially that the system is on the ground. The rocket was accelerating during the sensor calibration, so the data used for state-characterization and actuation was non-sensical, leading to the issues observed during the launch.
+						</p>
+						<h4>Altitude and Actuation Graph</h4>
+						<p>This graph highlights the disparity between the altitude the ACS measured versus the COTS recovery altimeter's measurement. The COTS recovery altimeter is only used to trigger parachute deployment. It is an entirely separate system from the ACS and experienced no flight anomalies, so its data is considered accurate.</p>
+						<figure><img src="figures/AltitudeGraph.jpg" width="600">
+							<figcaption></figcaption>
+						</figure>
+
+				</div>
+			</div>
+		</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html>Home</a></h3><hr>
+					<h3><a href=list.html>Detailed Specification List</a></h3><hr>
+					<h3><a href=data.html class="active"><em>Nova Somnium</em> ACS Launch Data</a></h3><hr>
+					<h3><a href=cyroc.html>Cyclone Rocketry</a></h3><hr>
+					<h3><a href=reproduce.html>Reproducibility</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>
+

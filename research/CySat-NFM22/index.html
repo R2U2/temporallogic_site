@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>CySat-NFM2022 &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						
+						<h2>Runtime Verification Triggers Real-time, Autonomous Fault Recovery on the CySat-I</h2>
+						<!-- Authors -->
+						<h4>Alexis Aurandt, Phillip H. Jones, and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=https://link.springer.com/chapter/10.1007/978-3-031-06773-0_45>"Runtime Verification Triggers Real-time, Autonomous Fault Recovery on the CySat-I"</a><p>
+						<hr>
+
+												<a href="CySat-NFM22.pdf"><h3 align=center><u>**The full version of the paper is available here (pdf)**</u></h3></a>
+
+
+						<h3>Abstract</h3>
+						<p>CubeSats are low-cost platforms that are popular for conducting spaceborne experiments, however they are known to have high failure rates (∼25% failure rate). In order to improve the likelihood of success of Iowa State University’s first CubeSat (CySat-I), we integrate Runtime Verification (RV) on the CySat-I to allow for fault detection at runtime. Although CubeSats have been previously identified as a possible target for RV, this is the first time that a RV engine has been deployed on a CubeSat. We utilize the R2U2 runtime verification engine due to its low overhead; we embed R2U2 directly on the On-Board Computer (OBC) to monitor the current state of the CySat-I. R2U2 continuously monitors the different subsystems on the CySat-I, and R2U2’s fault detection triggers predefined fault recovery strategies. Since the Electrical Power System (EPS) is a common source of failure, we specifically focus on this subsystem. We design a list of twenty-two specifications from English requirements corresponding to the EPS and translate them into Mission-time Linear Temporal Logic (MLTL). We perform mock launches on Earth with external fault injection to illustrate that R2U2 successfully reasons about faults and the CySat-I effectively performs fault recovery. We demonstrate that the CySat-I can successfully recover from eight unique EPS faults at runtime in a timely manner with no errors. During our mock launches, R2U2 discovered a potential error in the manufacturer’s firmware related to the EPS’s under-voltage event monitoring, and this led to a more in-depth investigation of the error by the manufacturers.</p>
+                        <h3>NASA Formal Methods (NFM) Symposium 2022 Presentation</h3>
+                        <p> This video was developed for the presentation of our paper at NFM 2022.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/x-yuRqL1Z6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+                    <h3><a href=status.html>CySat-I Status</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+                    <h3><a href=specifications.html>Specifications</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

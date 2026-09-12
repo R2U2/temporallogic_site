@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Integrating Runtime Verification into an Automated UAS Traffic Management System</title>
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+                        <!-- Title -->
+						<h2>Integrating Runtime Verification into an <br> Automated UAS Traffic Management System</h2>
+						<!-- Authors -->
+						<h4>Matthew Cauwels, Abigail Hammer, Benjamin Hertz, Phillip H. Jones, Kristin Y. Rozier</h4>
+                        <!-- Running subheader with paper link -->
+						<p> This webpage contains supplementary specifications for <a href=../../../DETECT_2020_paper_11.pdf>"Integrating Runtime Verification into an <br> Automated UAS Traffic Management System"</a> by M. Cauwels, A. Hammer, B. Hertz, P. H. Jones, and K. Y. Rozier </p>
+                        
+                        <!-- Specification Name -->
+                        <h2> SB_UTM_2 </h2>
+                        <!-- Specification Destriction -->
+                        <h4> Specification Description </h4>
+                        <p> The waypoint longitude (<font face=courier>wpLon</font>) of any UAS's telemetry data will be bounded between <font face=courier>MaxLonLB</font> and <font face=courier>MinLonUB</font>. </p>
+                        <!-- Signals Needed -->
+                        <h4> Signals Required </h4>
+                        <p> <font face=courier>wpLon</font> </p>
+                        <!-- Atomic Conversions -->
+                        <h4>Boolean Conversion of Signals to Atomic Inputs</h4>
+                        <pre><code>wpLon_leq_MaxLonUB = 1;
+for(i = 0; i &lt; NumUAS; i++)
+{
+    // if UAS i's wpLon is greater than the upper bounded
+    // and the value is not "nan"
+    if((wpLon[i] > MaxLonUB) && (wpLon[i] == wpLon[i])
+    { 
+        wpLon_leq_MaxLonUB = 0;
+    }
+} </code></pre>
+                        <pre><code>wpLon_geq_MinLonLB = 1;
+for(i = 0; i &lt; NumUAS; i++)
+{
+    // if UAS i's wpLon is less than the lower bounded
+    // and the value is not "nan"
+    if((wpLon[i] &lt; MinLonLB) && (wpLon[i] == wpLon[i])
+    { 
+        wpLon_geq_MinLonLB = 0;
+    }
+} </code></pre>
+                        <!-- MLTL Specification -->
+                        <h4> MLTL Specification </h4>
+                        <p> Original: (wpLon_leq_MaxLonUB &and; wpLon_geq_MinLonLB) </p>
+                        <p> Updated: &#9744;[0,3] (wpLon_leq_MaxLonUB &and; wpLon_geq_MinLonLB) </p>
+                        <!-- Explanation -->
+                        <h4> Fault Explanation </h4>
+                        <p> A UAS's waypoint longitude is not physically possible.</p>
+                        <!--  Notes -->
+                        <h4> Additional Notes </h4>
+                        <p> Longitude can only ever by between -180 and 180 degrees. Anything outside these bounds is nonsensical and indicates a fault within the system.</p>
+                        
+                        <!-- Figures -->
+						<h4>Figures</h4>
+                        <!-- Unmodified UTM input -->
+                        <figure>
+                            <img width="600" src="figures/SB_UTM_2_NoFault.png" caption="Snow">
+                            <figcaption>Figure 1: All of the waypoint longitude (<font face=courier>wpLon</font>) inputs from each GCS the UTM reads from the telemetry datatable.</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing no faults -->
+                        <figure>
+                            <img width="600" src="figures/SB_UTM_2_R2U2_Output_NoFault.png" caption="Snow">
+                            <figcaption>Figure 2: The output of R2U2's monitoring of specification SB_UTM_2, confirming that no UAS exceeds its waypoint longitude sensor bounds.</figcaption>
+                        </figure>
+                        <!-- Modified UTM input with Fault -->
+                        <figure>
+                            <img width="600" src="figures/SB_UTM_2_Fault.png" caption="Snow">
+                            <figcaption>Figure 3: Since Fig. 1 had no <font face=courier>wpLon</font> inputs that exceeded <font face=courier>MaxLonUB</font> or <font face=courier>MinLonLB</font>, we manually injected a fault into a single UAS (purple).</figcaption>
+                        </figure>
+                        <!-- R2U2's output showing that it see's the fault, but bounces -->
+                        <figure>
+                            <img width="600" src="figures/SB_UTM_2_R2U2_Output_Fault.png" caption="Snow">
+                            <figcaption>Figure 4: The output of R2U2's monitoring of specification SB_UTM_2, showing that R2U2 catches when the injected fault occurs. However, notice that there is bouncing in the initial Boolean specificaiton, which can lead to undesireable false-positive alerts.</figcaption>
+                        </figure>
+                        <!-- R2U2's output after updating the spec with a TL filter -->
+                        <figure>
+                            <img width="600" src="figures/SB_UTM_2_R2U2_Output_Fault_Updated.png" caption="Snow">
+                            <figcaption>Figure 5: The output of R2U2's monitoring of the updated specification SB_UTM_1, showing that R2U2 catches when the injected fault occurs and the "&#9744;[0,3]" temporal operator acts as a sliding filter, debouncing R2U2's output.</figcaption>
+                        </figure>
+</p>
+</p>
+</div>
+</div>
+</main>			
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=../../index.html>Home</a></h3><hr>
+					<h3><a href=../../results.html>Complete Specification List</a></h3><hr>
+					<h3><a href=../../contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

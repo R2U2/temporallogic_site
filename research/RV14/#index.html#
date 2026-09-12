@@ -1,0 +1,225 @@
+1;2501;0c<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=ISO-8859-1">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+
+<title>Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems</title>
+<meta name="description" content="PRISM">
+<meta name="keywords" content="PRISM">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+<p>
+
+</p><h1 align="center">Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems</h1>
+<div>
+
+<p align="center"><strong>Johannes Geist, Kristin Yvonne Rozier, and Johann Schumann</strong></p>
+<p align="center"><strong>2014</strong></p>
+</div>
+
+<p>
+These pages contain further details of the experiments described in <a name="tex2html1" href="http://research.kristinrozier.com/papers/GeistRozierSchumannRV2014.pdf">"Runtime Observer Pairs and Bayesian Network
+Reasoners On-board FPGAs: Flight-Certifiable System
+Health Management for Embedded Systems"</a>
+by Johannes Geist, Kristin Yvonne Rozier, and Johann Schumann. The BibTeX for this paper is available <A HREF="http://research.kristinrozier.com/BibTeX/GRS14.bib">here</A>.
+</p>
+
+<p>
+<h3 align = "left">Abstract: </h3>
+Safety-critical systems, like Unmanned Aerial Systems (UAS) that must operate totally 
+autonomously, e.g., to support ground-based emergency services, must also provide 
+assurance they will not endanger human life or property in the air or on the ground.
+Previously, a theoretical construction for paired synchronous and asynchronous
+runtime observers with Bayesian reasoning was introduced that demonstrated the 
+ability to handle runtime assurance 
+within the strict operational constraints to which the system must adhere.
+In this paper, we show how to instantiate and implement temporal logic 
+runtime observers and Bayesian network diagnostic reasoners that use the observers' outputs, on-board
+a field-standard Field Programmable Gate Array (FPGA) in a way that satisfies the strict flight
+operational standards of <b>Realizability</b>, <b>Responsiveness</b>, and <b>Unobtrusiveness</b>.
+With this type of compositionally constructed diagnostics framework we can develop compact,
+hierarchical, and highly expressive health management models for efficient, on-board
+fault detection and system monitoring.
+We describe an instantiation of our System Health Management (SHM) framework, rt-R2U2, on standard FPGA hardware,
+which is suitable to be deployed on-board a UAS.
+We run our system with a full set of real flight data from NASA's Swift UAS, 
+and highlight a case where our runtime SHM framework would have been able
+to detect and diagnose a fault from subtle evidence 
+that initially eluded traditional real-time diagnosis procedures.
+</p>
+
+<P> 
+</P>
+<HR>
+
+<P>
+ <BR>
+</P>
+
+<P>
+Our data files are compiled using the <strong>SamIam</strong> and <strong>Ace</strong> tools, which are free and open source and can be downloaded <A HREF="http://reasoning.cs.ucla.edu/">here</A>. Documentation is packaged in the tool downloads. 
+</P>
+
+
+<p>
+<strong>Disclaimer:</strong> The files distributed on this page contain research prototype code and examples published in the paper above. The files are compatible with SamIam release 3.0 and Ace version 2.0; we make no claims regarding compatibility with any other versions.  Please feel free to <A href="mailto:Kristin.Y.Rozier@nasa.gov">email me</A> concerning clarifications, bugs, or other corrections.
+</p><p>
+
+<br></p>
+
+
+<P>
+
+<hr>
+
+<p>
+<h3 align = "left">Case Study: Fluxgate Magnetometer Buffer Overflow:</h3>
+
+Assuming a standard set of sensors sending input signals along the bus to the embedded FPGA...
+
+<h4> Step 0:</h4> Define a set of Linear/Metric Temporal Logic specifications over the set of signals.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/ltl.txt">ltl.txt</A> </td>
+            <td> Hand-coded file of temporal logic formulas for the buffer overflow example. Future work would be to automate this task.
+            </td>
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+<h4>Step 1:</h4> Use <A HREF="http://reasoning.cs.ucla.edu/samiam/">SamIam</A> to design Bayes Net reasoners that utilize the set of temporal logic formulas as inputs.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+           <td><A HREF="http://research.kristinrozier.com/RV14/net1.net">net1.net</A> </td>
+            <td> Output from SamIam. Input to Ace; compile with default compiler options.
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+<h4>Step 2:</h4> Compile the resulting arithmetic circuit using <A HREF="http://reasoning.cs.ucla.edu/ace/">Ace</A>.
+
+
+<h5>Compilation with Ace:</h5>
+<p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/net1.net">net1.net</A> </td>
+            <td> Output from SamIam. Input to Ace; compile with default compiler options. This is the main Bayes Net reasoner used in our case study.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.inst">net1.net.inst</A> </td>
+            <td> Input to Ace; needed to compile net1.net. This is teh instantiation file needed for BN evaluation and it can be created automatically, but a predefined state of any node would influence the resuting arithmetic circuit. This verion was hand-coded to ensure control over the structure of the resulting arithmetic circuit.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.ac">net1.net.ac</A> </td>
+            <td> Output from Ace, one instance (since algorithm is not deterministic and the number of nodes and the structure both change with every compilation cycle).
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.lmap">net1.net.lmap</A> </td>
+            <td> Output from Ace, one instance (since algorithm is not deterministic).
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/net1.net.ac_visual.pdf">net1.net.ac_visual.pdf</A> </td>
+            <td> Visualization of net1.net.ac above using DOT.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</p>
+
+<hr>
+
+
+<h4>Step 3:</h4> Run rt-R2U2 code to combine together all of the artefacts from previous steps, creating a combination of temporal logic runtime observers and Bayes Net reasoners, all in a format suitable for upload to an FPGA to program the gates in the array. (We do not currently have a stand-alone version of this code; the version run for the paper was part of a large and onerous java GUI. A new, more lithe, standalone version is being created as part of 'future work' that should be both scalable and executable on any high-performance Linux platform.)
+
+<h5>rt-R2U2 Compilation:</h5>
+
+<p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/RV14_code_snippets.html">RV14_code_snippets.html</A> </td>
+            <td> Page of code snippets executing the critical functions in the rt-R2U2 code.
+            </td>
+          </tr>
+          <tr>
+            <td><A HREF="http://research.kristinrozier.com/RV14/rtR2U2-quick reference.pdf">rtR2U2-quick reference.pdf</A> </td>
+            <td> Quick reference file with basic documentation of our process. This is Johannes Geist's lab notebook and internal manual for BN compilation.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/instructions_web.txt">instructions_web.txt</A> </td>
+            <td> Output from rt-R2U2 code. Input file to FPGA containing readable instructions for the rt-R2U2 process.
+            </td>
+          </tr>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/ltl_web_readable.txt">ltl_web_readable.txt</A> </td>
+            <td> Output from rt-R2U2 code, though this version was hand-coded for the experimental evaluation used in this paper. Input file to FPGA containing readable instructions for the rt-R2U2 process.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</p>
+
+
+<h4>Step 4: [Optional]</h4> Preprocess the real test flight data using Matlab for data privacy reasons. In this paper, the real test flight data was normalized, preserving all pertinent properties of the data, but shifting the values to meet minimum requirements for data privacy at NASA.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/RV14_atomics_web.csv">RV14_atomics_web.csv</A> </td>
+            <td> Preprocessed input data file used for experimental evaluation in paper.
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+<h4>Step 5:</h4> Run the FPGA as if it were onboard, in the field, processing the .csv data as an input stream from the onboard sensors, programmed with the bundled binary versions of the program files <A HREF="http://research.kristinrozier.com/RV14/instructions_web.txt">instructions_web.txt</A> and <A HREF="http://research.kristinrozier.com/RV14/ltl_web_readable.txt">ltl_web_readable.txt</A>.
+
+<p>
+      <table border="1">
+	<tbody>
+          <tr>
+            <td> <A HREF="http://research.kristinrozier.com/RV14/serialinterface.zip">serialinterface.zip</A> </td>
+            <td> C program used to send the preprocessed input data file <A HREF="http://research.kristinrozier.com/RV14/RV14_atomics_web.csv">RV14_atomics_web.csv</A> to the FPGA as if it were a sensor stream read off of the bus; used for experimental evaluation in paper. This .zip file contains all .c and .h files needed to build this code, along with a Makefile.
+          </tr>
+	  </tbody>
+      </table>
+</p>
+
+
+
+
+<br><hr>
+<address>
+Kristin Yvonne Rozier
+2014-07-12
+</address>
+</body></html>

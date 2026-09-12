@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>FuseIC3 &#183; Home</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<a href="https://github.com/rohitdureja/FuseIC3"><img style="position: relative; top: 0; right: 0; border: 0; margin: -20px;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" align='right'></a>
+						<!-- Title -->
+						<h1>FuseIC3</h1>
+						<h2>An Algorithm for Checking Large Design Spaces</h2>
+						<!-- Authors -->
+						<h4>Rohit Dureja and Kristin Yvonne Rozier</h4>
+						<p> This webpage contains further details and artifacts for reproducibility of the experiments in <a href=#>"FuseIC3: An Algorithm for Checking Large Design Spaces"</a> by R. Dureja and K.Y. Rozier. <p>
+						<hr>
+
+<div align="center">
+  <h4><u><a href=docs/fmcad17_appendix_A.pdf>=> Proofs of theorems appearing in the paper can be found here </a><=</h4></u>
+</div>
+						<h3>Abstract</h3>
+						<p>The design of safety-critical systems often requires <i>design space exploration</i>: comparing several system models that differ in terms of design choices, capabilities, and implementations. Model checking can compare different models in such a set, however, it is continuously challenged by the state space explosion problem.
+						Therefore, learning and reusing information from solving related models becomes very important for future checking efforts. For example, reusing variable ordering in BDD-based model checking leads to substantial performance improvement.
+						In this paper, we present a SAT-based algorithm for checking a set of models.
+						Our algorithm, FuseIC3, extends IC3 to minimize time spent in exploring the common state space between related models. Specifically, FuseIC3 accumulates artifacts from the sequence of over-approximated reachable states, called <i>frames</i>, from earlier runs when checking new models, albeit, after careful repair. It uses bidirectional reachability; forward reachability to repair frames, and IC3-type backward reachability to block predecessors to bad states.
+						We extensively evaluate FuseIC3 over a large collection of challenging benchmarks.
+						FuseIC3 is 1.75× faster than checking each model individually, and 1.72× faster than the state-of-the-art incremental IC3 algorithm.
+						</p>
+
+						<h3>Algorithm</h3>
+						<p>FuseIC3 automatically reuses information from earlier model-checking runs to minimize the time spent in exploring the state space in common between related models. Given a set of models and a safety property, FuseIC3 sequentially checks each model by reusing information: reachable state approximations, counterexamples (cex), and invariants, learned in earlier runs to reduce the set’s total checking time. When the difference in two subsequent models is small or beyond the cone-of-influence of the property, the invariant or counterexample from earlier models may be directly used to verify the current model. Otherwise, FuseIC3 uses reachable state approximations as input to IC3 to only explore undiscovered reachable states in the current model. In the former, verification completes almost instantly, while in the latter, significant time is saved. When the stored information cannot be used directly, FuseIC3 repairs and patches it using an efficient SAT-based algorithm. The repair algorithm is the main strength of FuseIC3, and uses features present in modern SAT solvers. It adds “just enough” extra information to the saved reachable states to enable reuse. </p>
+
+
+
+					</div>
+				</div>
+			</main>
+
+			<nav id="nav">
+				<div class="innertube">
+					<h3><a href=index.html class="active">Home</a></h3><hr>
+					<h3><a href=benchmark.html>Benchmarks</a></h3><hr>
+					<h3><a href=results.html>Results</a></h3><hr>
+					<h3><a href=artifact.html>Artifacts</a></h3><hr>
+					<h3><a href=contact.html>Contact</a></h3><hr>
+				</div>
+			</nav>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+wp load ./waypoints_straight.txt
+sleep 1
+param set SIM_GYR_RND 13
+param show SIM_GYR_RND
+param set SIM_MAG_RND 4
+param show SIM_MAG_RND
+auto
+
